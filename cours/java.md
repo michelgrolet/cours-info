@@ -2,12 +2,7 @@
 
 [Retour à l'accueil](./../README.md)
 
-L'API Collection du package Java.util :
-- Collection,
-- List,
-- Set,
-- Map,
-- Queue.
+L'API Collection du package java.util.
 
 ## Menu
 
@@ -19,6 +14,9 @@ L'API Collection du package Java.util :
 			- [HashSet](#hashset)
 			- [TreeSet](#treeset)
 		- [Itérateurs](#itérateurs)
+	- [Map<K,V>](#mapkv)
+		- [HashMap<K,V>](#hashmapkv)
+		- [TreeMap<K,V>](#treemapkv)
 
 ---
 
@@ -51,3 +49,25 @@ while(i.hasPrevious()) {
 }
 ```
 On peut aussi utiliser la boucle **foreach** avec un tableau ou une instance d'Iterable (comme les collections).
+
+## Map<K,V>
+- put(K,V) associe V à K.
+- get(K)
+- remove(K)
+- containsKey(K)
+- containsValue(V)
+- keySet() retourne l'ensemble de toutes les clés.
+
+> On ne parcours pas une Map mais l'ensemble de ses clés.
+
+### HashMap<K,V>
+Implémente Cloneable.
+**Nécessite la fonction hashCode()** qui génère K à partir de V.
+- values() retourne une collection contenant les valeurs.
+- clone() duplique la table.
+
+```java
+new HashMap<K,V>([capacité],[tauxRemplissage])
+```
+
+### TreeMap<K,V>

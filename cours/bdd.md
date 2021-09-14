@@ -14,7 +14,7 @@
 		- [Dépendances Fonctionnelles particulières](#dépendances-fonctionnelles-particulières)
 		- [Fermeture Transitive de DF](#fermeture-transitive-de-df)
 		- [Couverture Minimale](#couverture-minimale)
-		- [Clés (minimales) de R](#clés-minimales-de-r)
+		- [Clés de R](#clés-de-r)
 		- [X dépend de Y...](#x-dépend-de-y)
 	- [3. Formes Normales](#3-formes-normales)
 		- [1FN](#1fn)
@@ -37,11 +37,12 @@
 
 ## 2. Dépendances Fonctionnelles
 ```
-X -> Y
+attrX -> attrY
 ```
 > Une valeur de X détermine alors *au plus* une valeur de Y.
 
 X &rarr; ∅ est vrai pour tout X.
+Quand X ne donne pas Y dans la relation R, on dit que **la dépendance fonctionelle n'est pas vérifiée sur R**.
 
 ### Axiomes d'Armstrong
 > **Réflexivité :** Y⊆X => X→Y  
@@ -69,10 +70,12 @@ F+ : ensemble des DFE pouvant être trouvées avec les [Axiomes d'Armstrong](#ax
 ### Couverture Minimale
 Ensemble **G** de DF canoniques non-redondantes élémentaires.
 
-### Clés (minimales) de R
-Plus petit **ensemble** pour lequel Clé→R.  
+### Clés de R
+**Ensembles X** qui vérifient la relation : **X→R**. Autrement dit, ce sont les ensembles qui permettent de trouver au plus un tuple.
+> Dans **X→Clé**, x est aussi une clé.
 **Clé Primaire :** Une des clés de R.  
 **Clé Étrangère :** Clé primaire de R2 appartenant à R.
+**Clé Minimale :** Clé comportant le minimum d'attributs.
 
 ### X dépend de Y...
 > **Transitivement :** X⊆A | X→Y | X→A | non(Y→X) | Y⊆X  

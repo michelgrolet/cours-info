@@ -17,6 +17,7 @@ L'API Collection du package java.util.
 	- [Map<K,V>](#mapkv)
 		- [HashMap<K,V>](#hashmapkv)
 		- [TreeMap<K,V>](#treemapkv)
+	- [classe Collections](#classe-collections)
 
 ---
 
@@ -50,20 +51,21 @@ while(i.hasPrevious()) {
 ```
 On peut aussi utiliser la boucle **foreach** avec un tableau ou une instance d'Iterable (comme les collections).
 
-## Map<K,V>
+## Map<K,V> 
+Map : table avec des clés uniques.
 - put(K,V) associe V à K.
 - get(K)
 - remove(K)
 - containsKey(K)
 - containsValue(V)
 - keySet() retourne l'ensemble de toutes les clés.
-
+- values() retourne une collection contenant les valeurs.
+- 
 > On ne parcours pas une Map mais l'ensemble de ses clés.
 
 ### HashMap<K,V>
 Implémente Cloneable.
 **Nécessite la fonction hashCode()** qui génère K à partir de V.
-- values() retourne une collection contenant les valeurs.
 - clone() duplique la table.
 
 ```java
@@ -71,3 +73,11 @@ new HashMap<K,V>([capacité],[tauxRemplissage])
 ```
 
 ### TreeMap<K,V>
+Implémente SortedMap.
+
+## classe Collections
+Algorithmes génériques opérant sur certaines collections (souvent des listes).
+- sort (List<T> [Comparator<T>]) tri avec compareTo de Comparable (ou de comparator si il est fourni).
+- reverse(List<T>)
+- fill(List<T>, T)
+- copy(List<T> dest, List<T> src)

@@ -1,13 +1,19 @@
-# Cours
-
-## - [Algorithmique avancée](./cours/algo.md)
-## - [CPOA](./cours/java.md)
-## - [SGBD](./cours/bdd.md)
-## - [Systèmes Réseaux](./cours/reseaux.md)
+# Cours du DUT d'Informatique
 
 ---
 
+## Conception et programmation orientée objet [➡](./cours/a2cpoa.md)
 
-## Notes
+## SGBD [➡](./cours/a2sgbd.md)
 
-- [Markdown Cheat Sheet](./../markdown-cheat-sheet.md)
+## Systèmes Réseaux [➡](./cours/a2reseaux.md)
+
+## Algorithmique [➡](./cours/a2algo.md)
+
+---
+
+#### Structures de données [➡](./cours/a1str.md)
+
+#### Maths [➡](./cours/a1maths.md)
+
+#### JS [➡](./cours/javascript.md)

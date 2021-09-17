@@ -42,7 +42,8 @@ On utilise une **table de vérité** pour représenter chaque possibilités pour
 
 ### Loi de Morgan
 
-$$\neg(p \wedge q) = (\neg p) \vee (\neg q)$$ $$\neg(p \vee q) = (\neg p) \wedge (\neg q) $$
+¬(*p*∧*q*) = (¬*p*) ∨ (¬*q*)  
+¬(*p*∨*q*) = (¬*p*) ∧ (¬*q*)
 
 ### Implication
 
@@ -51,7 +52,7 @@ $$\neg(p \wedge q) = (\neg p) \vee (\neg q)$$ $$\neg(p \vee q) = (\neg p) \wedge
 * 0 1 ⇒ 1
 * 0 0 ⇒ 1
 
-$$¬(p ⇒ q) = p ∧ (¬q)$$
+¬(*p*⇒*q*) = *p* ∧ (¬*q*)
 
 ### Équivalence
 
@@ -60,7 +61,7 @@ $$¬(p ⇒ q) = p ∧ (¬q)$$
 * 0 1 ⇔ 0
 * 0 0 ⇔ 1
 
-$$¬(p ⇒ q) = p ∧ (¬q)$$
+¬(*p*⇒*q*) = *p* ∧ (¬*q*)
 
 ## Ensembles
 

@@ -10,6 +10,8 @@
 
 ## Algorithmique [➡](./cours/a2algo.md)
 
+## Probabilités [➡](./cours/a2proba.md)
+
 ---
 
 #### Structures de données [➡](./cours/a1str.md)

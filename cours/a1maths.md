@@ -1,4 +1,5 @@
 # Mathématiques
+[*Retour à l'accueil*](./../README.md)
 
 Cours de mathématiques discrètes (logique, ensembles, ...) et d'algèbre linéaire (pivot, matrices, ...).
 

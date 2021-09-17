@@ -1,6 +1,5 @@
 # Bases de Données Relationnelles
-
-[Retour à l'accueil](./../README.md)
+[*Retour à l'accueil*](./../README.md)
 
 ## Menu
 

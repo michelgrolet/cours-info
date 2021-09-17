@@ -14,6 +14,7 @@
 	- [Probabilité Conditionelle](#probabilité-conditionelle)
 			- [Théorème des probabilités composées](#théorème-des-probabilités-composées)
 			- [Indépendance](#indépendance)
+	- [Loi binomiale](#loi-binomiale)
 	- [Lois à densité](#lois-à-densité)
 
 ---
@@ -65,7 +66,14 @@ A et B indépendants ssi P(A∩B)=P(A)P(B)
 
 > Si A et B indépendants ¬A et B indépendants.
 
+## Loi binomiale
+(k parmi n) = n (n-1) ... (n-k+1)  / k !
+
+Un ensemble de probabilités suit la loi binomiale ssi il forme un **shéma de Bernouilli** (expériences répétées, identiques et indépendantes).   
+P(X=k) = (k parmi n) pᵏ (1-p)ᵏ 
+
+
+
 ## Lois à densité
 > **Variable aléatoire continue :** Admet une infinité d'issues.
-
 

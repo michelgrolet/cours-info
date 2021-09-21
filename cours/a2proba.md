@@ -43,7 +43,7 @@ Une probabilité vérifie :
 - P(A) ⊂ [0,1]      
 - P(Ω)=1
 
-Parmi A B et C :
+Parmi A, B et C :
 - au moins un = A∪B∪C
 - tous = A∩B∩C
 - au plus 2 = tout sauf tous = ¬(A∩B∩C)
@@ -88,16 +88,16 @@ E(kX)=kE(X)
 > = Σ(x² P(X=xᵢ))  
 > :pushpin:V(X) = E(X-E(X))²
 
-> **Écart-type :** σ = √ V(X)
+> **Écart-type :** :pushpin:σ = √ V(X)
 
-V(X+Y)=V(X)+V(Y)
-V(kX)=k²V(X)
+V(X+Y)=V(X)+V(Y)  
+V(kX)=k²V(X)  
 V(X+a)=V(X)
 
 #### Loi de Bernoulli
 > C'est la loi d'une **variable aléatoire discrète**.  
 > L(X)=B(p )
-
+c
 P(X=1)=p  
 P(X=0)=1-p
 

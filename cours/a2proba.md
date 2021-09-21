@@ -101,15 +101,15 @@ c
 P(X=1)=p  
 P(X=0)=1-p
 
->**Espérance d'une loi de Bernoulli :** E(X)=p
->**Variance d'une loi de Bernoulli :** V(X)=p(1-p)
+>**Espérance d'une loi de Bernoulli :** :pushpin:E(X)=p
+>**Variance d'une loi de Bernoulli :** :pushpin:V(X)=p(1-p)
 
 
 #### Loi binomiale
 > Un ensemble de probabilités suit la loi binomiale B(n;p) **ssi** il forme un **schéma de Bernoulli** (expériences répétées, identiques et indépendantes).  
-> B(n;p) : P(X=k) = (k parmi n) pᵏ(1-p)ⁿ⁻ᵏ
+> B(n;p) : :pushpin:P(X=k) = (k parmi n) pᵏ(1-p)ⁿ⁻ᵏ
  
-(k parmi n) = n! / k! (n-k)!
+:pushpin:(k parmi n) = n! / k! (n-k)!
 
->**Espérance d'une loi binomiale :** E(X)=np  
->**Variance d'une loi binomiale :** V(X)=np(1-p)
+>**Espérance d'une loi binomiale :** :pushpin:E(X)=np  
+>**Variance d'une loi binomiale :** :pushpin:V(X)=np(1-p)

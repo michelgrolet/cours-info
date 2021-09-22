@@ -6,87 +6,148 @@
 
 - [2A - Modèle Probabiliste](#2a---modèle-probabiliste)
   - [Menu](#menu)
-  - [Événements](#événements)
+  - [I. Événements](#i-événements)
       - [Système complet d'événements](#système-complet-dévénements)
-  - [Probabilités](#probabilités)
-      - [Formule des probabilités totales](#formule-des-probabilités-totales)
-      - [Équiprobabilité : règle de Laplace](#équiprobabilité--règle-de-laplace)
-  - [Probabilité Conditionelle](#probabilité-conditionelle)
-      - [Théorème des probabilités composées](#théorème-des-probabilités-composées)
-      - [Indépendance](#indépendance)
-  - [Lois de probabilité](#lois-de-probabilité)
+  - [II. Probabilités](#ii-probabilités)
+  - [III. Indépendance](#iii-indépendance)
+  - [IV. Probabilité Conditionelle](#iv-probabilité-conditionelle)
+  - [V. Variables aléatoires](#v-variables-aléatoires)
+  - [VI. Lois de probabilité continues](#vi-lois-de-probabilité-continues)
       - [Espérance](#espérance)
       - [Variance](#variance)
+  - [Lois de probabilité discrètes](#lois-de-probabilité-discrètes)
       - [Loi de Bernoulli](#loi-de-bernoulli)
       - [Loi binomiale](#loi-binomiale)
+      - [Loi de Poisson](#loi-de-poisson)
 
 
 ___
 
-> **Ω Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire.  
-> **Espace Probabiliste :** ΩP(Ω)
+> **Ω Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire. Ω=¬∅ 
 
-## Événements
-> **Incompatibilité :** :pushpin:A∩B=∅
+## I. Événements
+> **Espace Probabilisable :** (Ω, P(Ω))  
+> > Ω : univers  
+> > P(Ω) : événements
+
+> **Incompatibilité :** :pushpin:A∩B=∅  
+> Dans ce cas P(A)∪P(B) = P(A)+P(B)
 
 #### Système complet d'événements
-> Événements incompatibles 2 à 2.  
-> Σ∪=Ω
+> Est formé de toutes les parties de Ω.
+> > ∪E=Ω  
+
+les parties de Ω ne sont prises qu'une fois : E₁∩E₂=∅
 
 A et ¬A forment un SCE.  
 C'est pourquoi :pushpin:P(B)=P(A∩B)+P(¬A∩B)
 
-## Probabilités
-Une probabilité vérifie :  
-- P(Ω) ⇒ ℝ*  
-- A ⇒ p(A)
-- P(A) ⊂ [0,1]      
-- P(Ω)=1
 
-Parmi A, B et C :
+
+
+
+## II. Probabilités
+> **Probabilité :** [Application](#application) :  
+> > :pushpin: P: ε(Ω) → [0,1]  
+> > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A → P(A)  
+> 
+> Une probabilité vérifie :  
+> - P(A) ⊂ [0,1]      
+> - P(Ω)=1
+
+> #### Application
+> Une **application** d’un ensemble A dans un ensemble B est une opération qui fait correspondre à tout élément x de A un élément y de B et un seul.
+
+Propriétés :
+- Additivité : P(A∪¬A) = P(A)+P(¬A)
+- propriété de la réunion : A∪¬A=Ω
+- propriété de l'intersection : A∩¬A = ∅
+
+Soit les événements A, B et C :
 - au moins un = A∪B∪C
 - tous = A∩B∩C
 - au plus 2 = tout sauf tous = ¬(A∩B∩C)
 
-#### Formule des probabilités totales
-> Si B₁, B₂, B₃ forment une partition de Ω, alors
+> #### Formule des probabilités totales
+> Si B₁, B₂, B₃ forment une partition de Ω, alors  
 :pushpin:P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)
 
-#### Équiprobabilité : règle de Laplace
+> #### Équiprobabilité : règle de Laplace
 > :pushpin:P(A)=card(A) / card(Ω)
-> 
+
 card(E)=taille de l'ensemble E
 
-## Probabilité Conditionelle
-> La probabilité de B dépendant de A est notée **Pₐ(B)**.  
-> :pushpin:P(A∩B) / P(A) Dépend de A.
 
-#### Théorème des probabilités composées
-> :pushpin:P(A∩B)=P(A)Pₐ(B)
 
-#### Indépendance
+
+
+## III. Indépendance
+> #### Théorème de l'Indépendance
 > A et B indépendants ssi :pushpin:P(A∩B)=P(A)P(B)
 
 Si A et B indépendants Pₐ(B)=P(B).  
-Si A et B indépendants ¬A et B indépendants.
+Si A et B indépendants ¬A et B indépendants. 
 
-## Lois de probabilité
 
-> **Variable aléatoire continue :** Admet une infinité d'issues.
+> **Pour A et B quelconques :**  
+> :pushpin:P(A∩B)=P(A)P(B)-P(A∪B)
 
-> **Loi de probabilité de X :** Probabilité que x prenne chacune valeur de l'espace image X(Ω).
+
+
+
+
+## IV. Probabilité Conditionelle
+> La probabilité de B dépendant de A est notée **Pₐ(B)**.  
+> :pushpin:P(A∩B) / P(A) Dépend de A.
+
+> #### Formule des probabilités composées
+> :pushpin:P(A∩B)=P(A)Pₐ(B)
+
+
+
+
+## V. Variables aléatoires
+> **Espace probabilisé :** (Ω, P(Ω), p)  
+> Ω : univers  
+> P(Ω) : Événement  
+> p : probabilité
+
+> **Variable aléatoire :**  :pushpin:  
+> > x:  Ω  ⇒ ℝ  
+> > ωᵢ ⇒ x(ωᵢ)=xᵢ
+
+> **Espace Image :** X(Ω) ensemble des valeurs prises par X. 
+> - Si X(Ω) est discret : x est une **Variable aléatoire discrète**.
+> - Si X(Ω) est continu : x est une **Variable aléatoire continue**. 
+
+
+
+
+
+## VI. Lois de probabilité continues
+> **Loi de probabilité de X :** Probabilité que x prenne chacune des valeurs de X(Ω).
+>
+|X=xᵢ|0|1|2|
+|--|--|--|--|
+|P(X=xᵢ)|1/8|2/8|5/8|
+
+✍🏻les événements X=xᵢ forment un [Système complet d'événements](#système-complet-dévénements).
+C'est pourquoi Σ P(X=xᵢ) = 1
 
 #### Espérance
-> E(X) = Σ(xᵢ-E(X)²) P(X=xᵢ)  
+> **Espérance :** Somme des xᵢ pondérés par leur probabilité :  
+>:pushpin: E(X) = Σ(xᵢ) P(X=xᵢ)  
+
 E(X+Y)=E(X)+E(Y)  
 E(kX)=kE(X)  
-:pushpin:E(X+a)=E(X)+a
+E(X+a)=E(X)+a
 
 #### Variance 
-> **Variance :** Somme des carrés des écarts à la moyenne.   
+> **Variance :** Somme des carrés des écarts à la moyenne :   
 > = Σ(xᵢ-E(X))² P(X=xᵢ)  
 > = Σ(x² P(X=xᵢ))  
-> :pushpin:V(X) = E(X-E(X))²
+> = E(X²)-E(X)²  
+> :pushpin:V(X) = E[(X-E(X))²]
 
 > **Écart-type :** :pushpin:σ = √ V(X)
 
@@ -94,22 +155,40 @@ V(X+Y)=V(X)+V(Y)
 V(kX)=k²V(X)  
 V(X+a)=V(X)
 
-#### Loi de Bernoulli
-> C'est la loi d'une **variable aléatoire discrète**.  
-> L(X)=B(p )
-c
-P(X=1)=p  
-P(X=0)=1-p
 
->**Espérance d'une loi de Bernoulli :** :pushpin:E(X)=p
+
+
+
+
+## Lois de probabilité discrètes
+#### Loi de Bernoulli
+> C'est la loi d'une **variable aléatoire discrète** qui ne prend que deux valeurs.  
+> L(X)=B(p\)
+
+|X=xᵢ|0|1|
+|--|--|--|
+|P(X=xᵢ)|1-p|p|
+
+>**Espérance d'une loi de Bernoulli :** :pushpin:E(X)=p  
 >**Variance d'une loi de Bernoulli :** :pushpin:V(X)=p(1-p)
 
 
 #### Loi binomiale
 > Un ensemble de probabilités suit la loi binomiale B(n;p) **ssi** il forme un **schéma de Bernoulli** (expériences répétées, identiques et indépendantes).  
 > B(n;p) : :pushpin:P(X=k) = (k parmi n) pᵏ(1-p)ⁿ⁻ᵏ
- 
+
+Une loi binomiale, s'applique par exemple
+à un tirage avec remise. 
+
 :pushpin:(k parmi n) = n! / k! (n-k)!
 
 >**Espérance d'une loi binomiale :** :pushpin:E(X)=np  
 >**Variance d'une loi binomiale :** :pushpin:V(X)=np(1-p)
+
+#### Loi de Poisson
+> Pour les événements rares
+> P(X=k) = e⁻λ λᵏ/k!
+
+X suit la loi de poisson : L(X)=P(λ)
+
+>**Espérance et variance d'une loi de poisson :** :pushpin:E(X)=V(X)=λ

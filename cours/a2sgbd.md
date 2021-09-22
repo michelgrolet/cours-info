@@ -21,6 +21,18 @@
     - [3FN](#3fn)
       - [Méthodes pour obtenir une 3FN](#méthodes-pour-obtenir-une-3fn)
     - [BCFN](#bcfn)
+  - [Transactions](#transactions)
+    - [Propriétés ACID](#propriétés-acid)
+    - [Etats d'une transaction](#etats-dune-transaction)
+    - [Transactions Oracle](#transactions-oracle)
+    - [Tolérance aux pannes](#tolérance-aux-pannes)
+    - [Gestion de la concurence](#gestion-de-la-concurence)
+      - [Niveaux d'isolation du verouillage :](#niveaux-disolation-du-verouillage-)
+      - [RS](#rs)
+      - [RX](#rx)
+      - [S](#s)
+      - [SRX (share row exclusive)](#srx-share-row-exclusive)
+      - [X (exclusive)](#x-exclusive)
 
 
 ---
@@ -136,3 +148,106 @@ Tout schéma passant une FN doit passer la FN précédente.
 
 - Seules les DFE doivent être de la forme clé→X.
 - Il n'y a qu'une clé minimale.
+
+
+
+## Transactions
+> Transaction : suite d'opérations dans la BDD
+### Propriétés ACID
+> Atomicité:  
+> Cohérence:   
+> Isolation: *Une transaction ne voit pas tout*   
+> Durabilité: *Toute modification persiste*  
+
+### Etats d'une transaction
+> Annulée: on redémarre la transition ou on la tue.  
+> Validée: l'effet de la transaction est entériné.
+
+Commit: valide la transaction (elle passe à l'état **validé**).  
+Rollback: annule la dernière transaction. 
+
+### Transactions Oracle
+Commence avec la première instruction SQL.  
+Termine :
+- Lors du commit ou rollback
+- Déconnection (commit auto)
+- Arret du processus (rollback auto)
+
+### Tolérance aux pannes
+Les algo de récup permettent de respecter les propriétés ACID.
+Ils permettent de revenir à un état cohérent.
+
+Un Journal contient toutes les actions exécutées.
+- Démarrage
+- Écriture
+- Lecture
+- Validation
+- Annulation
+
+Oracle utilise
+- Fichier journal redo log (contient les commits)
+- rollback segment (contient la table)
+
+A chaque commit il faut :
+- modifier le redo log,
+- modifier le rollback segment,
+- bloquer les lignes de la table.  
+
+A chaque rollback il faut :
+- annuler les actions faites dans le rollback segment, 
+- débloquer les lignes de la table.
+
+### Gestion de la concurence
+Concurrence entre deux transactions qui accèdent en même temps aux mêmes données.
+
+Un **système de concurrence** doit éviter les introductions d'incohérences.
+
+**Verouillage :** variable binaire associée à une donnée qui décrit si elle est disponible.  
+V=0 : la donnée est indisponible.   
+C'est trop exclusif.
+
+❗ Interblocage : quand chaque transaction attend une donnée verouillée par une autre transaction.  
+✅ Si le sys détecte un interblocage, il peut :
+- tuer une des transactions,
+- arrêter les attentes des transactions par une **mises hors délai** (timeout).
+
+#### Niveaux d'isolation du verouillage :
+```SQL
+SET TRANSACTION ISOLATION LEVEL X
+```
+- `X=SERIALIZABLE` transaction séquentielles.  
+- `X=REAPETED READ` on voit les données des transac validées. Lectures multiples donnent le même résultat mais des tuples peuvent apparaître entre deux lectures.
+- `X=READ COMMITED` in voit les données des modifs validées. On peut avoir un résult diff entre deux lectures.  
+- `X=READ UNCOMMITED` on voit même les données non validées.
+
+Niveaux de granularité : différentes tailles de verouillage
+- ligne : on voit que ce qui est validé au `SELECT`
+- tuple : verrou DML évite que d'autres transactions verouillent ce tuple. Il s'enlève si commit ou rollback. + verrou DDL
+
+
+modes de verouillage :
+exclusif X : les ressources verouillées ne peuvent pas être partagées.
+sinon partagé S
+
+types de verrous : rs, rx, ...
+
+#### RS
+Verrou sur les tuples d'une table. Les autres transac peuvent tout faire sauf avoir un verrou exclusif en écriture.
+
+#### RX
+Les autres peuvent obtenir RS et RX.
+
+#### S
+```SQL
+LOCK TABLE tab IN SHARE MODE
+```
+
+#### SRX (share row exclusive)
+```SQL
+LOCK TABLE tab IN SHARE ROW EXCLUSIVE MODE
+```
+
+#### X (exclusive)
+```SQL
+LOCK TABLE tab IN EXCLUSIVE MODE
+```

@@ -9,10 +9,10 @@ L'API Collection du package java.util.
 - [CPOA](#cpoa)
 	- [Menu](#menu)
 	- [Collection](#collection)
-		- [List](#list)
-		- [Set](#set)
-			- [HashSet](#hashset)
-			- [TreeSet](#treeset)
+		- [Collection.List](#collectionlist)
+		- [Collection.Set](#collectionset)
+			- [Collection.Set.HashSet](#collectionsethashset)
+			- [Collection.Set.SortedSet.TreeSet](#collectionsetsortedsettreeset)
 		- [Itérateurs](#itérateurs)
 	- [Map<K,V>](#mapkv)
 		- [HashMap<K,V>](#hashmapkv)
@@ -23,15 +23,15 @@ L'API Collection du package java.util.
 
 ## Collection
 
-### List
+### Collection.List
 Accès à partir de l'index.
 
-### Set
+### Collection.Set
 Pas de doublons : permet de gérer des ensembles d'objets.
-#### HashSet
+#### Collection.Set.HashSet
 Tableau qui associe une valeur à une clé.
 Pas d'ordre.
-#### TreeSet
+#### Collection.Set.SortedSet.TreeSet
 Trie les éléments. Tous les objets doivent implémenter Comparable.
 
 ### Itérateurs

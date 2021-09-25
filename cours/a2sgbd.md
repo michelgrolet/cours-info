@@ -21,18 +21,20 @@
     - [3FN](#3fn)
       - [Méthodes pour obtenir une 3FN](#méthodes-pour-obtenir-une-3fn)
     - [BCFN](#bcfn)
-  - [Transactions](#transactions)
-    - [Propriétés ACID](#propriétés-acid)
-    - [Etats d'une transaction](#etats-dune-transaction)
-    - [Transactions Oracle](#transactions-oracle)
-    - [Tolérance aux pannes](#tolérance-aux-pannes)
-    - [Gestion de la concurence](#gestion-de-la-concurence)
-      - [Niveaux d'isolation du verouillage :](#niveaux-disolation-du-verouillage-)
+- [Transactions](#transactions)
+      - [Etats d'une transaction](#etats-dune-transaction)
+      - [Transactions Oracle](#transactions-oracle)
+      - [Tolérance aux pannes](#tolérance-aux-pannes)
+  - [Gestion de la concurence](#gestion-de-la-concurence)
+      - [Nécessité d'une gestion de la cohérence](#nécessité-dune-gestion-de-la-cohérence)
+      - [Niveaux d'isolation du verouillage](#niveaux-disolation-du-verouillage)
+  - [Modes de verouillage](#modes-de-verouillage)
       - [RS](#rs)
       - [RX](#rx)
-      - [S](#s)
-      - [SRX (share row exclusive)](#srx-share-row-exclusive)
-      - [X (exclusive)](#x-exclusive)
+      - [S (shared lock)](#s-shared-lock)
+      - [SRX (share row exclusive lock)](#srx-share-row-exclusive-lock)
+      - [X (exclusive lock)](#x-exclusive-lock)
+      - [(global lock)](#global-lock)
 
 
 ---
@@ -151,29 +153,30 @@ Tout schéma passant une FN doit passer la FN précédente.
 
 
 
-## Transactions
-> Transaction : suite d'opérations dans la BDD
-### Propriétés ACID
-> Atomicité:  
-> Cohérence:   
-> Isolation: *Une transaction ne voit pas tout*   
-> Durabilité: *Toute modification persiste*  
 
-### Etats d'une transaction
-> Annulée: on redémarre la transition ou on la tue.  
-> Validée: l'effet de la transaction est entériné.
 
-Commit: valide la transaction (elle passe à l'état **validé**).  
-Rollback: annule la dernière transaction. 
 
-### Transactions Oracle
+
+# Transactions
+> **Transaction :** suite d'opérations SQL suivant les propriétés ACID :
+> #### Propriétés ACID
+> > - **Atomicité :** Une transaction doit être une unité de travail indivisible ; soit toutes les modifications de données sont effectuées, soit aucune ne l'est.  
+> > - **Cohérence :** Toutes les règles doivent être appliquées aux modifications apportées par la transaction.  
+> > - **Isolation :** Une transaction reconnaît les données dans l'état où elles se trouvaient avant d'être modifiées par une transaction simultanée, ou les reconnaît une fois que la deuxième transaction est terminée, mais ne reconnaît jamais un état intermédiaire.  
+> > - **Durabilité :** Lorsqu'une transaction durable est terminée, ses effets sur le système sont permanents.  
+
+#### Etats d'une transaction
+> Commit -> l'effet de la transaction est entériné.
+> Rollback -> annule la dernière transaction.
+
+#### Transactions Oracle
 Commence avec la première instruction SQL.  
 Termine :
 - Lors du commit ou rollback
 - Déconnection (commit auto)
-- Arret du processus (rollback auto)
+- Erreur -> arrêt du processus (rollback auto)
 
-### Tolérance aux pannes
+#### Tolérance aux pannes
 Les algo de récup permettent de respecter les propriétés ACID.
 Ils permettent de revenir à un état cohérent.
 
@@ -197,39 +200,42 @@ A chaque rollback il faut :
 - annuler les actions faites dans le rollback segment, 
 - débloquer les lignes de la table.
 
-### Gestion de la concurence
+## Gestion de la concurence
 Concurrence entre deux transactions qui accèdent en même temps aux mêmes données.
 
-Un **système de concurrence** doit éviter les introductions d'incohérences.
-
-**Verouillage :** variable binaire associée à une donnée qui décrit si elle est disponible.  
-V=0 : la donnée est indisponible.   
-C'est trop exclusif.
+#### Nécessité d'une gestion de la cohérence
+Un **système de concurrence** doit éviter les introductions d'incohérences, telles que :
+- **Mise à jour perdue :** lorsque deux transactions ou plus sélectionnent la même ligne.
+- **Dépendance non validée :**  lorsqu'une deuxième transaction sélectionne une ligne qui est actuellement mise à jour par une autre transaction.
+- **Lecture non reproductible :** lorsqu'une deuxième transaction accède à la même ligne plusieurs fois et lit différentes données à chaque fois.
+- **Lecture fantôme :** lorsque deux requêtes identiques sont exécutées et que la collection de lignes retournée par la deuxième requête est différente.
 
 ❗ Interblocage : quand chaque transaction attend une donnée verouillée par une autre transaction.  
-✅ Si le sys détecte un interblocage, il peut :
+✅ Si le système détecte un interblocage, il peut :
 - tuer une des transactions,
 - arrêter les attentes des transactions par une **mises hors délai** (timeout).
 
-#### Niveaux d'isolation du verouillage :
+**Verouillage binaire :** variable binaire associée à une donnée, qui décrit si elle est disponible.  
+Le verouillage binaire est trop exclusif.
+
+#### Niveaux d'isolation du verouillage
 ```SQL
 SET TRANSACTION ISOLATION LEVEL X
 ```
-- `X=SERIALIZABLE` transaction séquentielles.  
-- `X=REAPETED READ` on voit les données des transac validées. Lectures multiples donnent le même résultat mais des tuples peuvent apparaître entre deux lectures.
-- `X=READ COMMITED` in voit les données des modifs validées. On peut avoir un résult diff entre deux lectures.  
-- `X=READ UNCOMMITED` on voit même les données non validées.
+- `X=SERIALIZABLE` Les instructions ne peuvent pas lire des données qui ont été modifiées mais pas encore validées par d'autres transactions.
+Aucune autre transaction ne peut modifier des données qui ont été lues par la transaction active tant que celle-ci n'est pas terminée.
+Les autres transactions ne peuvent pas insérer de nouvelles lignes avec des valeurs de clés comprises dans le groupe de clés lues par des instructions de la transaction active, tant que celle-ci n'est pas terminée.    
+- `X=REPEATABLE READ` Spécifie que les instructions ne peuvent pas lire des données qui ont été modifiées mais pas encore validées par d'autres transactions, et qu'aucune autre transaction ne peut modifier les données lues par la transaction active tant que celle-ci n'est pas terminée.  
+- `X=READ COMMITED` Spécifie que les instructions ne peuvent pas lire les données modifiées mais non validées par d'autres transactions.  
+- `X=READ UNCOMMITED` *(par défaut)* Spécifie que les instructions peuvent lire des lignes qui ont été modifiées par d'autres transactions, mais pas encore validées.
+
 
 Niveaux de granularité : différentes tailles de verouillage
 - ligne : on voit que ce qui est validé au `SELECT`
 - tuple : verrou DML évite que d'autres transactions verouillent ce tuple. Il s'enlève si commit ou rollback. + verrou DDL
 
-
-modes de verouillage :
-exclusif X : les ressources verouillées ne peuvent pas être partagées.
-sinon partagé S
-
-types de verrous : rs, rx, ...
+## Modes de verouillage
+> **LA MODIFICATION DE LA TABLE SE FAIT AU DÉVEROUILLAGE. 
 
 #### RS
 Verrou sur les tuples d'une table. Les autres transac peuvent tout faire sauf avoir un verrou exclusif en écriture.
@@ -237,17 +243,29 @@ Verrou sur les tuples d'une table. Les autres transac peuvent tout faire sauf av
 #### RX
 Les autres peuvent obtenir RS et RX.
 
-#### S
+#### S (shared lock)
 ```SQL
+-- Utilisé pour les opérations sans modifications de la table, par exemple un SELECT.
+-- Les autres transactions peuvent obtenir un S lock.
 LOCK TABLE tab IN SHARE MODE
 ```
+On ne peut pas commit un autre transaction.
+On ne peut pas modifier l'état de la table dans une autre transaction.
 
-#### SRX (share row exclusive)
+#### SRX (share row exclusive lock)
 ```SQL
-LOCK TABLE tab IN SHARE ROW EXCLUSIVE MODE
+LOCK TABLE tab IN SHARE ROW EXCLUSIVE MODE!
 ```
 
-#### X (exclusive)
+#### X (exclusive lock)
 ```SQL
+-- Utilisé par les opérations de modification de données, telles que INSERT, UPDATE ou DELETE.
+-- Les autres transactions ne peuvent pas obtenir de S lock.
 LOCK TABLE tab IN EXCLUSIVE MODE
+```
+
+#### (global lock)
+```SQL
+-- Empêche l'accès à une table.
+??
 ```

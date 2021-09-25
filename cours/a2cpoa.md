@@ -2,37 +2,88 @@
 
 [Retour à l'accueil](./../README.md)
 
-L'API Collection du package java.util.
+Le framework Collection du package java.util.
 
 ## Menu
 
 - [CPOA](#cpoa)
 	- [Menu](#menu)
 	- [Collection](#collection)
-		- [Collection.List](#collectionlist)
-		- [Collection.Set](#collectionset)
-			- [Collection.Set.HashSet](#collectionsethashset)
-			- [Collection.Set.SortedSet.TreeSet](#collectionsetsortedsettreeset)
+		- [List](#list)
+		- [Set](#set)
 		- [Itérateurs](#itérateurs)
 	- [Map<K,V>](#mapkv)
-		- [HashMap<K,V>](#hashmapkv)
-		- [TreeMap<K,V>](#treemapkv)
+		- [SortedMap ◦ TreeMap<K,V>](#sortedmap--treemapkv)
 	- [classe Collections](#classe-collections)
 
 ---
 
 ## Collection
+- `size()`
+- `isEmpty()`
+- `contains(e)`
+- `clear()`
+- `iterator()`
+- `toArray([array])`
 
-### Collection.List
+> Iterable ◦ Collection
+> - List
+>   - ArrayList
+>   - LinkedList
+>   - Vector ◦ Stack
+> - Set
+>   - HashSet
+>   - SortedSet ◦ TreeSet
+
+### List
 Accès à partir de l'index.
+> #### ArrayList - tableau de taille variable
+> Constructeur : `ArrayList([taille]ou[collec])`
+> - `get(i)`
+> - `set(i,e)`
+> - `add([i],e)`
+> - `remove(i)`
+> - `indexOf(e)` *Nécessite equals()*
+> - `lastIndexOf(e)`
+> - `listIterator([i])` *i (optionnel): index de départ*
 
-### Collection.Set
+> #### LinkedList - listes doublement chaînées
+> - `addLast(e)`
+> - `addFirst(e)`
+> - `getLast()`
+> - `getFirst()`
+> - `removeLast()`
+> - `removeFirst(e)`
+
+### Set
 Pas de doublons : permet de gérer des ensembles d'objets.
-#### Collection.Set.HashSet
-Tableau qui associe une valeur à une clé.
-Pas d'ordre.
-#### Collection.Set.SortedSet.TreeSet
-Trie les éléments. Tous les objets doivent implémenter Comparable.
+> - `s1.containsAll(s2)` return **true ssi s2∈s1**
+> - `s1.addAll(s2)` **s1 ← s1∪s2**
+> - `s1.retainAll(s2)` **s1 ← s1∩s2**
+> - `s1.removeAll(s2)` **s1 ← s1-s2**
+
+> #### HashSet - valeur→clé
+> Constructeurs : `HashSet([collec])` ou `HashSet(taille, [loadFactor])`
+> - `add(e)`
+> - `remove(e)`
+> - `clear()`
+> - `contains(e)`
+> - `isEmpty()`
+> - `size()`
+> - `iterator()`
+
+> #### TreeSet - nécessite Comparable
+> Constructeurs : `TreeSet([Comparator])` ou `TreeSet(Collection)` ou `TreeSet(SortedSet)`
+> - `add(e)`
+> - `addAll(Collection)`
+> - `clear()`
+> - `clone()`
+> - `comparator()`
+> - `contains(e)`
+> - `first()`
+> - `last()`
+> - `remove(e)`
+> - `size()`
 
 ### Itérateurs
 Permet de parcourir une Collection élément par élément.
@@ -49,30 +100,36 @@ while(i.hasPrevious()) {
 	System.out.println(i.previous());
 }
 ```
-On peut aussi utiliser la boucle **foreach** avec un tableau ou une instance d'Iterable (comme les collections).
+On peut aussi utiliser la boucle **foreach** avec un tableau ou une instance d'Iterable (les collections par exemple).
 
 ## Map<K,V> 
-Map : table avec des clés uniques.
+Map : table avec des clés uniques. Un parcours se fait sur les clés.
 - put(K,V) associe V à K.
 - get(K)
 - remove(K)
 - containsKey(K)
 - containsValue(V)
-- keySet() retourne l'ensemble de toutes les clés.
+- keySet() retourne un set contenant les clés.
 - values() retourne une collection contenant les valeurs.
-- 
-> On ne parcours pas une Map mais l'ensemble de ses clés.
 
-### HashMap<K,V>
-Implémente Cloneable.
-**Nécessite la fonction hashCode()** qui génère K à partir de V.
-- clone() duplique la table.
+> Map
+> - HashMap
+> - SortedMap ◦ TreeMap
 
-```java
-new HashMap<K,V>([capacité],[tauxRemplissage])
-```
+> ### HashMap<K,V> - Implémente Cloneable  
+> Constructeurs : `HashMap([cap])` ou `HashMap(cap,load)` cap*2 quand (load)% de la table est atteint.
+> - **hashCode()** (nécessaire) : génère K à partir de V
+> - **equals()** (nécessaire) : permet de savoir la position dans la table. Deux éléments égaux doivent avoir le même hashCode.
+> - containsValue(v)
+> - containsKey(k)
+> - get(k)
+> - put(k,v)
+> - remove(k)
+> - values() retourne la Collection des valeurs
+> - keySet() retourne le Set des clés
+> - clone()
 
-### TreeMap<K,V>
+### SortedMap ◦ TreeMap<K,V>
 Implémente SortedMap.
 
 ## classe Collections

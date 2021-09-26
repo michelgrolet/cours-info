@@ -86,16 +86,12 @@ Soit les événements A, B et C :
 > $$P_{A}$$ et $$B$$ indépendants. 
 
 
-> **Pour A et B quelconques :**  
-> 📌$$P(A∩B)=P(A)P(B)-P(A∪B)$$
-
-
 
 
 
 ## Probabilité Conditionelle
 > La probabilité de B dépendant de A est notée $$P_{A}(B)$$.  
-> 📌$$\frac{P(A∩B)}{P(A)}$$ Dépend de A.
+> 📌$$P_{A}(B)=\frac{P(A∩B)}{P(A)}$$
 
 > #### Formule des probabilités composées
 > 📌$$P(A∩B)=P(A)P_{A}(B)$$
@@ -111,7 +107,7 @@ $$📌x:
 \end{cases}$$ 
 
 
-> **Espace Image :** X(Ω) ensemble des valeurs prises par X. 
+> **Espace Image** $$X(Ω)$$ : ensemble des valeurs prises par X. 
 > - Si X(Ω) est discret : x est une **Variable aléatoire discrète**.
 > - Si X(Ω) est continu : x est une **Variable aléatoire continue**. 
 

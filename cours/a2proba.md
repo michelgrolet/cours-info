@@ -26,7 +26,7 @@
 
 ___
 
-> **Ω Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire. $Ω=\bar{∅}$ 
+> **Ω Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire. $$Ω=\bar{∅}$$
 
 ## I. Événements
 > **Espace Probabilisable :** $(Ω, P(Ω))$  

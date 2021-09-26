@@ -40,18 +40,20 @@ les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$
 
 
 ## Probabilité
-Une probabilité se définit par l'[application](#application) :  
-$$\begin{cases}
+Une probabilité se définit par l'application :  
+$$P : 
+\begin{cases}
 ε(Ω) → [0,1] \\
 A → P(A)
 \end{cases}$$ 
 
+> Une **application** d’un ensemble A dans un ensemble B est une opération qui fait correspondre à tout élément x de A un élément y de B et un seul.
+
 > 📌 Une probabilité vérifie :  
 > $$P(A)⊂[0,1]$$  
-> $$P(Ω)=1$$
-> $$P(A)∪P(B) = P(A)+P(B)-P(A)∩P(B)$$ **ou $$P(A)∪P(B) = P(A)+P(B)$$ si A et B sont incompatibles.**
+> $$P(Ω)=1$$  
+> $$P(A)∪P(B) = P(A)+P(B)-P(A)∩P(B)$$ **enlever A∩B si A et B sont incompatibles.**
 
-> Une **application** d’un ensemble A dans un ensemble B est une opération qui fait correspondre à tout élément x de A un élément y de B et un seul.
 
 Propriétés :
 - Additivité : $$P(A∪\bar{A}) = P(A)+P(\bar{A})$$

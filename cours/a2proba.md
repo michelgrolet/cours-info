@@ -27,6 +27,11 @@ ___
 > $$(Ω, P(Ω), p)$$ **Espace probabilisé :** probabilité $$p$$ sur l'univers $$Ω$$.
 
 
+
+
+
+
+___
 ## Système complet d'événements
 Un SCE est formé de toutes les parties de $$Ω$$.
 📌 $$∪E_{i}=Ω$$  
@@ -35,6 +40,12 @@ les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$
 > C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
 
 
+
+
+
+
+
+___
 ## Probabilité
 Une **probabilité** se définit par l'**application** :  
 $$📌P: 
@@ -73,6 +84,8 @@ Soit les événements A, B et C :
 
 
 
+
+___
 ## Indépendance
 > #### Théorème de l'Indépendance
 > 📌A et B indépendants ssi $$P(A∩B)=P(A)P(B)$$
@@ -85,6 +98,8 @@ Soit les événements A, B et C :
 
 
 
+
+___
 ## Probabilité Conditionelle
 > La probabilité de B dépendant de A est notée $$P_{A}(B)$$.  
 > 📌$$P_{A}(B)=\frac{P(A∩B)}{P(A)}$$
@@ -95,13 +110,14 @@ Soit les événements A, B et C :
 
 
 
+
+___
 ## Variables aléatoires
 $$📌x: 
 \begin{cases}
 Ω ⇒ ℝ \\
 ωᵢ ⇒ x(ωᵢ)=xᵢ
 \end{cases}$$ 
-
 
 > **Espace Image** $$X(Ω)$$ : ensemble des valeurs prises par X. 
 > - Si X(Ω) est discret : x est une **Variable aléatoire discrète**.
@@ -111,6 +127,8 @@ $$📌x:
 
 
 
+
+___
 ## Lois de probabilité
 
 > **Loi de probabilité de X :** Probabilité que x prenne chacune des valeurs de X(Ω).

@@ -1,6 +1,6 @@
 lsi: false
 safe: true
-source: /cours_info
+source: /
 incremental: false
 highlighter: rouge
 gist:

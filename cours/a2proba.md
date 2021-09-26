@@ -186,7 +186,6 @@ Une loi binomiale, s'applique par exemple
 > - $$\binom{n}{n} = 1$$    
 > - $$\binom{0}{0} = 1$$    
 
-
 >**Espérance d'une loi binomiale :** 📌$$E(X)=np$$  
 >**Variance d'une loi binomiale :** 📌$$V(X)=np(1-p)$$
 
@@ -199,20 +198,17 @@ X suit la loi de poisson : $$L(X)=P(λ)$$
 >**Espérance et variance d'une loi de poisson :** 📌$$E(X)=V(X)=λ$$
 
 
-
-
-
 # Formules
 - Incompatibilité : $$A∩B=∅$$
 - Dans un SCE : $$P(B)=P(A∩B)+P(\bar{A}∩B)$$
-- Probabilité : $$ε(Ω) → [0,1] | A → P(A)$$
+- Probabilité | $$ε(Ω) → [0,1]$$ | $$A → P(A)$$
 - Probabilités totales : $$P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)$$
 - règle de Laplace : $$P(A)=\frac{card(A)}{card(Ω)}$$
 - P(A∩B)=P(A)P(B)-P(A∪B)
 - Indépendance : $$P(A∩B)=P(A)P(B)$$
 - Probabilités composées : $$P(A∩B)=P(A)P_{A}(B)$$
-- Variable Aléatoire : $$x: Ω ⇒ ℝ | ωᵢ ⇒ x(ωᵢ)=xᵢ$$
+- Variable Aléatoire : $$x: Ω ⇒ ℝ$$ | $$ωᵢ ⇒ x(ωᵢ)=xᵢ$$
 - Espérance : $$Σ(xᵢ) P(X=xᵢ)$$
 - Variance : $$E[(X-E(X))²]$$
-- Bernoulli : $$E(X)=p$$ | $$V(X)=p(1-p)$$
+- Bernoulli | $$E(X)=p$$ | $$V(X)=p(1-p)$$
 - 

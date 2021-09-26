@@ -25,19 +25,17 @@
 
 ___
 
-> **Ω Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire. $$Ω=\bar{∅}$$
+> $$Ω$$ **Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire. $$Ω=\bar{∅}$$
 
 ## I. Événements
 > **Espace Probabilisable :** $$(Ω, P(Ω))$$   
-> > $$Ω$$ : univers  
-> > $$P(Ω)$$ : événements
+> $$Ω$$ : univers  
+> $$P(Ω)$$ : événements
 
-> **Incompatibilité :** 📌$$A∩B=∅$$  
-> Dans ce cas $$P(A)∪P(B) = P(A)+P(B)$$
+> Si A et B sont incompatibles : $$P(A)∪P(B) = P(A)+P(B)$$
 
 #### Système complet d'événements
-> Est formé de toutes les parties de Ω.  
-> > $$∪E=Ω$$  
+> Est formé de toutes les parties de Ω. $$∪E_{i}=Ω$$  
 
 les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$
 

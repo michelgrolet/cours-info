@@ -35,10 +35,8 @@ ___
 > Si A et B sont incompatibles : $$P(A)∪P(B) = P(A)+P(B)$$
 
 #### Système complet d'événements
-> Est formé de toutes les parties de Ω. $$∪E_{i}=Ω$$  
-
-les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$
-
+Il est formé de toutes les parties de Ω. $$∪E_{i}=Ω$$  
+les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$  
 $$A$$ et $$\bar{A}$$ forment un SCE.  
 C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
 
@@ -47,12 +45,12 @@ C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
 
 
 ## II. Probabilités
-**Probabilité :** [Application](#application) :  
+Une probabilité se définit par l'[application](#application) :  
 $$ε(Ω) → [0,1]$$  
 $$A → P(A)$$
 
 > Une probabilité vérifie :  
-> - $$P(A) ⊂ [0,1]$$    
+> - $$P(A) ⊂ [0,1]$$  
 > - $$P(Ω)=1$$
 
 > #### Application
@@ -75,7 +73,7 @@ Soit les événements A, B et C :
 > #### Équiprobabilité : règle de Laplace
 > 📌$$P(A)=\frac{card(A)}{card(Ω)}$$
 
-card(E)=taille de l'ensemble E
+$$card(E)$$=taille de l'ensemble E
 
 
 
@@ -85,12 +83,12 @@ card(E)=taille de l'ensemble E
 > #### Théorème de l'Indépendance
 > A et B indépendants ssi 📌$$P(A∩B)=P(A)P(B)$$
 
-Si A et B indépendants $$P_{A}(B)=P(B)$$.  
-Si A et B indépendants ¬A et B indépendants. 
+Si $$A$$ et $$B$$ indépendants $$P_{A}(B)=P(B)$$.  
+Si $$A$$ et $$B$$ indépendants $$P_{A}$$ et $$B$$ indépendants. 
 
 
 > **Pour A et B quelconques :**  
-> 📌P(A∩B)=P(A)P(B)-P(A∪B)
+> 📌$$P(A∩B)=P(A)P(B)-P(A∪B)$$
 
 
 
@@ -107,13 +105,13 @@ Si A et B indépendants ¬A et B indépendants.
 
 
 ## V. Variables aléatoires
-> **Espace probabilisé :** $$(Ω, P(Ω), p)  $$
+> **Espace probabilisé :** $$(Ω, P(Ω), p)$$  
 > Ω : univers  
 > P(Ω) : Événement  
 > p : probabilité
 
 **Variable aléatoire :**  📌  
-$$x:  Ω  ⇒ ℝ$$  
+$$x: Ω ⇒ ℝ$$  
 $$ωᵢ ⇒ x(ωᵢ)=xᵢ$$
 
 > **Espace Image :** X(Ω) ensemble des valeurs prises par X. 
@@ -175,7 +173,7 @@ $$V(X+a)=V(X)$$
 
 #### Loi binomiale
 > Un ensemble de probabilités suit la loi binomiale B(n;p) **ssi** il forme un **schéma de Bernoulli** (expériences répétées, identiques et indépendantes).  
-> $$B(n;p)$$ : 📌$$P(X=k) = (k \\ n) pᵏ(1-p)ⁿ⁻ᵏ$$
+> $$B(n;p)$$ : 📌$$P(X=k) = \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ$$
 
 Une loi binomiale, s'applique par exemple
 à un tirage avec remise. 
@@ -205,9 +203,16 @@ X suit la loi de poisson : $$L(X)=P(λ)$$
 
 
 # Formules
-- $$Ω=\bar{∅}$$
 - Incompatibilité : $$A∩B=∅$$
 - Dans un SCE : $$P(B)=P(A∩B)+P(\bar{A}∩B)$$
-- Probabilité : $$ε(Ω) → [0,1] \newline A → P(A)$$
+- Probabilité : $$ε(Ω) → [0,1] | A → P(A)$$
 - Probabilités totales : $$P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)$$
-- règle de Laplace : 
+- règle de Laplace : $$P(A)=\frac{card(A)}{card(Ω)}$$
+- P(A∩B)=P(A)P(B)-P(A∪B)
+- Indépendance : $$P(A∩B)=P(A)P(B)$$
+- Probabilités composées : $$P(A∩B)=P(A)P_{A}(B)$$
+- Variable Aléatoire : $$x: Ω ⇒ ℝ | ωᵢ ⇒ x(ωᵢ)=xᵢ$$
+- Espérance : $$Σ(xᵢ) P(X=xᵢ)$$
+- Variance : $$E[(X-E(X))²]$$
+- Bernoulli : $$E(X)=p$$ | $$V(X)=p(1-p)$$
+- 

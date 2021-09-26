@@ -30,7 +30,7 @@ ___
 > **Espace Probabilisable :** $$(Ω, P(Ω))$$   
 > > $$Ω$$ : univers  
 > > $$P(Ω)$$ : événements
-
+$$Ω=\bar{∅}$$
 > **Incompatibilité :** :pushpin:$$A∩B=∅$$  
 > Dans ce cas $$P(A)∪P(B) = P(A)+P(B)$$
 

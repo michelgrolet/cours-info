@@ -33,13 +33,14 @@ ___
 > $$Ω$$ : univers  
 > $$P(Ω)$$ : événements
 
-> Si A et B sont incompatibles : $$P(A)∪P(B) = P(A)+P(B)$$
+Si A et B sont incompatibles : 📌 $$P(A)∪P(B) = P(A)+P(B)$$
 
 #### Système complet d'événements
-Il est formé de toutes les parties de Ω. $$∪E_{i}=Ω$$  
+Un SCE est formé de toutes les parties de $$Ω$$. $$∪E_{i}=Ω$$  
 les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$  
-$$A$$ et $$\bar{A}$$ forment un SCE.  
-C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
+
+> $$A$$ et $$\bar{A}$$ forment un SCE.  
+> C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
 
 
 
@@ -47,12 +48,12 @@ C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
 
 ## II. Probabilités
 Une probabilité se définit par l'[application](#application) :  
-$$ε(Ω) → [0,1]$$  
-$$A → P(A)$$
+> $$ε(Ω) → [0,1]$$  
+> $$A → P(A)$$
 
 > Une probabilité vérifie :  
-> - $$P(A) ⊂ [0,1]$$  
-> - $$P(Ω)=1$$
+> $$P(A) ⊂ [0,1]$$  
+> $$P(Ω)=1$$
 
 > #### Application
 > Une **application** d’un ensemble A dans un ensemble B est une opération qui fait correspondre à tout élément x de A un élément y de B et un seul.
@@ -206,18 +207,11 @@ X suit la loi de poisson : $$L(X)=P(λ)$$
 - Probabilités totales | $$P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)$$
 - règle de Laplace | $$P(A)=\frac{card(A)}{card(Ω)}$$
 - Union | P(A∩B)=P(A)P(B)-P(A∪B)
-- Indépendance [:] $$P(A∩B)=P(A)P(B)$$
-- Probabilités composées [:] $$P(A∩B)=P(A)P_{A}(B)$$
-- Variable Aléatoire [:] $$x: Ω ⇒ ℝ$$ | $$ωᵢ ⇒ x(ωᵢ)=xᵢ$$
+- Indépendance | $$P(A∩B)=P(A)P(B)$$
+- Probabilités composées | $$P(A∩B)=P(A)P_{A}(B)$$
+- Variable Aléatoire | $$x: Ω ⇒ ℝ$$ | $$ωᵢ ⇒ x(ωᵢ)=xᵢ$$
 - Espérance | $$Σ(xᵢ) P(X=xᵢ)$$
 - Variance | $$E[(X-E(X))²]$$
 
 # Lois
-Nom       | E(X)   | V(X)        | P(X=k)                      
---------- | ------ | ----------- | --------------------------- 
-Bernoulli | $$p$$  | $$p(1-p)$$  | $$kn$$                      
-Binomiale | $$np$$ | $$np(1-p)$$ | $$\binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ$$ 
-Poisson   | λ      | λ           | $$\frac{e^{-λ} λ^{k}}{k!}$$
-
-
 $$\begin{array} {|r|r|}\hline Nom & E(X) & V(X) & P(X=k) \\ \hline Bernoulli & p & p(1-p) & kn \\ \hline Binomiale & np & np(1-p) & \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ \\ \hline Poisson & λ & λ & 3_3 \\ \hline  \end{array}$$

@@ -9,13 +9,13 @@
   - [Menu](#menu)
   - [Système complet d'événements](#système-complet-dévénements)
   - [Probabilité](#probabilité)
-  - [III. Indépendance](#iii-indépendance)
-  - [IV. Probabilité Conditionelle](#iv-probabilité-conditionelle)
-  - [V. Variables aléatoires](#v-variables-aléatoires)
-  - [VI. Lois de probabilité continues](#vi-lois-de-probabilité-continues)
+  - [Indépendance](#indépendance)
+  - [Probabilité Conditionelle](#probabilité-conditionelle)
+  - [Variables aléatoires](#variables-aléatoires)
+  - [Lois de probabilité continues](#lois-de-probabilité-continues)
       - [Espérance](#espérance)
       - [Variance](#variance)
-  - [VII. Lois de probabilité discrètes](#vii-lois-de-probabilité-discrètes)
+  - [Lois de probabilité discrètes](#lois-de-probabilité-discrètes)
       - [Loi de Bernoulli](#loi-de-bernoulli)
       - [Loi binomiale](#loi-binomiale)
       - [Loi de Poisson](#loi-de-poisson)
@@ -41,7 +41,7 @@ les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$
 
 ## Probabilité
 Une probabilité se définit par l'application :  
-$$P : 
+$$📌P: 
 \begin{cases}
 ε(Ω) → [0,1] \\
 A → P(A)
@@ -78,7 +78,7 @@ $$card(E)$$=taille de l'ensemble E
 
 
 
-## III. Indépendance
+## Indépendance
 > #### Théorème de l'Indépendance
 > A et B indépendants ssi 📌$$P(A∩B)=P(A)P(B)$$
 
@@ -93,7 +93,7 @@ Si $$A$$ et $$B$$ indépendants $$P_{A}$$ et $$B$$ indépendants.
 
 
 
-## IV. Probabilité Conditionelle
+## Probabilité Conditionelle
 > La probabilité de B dépendant de A est notée $$P_{A}(B)$$.  
 > 📌$$\frac{P(A∩B)}{P(A)}$$ Dépend de A.
 
@@ -103,11 +103,13 @@ Si $$A$$ et $$B$$ indépendants $$P_{A}$$ et $$B$$ indépendants.
 
 
 
-## V. Variables aléatoires
+## Variables aléatoires
+$$📌x: 
+\begin{cases}
+Ω ⇒ ℝ \\
+ωᵢ ⇒ x(ωᵢ)=xᵢ
+\end{cases}$$ 
 
-**Variable aléatoire :**  📌  
-$$x: Ω ⇒ ℝ$$  
-$$ωᵢ ⇒ x(ωᵢ)=xᵢ$$
 
 > **Espace Image :** X(Ω) ensemble des valeurs prises par X. 
 > - Si X(Ω) est discret : x est une **Variable aléatoire discrète**.
@@ -117,7 +119,7 @@ $$ωᵢ ⇒ x(ωᵢ)=xᵢ$$
 
 
 
-## VI. Lois de probabilité continues
+## Lois de probabilité continues
 > **Loi de probabilité de X :** Probabilité que x prenne chacune des valeurs de X(Ω).
 >
 |X=xᵢ|0|1|2|
@@ -153,7 +155,7 @@ $$V(X+a)=V(X)$$
 
 
 
-## VII. Lois de probabilité discrètes
+## Lois de probabilité discrètes
 #### Loi de Bernoulli
 > C'est la loi d'une **variable aléatoire discrète** qui ne prend que deux valeurs.  
 > $$L(X)=B(p)$$

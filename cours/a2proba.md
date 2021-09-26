@@ -213,11 +213,11 @@ X suit la loi de poisson : $$L(X)=P(λ)$$
 - Variance | $$E[(X-E(X))²]$$
 
 # Lois
-| Nom       | E(X)   | V(X)        | P(X=k)                      |  
-| --------- | ------ | ----------- | --------------------------- |  
-| Bernoulli | $$p$$  | $$p(1-p)$$  | $$kn$$                      |  
-| Binomiale | $$np$$ | $$np(1-p)$$ | $$\binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ$$ |  
-| Poisson   | λ      | λ           | $$\frac{e^{-λ} λ^{k}}{k!}$$ |  
+Nom       | E(X)   | V(X)        | P(X=k)                      
+--------- | ------ | ----------- | --------------------------- 
+Bernoulli | $$p$$  | $$p(1-p)$$  | $$kn$$                      
+Binomiale | $$np$$ | $$np(1-p)$$ | $$\binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ$$ 
+Poisson   | λ      | λ           | $$\frac{e^{-λ} λ^{k}}{k!}$$
 
 
-$$\begin{array} {|r|r|}\hline Nom & E(X) & V(X) & P(X=k) \\ \hline Bernoulli & p & p(1-p) & kn \\ \hline Binomiale & np & np(1-p) & \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ \\ \hline Poisson & λ & λ & \frac{e^{-λ} λ^{k}}{k!} \\ \hline  \end{array}$$
+$$\begin{array} {|r|r|}\hline Nom & E(X) & V(X) & P(X=k) \\ \hline Bernoulli & p & p(1-p) & kn \\ \hline Binomiale & np & np(1-p) & \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ \\ \hline Poisson & λ & λ & 3_3 \\ \hline  \end{array}$$

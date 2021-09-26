@@ -30,7 +30,7 @@ ___
 > **Espace Probabilisable :** $$(Ω, P(Ω))$$   
 > > $$Ω$$ : univers  
 > > $$P(Ω)$$ : événements
-$$Ω=\bar{∅}$$
+
 > **Incompatibilité :** :pushpin:$$A∩B=∅$$  
 > Dans ce cas $$P(A)∪P(B) = P(A)+P(B)$$
 
@@ -48,13 +48,13 @@ C'est pourquoi :pushpin:$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
 
 
 ## II. Probabilités
-> **Probabilité :** [Application](#application) :  
-> > $$ε(Ω) → [0,1] \newline
-> > A → P(A)$$
+**Probabilité :** [Application](#application) :  
+$$ε(Ω) → [0,1] \newline
+A → P(A)$$
 > 
 > Une probabilité vérifie :  
-> - $$P(A) ⊂ [0,1]$$      
-> - $$P(Ω)=1$$
+> - $P(A) ⊂ [0,1]$    
+> - $P(Ω)=1$
 
 > #### Application
 > Une **application** d’un ensemble A dans un ensemble B est une opération qui fait correspondre à tout élément x de A un élément y de B et un seul.

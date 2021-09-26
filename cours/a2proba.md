@@ -12,16 +12,12 @@
   - [Indépendance](#indépendance)
   - [Probabilité Conditionelle](#probabilité-conditionelle)
   - [Variables aléatoires](#variables-aléatoires)
-  - [Lois de probabilité continues](#lois-de-probabilité-continues)
+  - [Lois de probabilité](#lois-de-probabilité)
       - [Espérance](#espérance)
       - [Variance](#variance)
-  - [Lois de probabilité discrètes](#lois-de-probabilité-discrètes)
-      - [Loi de Bernoulli](#loi-de-bernoulli)
-      - [Loi binomiale](#loi-binomiale)
-      - [Loi de Poisson](#loi-de-poisson)
-      - [Formule de répartition](#formule-de-répartition)
+      - [Fonction de répartition](#fonction-de-répartition)
+      - [Différentes lois de probabiilté](#différentes-lois-de-probabiilté)
 - [Formules](#formules)
-- [Lois](#lois)
 
 
 ___
@@ -115,7 +111,8 @@ $$📌x:
 
 
 
-## Lois de probabilité continues
+## Lois de probabilité
+
 > **Loi de probabilité de X :** Probabilité que x prenne chacune des valeurs de X(Ω).
 >
 |xᵢ     |0  |1  |2  |
@@ -126,15 +123,15 @@ $$📌x:
 C'est pourquoi $$\sum_{i}P(X=xᵢ)=1$$
 
 #### Espérance
-> **Espérance :** Somme des xᵢ pondérés par leur probabilité :  
->📌 $$E(X) = Σ(xᵢ) P(X=xᵢ)$$  
+Somme des xᵢ pondérés par leur probabilité. 
+📌 $$E(X) = Σ(xᵢ) P(X=xᵢ)$$  
 
 $$E(X+Y)=E(X)+E(Y)$$  
 $$E(kX)=kE(X)$$  
 $$E(X+a)=E(X)+a$$
 
 #### Variance 
-> **Variance :** Somme des carrés des écarts à la moyenne :   
+> Somme des carrés des écarts à la moyenne :   
 > $$= \sum(xᵢ-E(X))² P(X=xᵢ)$$  
 > $$= \sum(x² P(X=xᵢ))$$  
 > $$= E(X²)-E(X)²$$  
@@ -146,30 +143,27 @@ $$V(X+Y)=V(X)+V(Y)$$
 $$V(kX)=k²V(X)$$  
 $$V(X+a)=V(X)$$
 
+#### Fonction de répartition
+$$F(t) = P(X⩽t)$$
+Sa représentation est un escalier toujours montantcar on inclut toujours les probabilités inférieures.
 
 
+#### Différentes lois de probabiilté
+$$\begin{array} {|r|r|}
+hline Nom & E(X) & V(X) & P(X=k) \\ 
+\hline B(p) Bernoulli & p & p(1-p) & kn \\ 
+\hline B(n;p) Binomiale & np & np(1-p) & \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ \\ 
+\hline P(λ) Poisson & λ & λ & 3_3 \\ 
+\hline  \end{array}$$
 
-
-
-## Lois de probabilité discrètes
-#### Loi de Bernoulli
-> C'est la loi d'une **variable aléatoire discrète** qui ne prend que deux valeurs.  
-> $$L(X)=B(p)$$
-
+- **Loi de Bernoulli :** C'est la loi d'une **variable aléatoire discrète** qui ne prend que deux valeurs.  
 |X=xᵢ|0|1|
 |--|--|--|
 |P(X=xᵢ)|1-p|p|
 
->**Espérance d'une loi de Bernoulli :** 📌$$E(X)=p$$  
->**Variance d'une loi de Bernoulli :** 📌$$V(X)=p(1-p)$$
+- **Loi binomiale :** Un ensemble de probabilités suit la loi binomiale **ssi** il forme un **schéma de Bernoulli** (EBRII).  
 
-
-#### Loi binomiale
-> Un ensemble de probabilités suit la loi binomiale B(n;p) **ssi** il forme un **schéma de Bernoulli** (expériences répétées, identiques et indépendantes).  
-> $$B(n;p)$$ : 📌$$P(X=k) = \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ$$
-
-Une loi binomiale, s'applique par exemple
-à un tirage avec remise. 
+Une loi binomiale, s'applique par exemple à un tirage avec remise. 
 
 > Coefficient bionomial : 📌$$\binom{n}{k} = n! / k! (n-k)!$$ 
 > - $$\binom{n}{k} = \binom{n}{n-k}$$ 
@@ -179,23 +173,10 @@ Une loi binomiale, s'applique par exemple
 > - $$\binom{n}{n} = 1$$    
 > - $$\binom{0}{0} = 1$$    
 
->**Espérance d'une loi binomiale :** 📌$$E(X)=np$$  
->**Variance d'une loi binomiale :** 📌$$V(X)=np(1-p)$$
-
-#### Loi de Poisson
-> Pour les événements rares
-> $$P(X=k) = \frac{e^{-λ} λ^{k}}{k!}$$
-
-X suit la loi de poisson : $$L(X)=P(λ)$$
-
->**Espérance et variance d'une loi de poisson :** 📌$$E(X)=V(X)=λ$$
+- **Loi de Poisson :** Pour les événements rares
 
 
 
-
-#### Formule de répartition
-$$F(t) = P(X⩽t)$$
-Sa représentation est un escalier toujours montantcar on inclut toujours les probabilités inférieures.
 
 
 
@@ -212,6 +193,3 @@ Sa représentation est un escalier toujours montantcar on inclut toujours les pr
 - Variable Aléatoire | $$x: Ω ⇒ ℝ$$ | $$ωᵢ ⇒ x(ωᵢ)=xᵢ$$
 - Espérance | $$Σ(xᵢ) P(X=xᵢ)$$
 - Variance | $$E[(X-E(X))²]$$
-
-# Lois
-$$\begin{array} {|r|r|}\hline Nom & E(X) & V(X) & P(X=k) \\ \hline Bernoulli & p & p(1-p) & kn \\ \hline Binomiale & np & np(1-p) & \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ \\ \hline Poisson & λ & λ & 3_3 \\ \hline  \end{array}$$

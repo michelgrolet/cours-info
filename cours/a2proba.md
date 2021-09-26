@@ -170,10 +170,11 @@ $$\begin{array} {|r|r|}
 \hline P(λ) & Poisson & λ & λ & \frac{e^{-λ}λ^{k}}{k!} \\ 
 \hline  \end{array}$$
 
-> **Loi de Bernoulli :** pour X ne prenant que 2 valeurs.  
-> |X=xᵢ|0|1|
-> |--|--|--|
-> |P(X=xᵢ)|1-p|p|
+- **Loi de Bernoulli :** pour X ne prenant que 2 valeurs.  
+  
+|X=xᵢ|0|1|
+|--|--|--|
+|P(X=xᵢ)|1-p|p|
 
 - **Loi binomiale :** Un ensemble de probabilités suit la loi binomiale **ssi** il forme un **schéma de Bernoulli** (EBRII).  
 

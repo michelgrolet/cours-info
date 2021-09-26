@@ -26,13 +26,14 @@
 
 ___
 
-> $$Ω$$ **Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire. $$Ω=\bar{∅}$$
+> $$Ω$$ **Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire (totalité d'un diagramme de Venn).
 > $$(Ω, P(Ω))$$ **Espace Probabilisable :** ensemble des événements de l'univers $$Ω$$.
 > $$(Ω, P(Ω), p)$$ **Espace probabilisé :** probabilité $$p$$ sur l'univers $$Ω$$.
 
 
 ## Système complet d'événements
-Un SCE est formé de toutes les parties de $$Ω$$. $$∪E_{i}=Ω$$  
+Un SCE est formé de toutes les parties de $$Ω$$.
+📌 $$∪E_{i}=Ω$$  
 les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$  
 > $$A$$ et $$\bar{A}$$ forment un SCE.  
 > C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
@@ -48,7 +49,6 @@ Une probabilité se définit par l'[application](#application) :
 > $$P(Ω)=1$$
 > $$P(A)∪P(B) = P(A)+P(B)-P(A)∩P(B)$$ **ou $$P(A)∪P(B) = P(A)+P(B)$$ si A et B sont incompatibles.**
 
-> #### Application
 > Une **application** d’un ensemble A dans un ensemble B est une opération qui fait correspondre à tout élément x de A un élément y de B et un seul.
 
 Propriétés :
@@ -63,7 +63,7 @@ Soit les événements A, B et C :
 
 > #### Formule des probabilités totales
 > Si B₁, B₂, B₃ forment une partition de Ω, alors  
-📌$$P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)$$
+> 📌$$P(A)=P(A∩B₁)+P(A∩B₂)+P(A∩B₃)$$
 
 > #### Équiprobabilité : règle de Laplace
 > 📌$$P(A)=\frac{card(A)}{card(Ω)}$$
@@ -202,7 +202,7 @@ Sa représentation est un escalier toujours montantcar on inclut toujours les pr
 - Incompatibilité | $$A∩B=∅$$
 - Dans un SCE | $$P(B)=P(A∩B)+P(\bar{A}∩B)$$
 - Probabilité | $$ε(Ω) → [0,1]$$ | $$A → P(A)$$
-- Probabilités totales | $$P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)$$
+- Probabilités totales | $$P(A)=P(A∩B₁)+P(A∩B₂)+P(A∩B₃)$$
 - règle de Laplace | $$P(A)=\frac{card(A)}{card(Ω)}$$
 - Union | P(A∩B)=P(A)P(B)-P(A∪B)
 - Indépendance | $$P(A∩B)=P(A)P(B)$$

@@ -25,7 +25,8 @@ ___
 > $$(Ω, P(Ω))$$ **Espace Probabilisable :** ensemble des événements de l'univers $$Ω$$.
 > $$(Ω, P(Ω), p)$$ **Espace probabilisé :** probabilité $$p$$ sur l'univers $$Ω$$.
 
-
+> **Expérience aléatoire :** expérience dont on ne connait le résultat qu'après l'avoir exécutée, mais dont on connait toutes les issues.
+> **Événement :** sous-ensemble de l'univers d'une expérience aléatoire.
 
 
 
@@ -124,7 +125,6 @@ $$📌x:
 
 
 
-
 ___
 ## Lois de probabilité
 
@@ -167,7 +167,7 @@ $$\begin{array} {|r|r|}
 \hline Nom & E(X) & V(X) & P(X=k) \\ 
 \hline B(p) Bernoulli & p & p(1-p) & kn \\ 
 \hline B(n;p) Binomiale & np & np(1-p) & \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ \\ 
-\hline P(λ) Poisson & λ & λ & 3_3 \\ 
+\hline P(λ) Poisson & λ & λ & \frac{e^{-λ}λ^{k}}{} \\ 
 \hline  \end{array}$$
 
 - **Loi de Bernoulli :** pour X ne prenant que 2 valeurs.  
@@ -179,7 +179,7 @@ $$\begin{array} {|r|r|}
 
 ✍🏻 Une loi binomiale s'applique par exemple à un tirage avec remise. 
 
-> Coefficient bionomial : 📌$$\binom{n}{k} = n! / k! (n-k)!$$ 
+> Coefficient bionomial : 📌$$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$ 
 > - $$\binom{n}{k} = \binom{n}{n-k}$$, 
 > - $$\binom{n}{k} + \binom{n}{k+1} = \binom{n+1}{k+1}$$ - *Formule de Pascal*,
 > - $$\binom{n}{0} = 1$$,    
@@ -196,9 +196,8 @@ $$\begin{array} {|r|r|}
 
 
 # Formules
-Incompatibilité | $$A∩B=∅$$  
 
-Dans un SCE | $$P(B)=P(A∩B)+P(\bar{A}∩B)$$  
+Incompatibilité | $$A∩B=∅$$  
 
 Probabilité | $$ε(Ω) → [0,1]$$ | $$A → P(A)$$  
 

@@ -1,6 +1,4 @@
-# Cours du DUT d'Informatique
-
----
+## Probabilités [➡](./cours/a2proba.md)
 
 ## Conception et programmation orientée objet [➡](./cours/a2cpoa.md)
 
@@ -9,10 +7,6 @@
 ## Systèmes Réseaux [➡](./cours/a2reseaux.md)
 
 ## Algorithmique [➡](./cours/a2algo.md)
-
-## Probabilités [➡](./cours/a2proba.md)
-
----
 
 #### Structures de données [➡](./cours/a1str.md)
 

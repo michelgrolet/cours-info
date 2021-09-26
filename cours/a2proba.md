@@ -1,4 +1,4 @@
-{% include _includes/mathjax.html %}
+{% include mathjax.html %}
 
 # 2A - Modèle Probabiliste
 [*Retour à l'accueil*](./../README.md)

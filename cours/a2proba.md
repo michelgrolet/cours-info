@@ -197,13 +197,23 @@ $$\begin{array} {|r|r|}
 
 # Formules
 Incompatibilité | $$A∩B=∅$$  
+
 Dans un SCE | $$P(B)=P(A∩B)+P(\bar{A}∩B)$$  
+
 Probabilité | $$ε(Ω) → [0,1]$$ | $$A → P(A)$$  
+
 Probabilités totales | $$P(A)=P(A∩B₁)+P(A∩B₂)+P(A∩B₃)$$  
+
 Équiprobabilité | $$P(A)=\frac{card(A)}{card(Ω)}$$  
+
 Union | $$P(A∩B)=P(A)P(B)-P(A∪B)$$  
+
 Indépendance | $$P(A∩B)=P(A)P(B)$$  
+
 Probabilités composées | $$P(A∩B)=P(A)P_{A}(B)$$  
+
 Variable Aléatoire | $$x: Ω ⇒ ℝ$$ | $$ωᵢ ⇒ x(ωᵢ)=xᵢ$$  
+
 Espérance | $$Σ(xᵢ) P(X=xᵢ)$$  
+
 Variance | $$E[(X-E(X))²]$$  

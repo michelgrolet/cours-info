@@ -167,7 +167,7 @@ $$\begin{array} {|r|r|}
 \hline Nom & E(X) & V(X) & P(X=k) \\ 
 \hline B(p) Bernoulli & p & p(1-p) & kn \\ 
 \hline B(n;p) Binomiale & np & np(1-p) & \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ \\ 
-\hline P(λ) Poisson & λ & λ & \frac{e^{-λ}λ^{k}}{} \\ 
+\hline P(λ) Poisson & λ & λ & \frac{e^{-λ}λ^{k}}{k!} \\ 
 \hline  \end{array}$$
 
 - **Loi de Bernoulli :** pour X ne prenant que 2 valeurs.  

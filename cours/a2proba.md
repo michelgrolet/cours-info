@@ -135,12 +135,12 @@ $$E(X+a)=E(X)+a$$
 
 #### Variance 
 > **Variance :** Somme des carrés des écarts à la moyenne :   
-> $$= Σ(xᵢ-E(X))² P(X=xᵢ)$$  
-> $$= Σ(x² P(X=xᵢ))$$  
+> $$= \sum(xᵢ-E(X))² P(X=xᵢ)$$  
+> $$= \sum(x² P(X=xᵢ))$$  
 > $$= E(X²)-E(X)²$$  
 > 📌$$V(X) = E[(X-E(X))²]$$
 
-> **Écart-type :** 📌$$σ = √ V(X)$$
+> **Écart-type :** 📌$$σ=\sqrt{V(X)}$$
 
 $$V(X+Y)=V(X)+V(Y)$$  
 $$V(kX)=k²V(X)$$  

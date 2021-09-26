@@ -218,3 +218,9 @@ X suit la loi de poisson : $$L(X)=P(λ)$$
 | Bernoulli | $$p$$ | $$p(1-p)$$ | $$kn$$ |  
 | Binomiale | $$np$$ | $$np(1-p)$$ | $$\binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ$$ |  
 | Poisson | λ | λ | $$\frac{e^{-λ} λ^{k}}{k!}$$ |  
+
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |

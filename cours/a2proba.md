@@ -31,7 +31,7 @@ ___
 > > $$Ω$$ : univers  
 > > $$P(Ω)$$ : événements
 
-> **Incompatibilité :** :pushpin:$$A∩B=∅$$  
+> **Incompatibilité :** 📌$$A∩B=∅$$  
 > Dans ce cas $$P(A)∪P(B) = P(A)+P(B)$$
 
 #### Système complet d'événements
@@ -41,7 +41,7 @@ ___
 les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$
 
 $$A$$ et $$\bar{A}$$ forment un SCE.  
-C'est pourquoi :pushpin:$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
+C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
 
 
 
@@ -71,10 +71,10 @@ Soit les événements A, B et C :
 
 > #### Formule des probabilités totales
 > Si B₁, B₂, B₃ forment une partition de Ω, alors  
-:pushpin:$$P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)$$
+📌$$P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)$$
 
 > #### Équiprobabilité : règle de Laplace
-> :pushpin:P(A)=card(A) / card(Ω)
+> 📌P(A)=card(A) / card(Ω)
 
 card(E)=taille de l'ensemble E
 
@@ -84,14 +84,14 @@ card(E)=taille de l'ensemble E
 
 ## III. Indépendance
 > #### Théorème de l'Indépendance
-> A et B indépendants ssi :pushpin:P(A∩B)=P(A)P(B)
+> A et B indépendants ssi 📌P(A∩B)=P(A)P(B)
 
 Si A et B indépendants Pₐ(B)=P(B).  
 Si A et B indépendants ¬A et B indépendants. 
 
 
 > **Pour A et B quelconques :**  
-> :pushpin:P(A∩B)=P(A)P(B)-P(A∪B)
+> 📌P(A∩B)=P(A)P(B)-P(A∪B)
 
 
 
@@ -99,10 +99,10 @@ Si A et B indépendants ¬A et B indépendants.
 
 ## IV. Probabilité Conditionelle
 > La probabilité de B dépendant de A est notée **Pₐ(B)**.  
-> :pushpin:P(A∩B) / P(A) Dépend de A.
+> 📌P(A∩B) / P(A) Dépend de A.
 
 > #### Formule des probabilités composées
-> :pushpin:P(A∩B)=P(A)Pₐ(B)
+> 📌P(A∩B)=P(A)Pₐ(B)
 
 
 
@@ -113,7 +113,7 @@ Si A et B indépendants ¬A et B indépendants.
 > P(Ω) : Événement  
 > p : probabilité
 
-> **Variable aléatoire :**  :pushpin:  
+> **Variable aléatoire :**  📌  
 > > x:  Ω  ⇒ ℝ  
 > > ωᵢ ⇒ x(ωᵢ)=xᵢ
 
@@ -137,7 +137,7 @@ C'est pourquoi Σ P(X=xᵢ) = 1
 
 #### Espérance
 > **Espérance :** Somme des xᵢ pondérés par leur probabilité :  
->:pushpin: E(X) = Σ(xᵢ) P(X=xᵢ)  
+>📌 E(X) = Σ(xᵢ) P(X=xᵢ)  
 
 E(X+Y)=E(X)+E(Y)  
 E(kX)=kE(X)  
@@ -148,9 +148,9 @@ E(X+a)=E(X)+a
 > = Σ(xᵢ-E(X))² P(X=xᵢ)  
 > = Σ(x² P(X=xᵢ))  
 > = E(X²)-E(X)²  
-> :pushpin:V(X) = E[(X-E(X))²]
+> 📌V(X) = E[(X-E(X))²]
 
-> **Écart-type :** :pushpin:σ = √ V(X)
+> **Écart-type :** 📌σ = √ V(X)
 
 V(X+Y)=V(X)+V(Y)  
 V(kX)=k²V(X)  
@@ -170,18 +170,18 @@ V(X+a)=V(X)
 |--|--|--|
 |P(X=xᵢ)|1-p|p|
 
->**Espérance d'une loi de Bernoulli :** :pushpin:E(X)=p  
->**Variance d'une loi de Bernoulli :** :pushpin:V(X)=p(1-p)
+>**Espérance d'une loi de Bernoulli :** 📌E(X)=p  
+>**Variance d'une loi de Bernoulli :** 📌V(X)=p(1-p)
 
 
 #### Loi binomiale
 > Un ensemble de probabilités suit la loi binomiale B(n;p) **ssi** il forme un **schéma de Bernoulli** (expériences répétées, identiques et indépendantes).  
-> B(n;p) : :pushpin:P(X=k) = (k \\ n) pᵏ(1-p)ⁿ⁻ᵏ
+> B(n;p) : 📌P(X=k) = (k \\ n) pᵏ(1-p)ⁿ⁻ᵏ
 
 Une loi binomiale, s'applique par exemple
 à un tirage avec remise. 
 
-> Coefficient bionomial : :pushpin:(k \\ n) = n! / k! (n-k)! 
+> Coefficient bionomial : 📌(k \\ n) = n! / k! (n-k)! 
 > - (k \\ n) = (n-k \\ n) 
 > - (k \\ n) + (k+1 \\ n) = (k+1 \\ n+1) - *Formule de Pascal*
 > - (0 \\ n) = 1    
@@ -190,8 +190,8 @@ Une loi binomiale, s'applique par exemple
 > - (0 \\ 0) = 1    
 
 
->**Espérance d'une loi binomiale :** :pushpin:E(X)=np  
->**Variance d'une loi binomiale :** :pushpin:V(X)=np(1-p)
+>**Espérance d'une loi binomiale :** 📌E(X)=np  
+>**Variance d'une loi binomiale :** 📌V(X)=np(1-p)
 
 #### Loi de Poisson
 > Pour les événements rares
@@ -199,4 +199,4 @@ Une loi binomiale, s'applique par exemple
 
 X suit la loi de poisson : L(X)=P(λ)
 
->**Espérance et variance d'une loi de poisson :** :pushpin:E(X)=V(X)=λ
+>**Espérance et variance d'une loi de poisson :** 📌E(X)=V(X)=λ

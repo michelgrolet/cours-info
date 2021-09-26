@@ -7,9 +7,8 @@
 
 - [2A - Modèle Probabiliste](#2a---modèle-probabiliste)
   - [Menu](#menu)
-  - [I. Événements](#i-événements)
-      - [Système complet d'événements](#système-complet-dévénements)
-  - [II. Probabilités](#ii-probabilités)
+  - [Système complet d'événements](#système-complet-dévénements)
+  - [Probabilité](#probabilité)
   - [III. Indépendance](#iii-indépendance)
   - [IV. Probabilité Conditionelle](#iv-probabilité-conditionelle)
   - [V. Variables aléatoires](#v-variables-aléatoires)
@@ -20,6 +19,7 @@
       - [Loi de Bernoulli](#loi-de-bernoulli)
       - [Loi binomiale](#loi-binomiale)
       - [Loi de Poisson](#loi-de-poisson)
+      - [Formule de répartition](#formule-de-répartition)
 - [Formules](#formules)
 - [Lois](#lois)
 
@@ -27,33 +27,26 @@
 ___
 
 > $$Ω$$ **Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire. $$Ω=\bar{∅}$$
+> $$(Ω, P(Ω))$$ **Espace Probabilisable :** ensemble des événements de l'univers $$Ω$$.
+> $$(Ω, P(Ω), p)$$ **Espace probabilisé :** probabilité $$p$$ sur l'univers $$Ω$$.
 
-## I. Événements
-> **Espace Probabilisable :** $$(Ω, P(Ω))$$   
-> $$Ω$$ : univers  
-> $$P(Ω)$$ : événements
 
-Si A et B sont incompatibles : 📌 $$P(A)∪P(B) = P(A)+P(B)$$
-
-#### Système complet d'événements
+## Système complet d'événements
 Un SCE est formé de toutes les parties de $$Ω$$. $$∪E_{i}=Ω$$  
 les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$  
-
 > $$A$$ et $$\bar{A}$$ forment un SCE.  
 > C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
 
 
-
-
-
-## II. Probabilités
+## Probabilité
 Une probabilité se définit par l'[application](#application) :  
-> $$ε(Ω) → [0,1]$$  
+> $ε(Ω) → [0,1]$$  
 > $$A → P(A)$$
 
-> Une probabilité vérifie :  
-> $$P(A) ⊂ [0,1]$$  
+> 📌 Une probabilité vérifie :  
+> $$P(A)⊂[0,1]$$  
 > $$P(Ω)=1$$
+> $$P(A)∪P(B) = P(A)+P(B)-P(A)∩P(B)$$ **ou $$P(A)∪P(B) = P(A)+P(B)$$ si A et B sont incompatibles.**
 
 > #### Application
 > Une **application** d’un ensemble A dans un ensemble B est une opération qui fait correspondre à tout élément x de A un élément y de B et un seul.
@@ -107,10 +100,6 @@ Si $$A$$ et $$B$$ indépendants $$P_{A}$$ et $$B$$ indépendants.
 
 
 ## V. Variables aléatoires
-> **Espace probabilisé :** $$(Ω, P(Ω), p)$$  
-> Ω : univers  
-> P(Ω) : Événement  
-> p : probabilité
 
 **Variable aléatoire :**  📌  
 $$x: Ω ⇒ ℝ$$  
@@ -198,6 +187,15 @@ Une loi binomiale, s'applique par exemple
 X suit la loi de poisson : $$L(X)=P(λ)$$
 
 >**Espérance et variance d'une loi de poisson :** 📌$$E(X)=V(X)=λ$$
+
+
+
+
+#### Formule de répartition
+$$F(t) = P(X⩽t)$$
+Sa représentation est un escalier toujours montantcar on inclut toujours les probabilités inférieures.
+
+
 
 
 # Formules

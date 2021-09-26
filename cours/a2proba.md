@@ -41,10 +41,10 @@ les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$
 
 ## Probabilité
 Une probabilité se définit par l'[application](#application) :  
-$$\begin{empheq}
+$$\begin{cases}
 ε(Ω) → [0,1] \\
 A → P(A)
-\end{empheq}$$ 
+\end{cases}$$ 
 
 > 📌 Une probabilité vérifie :  
 > $$P(A)⊂[0,1]$$  

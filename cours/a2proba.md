@@ -20,6 +20,7 @@
       - [Loi de Bernoulli](#loi-de-bernoulli)
       - [Loi binomiale](#loi-binomiale)
       - [Loi de Poisson](#loi-de-poisson)
+- [Formules](#formules)
 
 
 ___
@@ -200,3 +201,12 @@ Une loi binomiale, s'applique par exemple
 X suit la loi de poisson : L(X)=P(λ)
 
 >**Espérance et variance d'une loi de poisson :** 📌E(X)=V(X)=λ
+
+
+
+
+
+# Formules
+- $$Ω=\bar{∅}$$
+- Incompatibilité : $$A∩B=∅$$
+- 

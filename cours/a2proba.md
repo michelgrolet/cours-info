@@ -54,7 +54,7 @@ $$📌P:
 A → P(A)
 \end{cases}$$ 
 
-> Une **application** d’un ensemble A dans un ensemble B est une opération qui fait correspondre à tout élément x de A un élément y de B et un seul.
+> Une **application** $$A→B$$ est une opération qui fait correspondre à tout élément x de A **un seul** élément y de B.
 
 > Une probabilité vérifie :  
 > $$P(A)⊂[0,1]$$  

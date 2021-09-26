@@ -1,1 +1,1 @@
-gem 'jemoji'
+gem 'jemoji', 'asciidoctor-latex', '~> 1.5.0.17.dev'

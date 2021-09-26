@@ -1,5 +1,9 @@
-# 2A - Modèle Probabiliste
+<script type="text/javascript" charset="utf-8" 
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,
+https://vincenttam.github.io/javascripts/MathJaxLocal.js"></script>
 
+# 2A - Modèle Probabiliste
+$test/tata$  
 [*Retour à l'accueil*](./../README.md)
 
 ## Menu
@@ -15,7 +19,7 @@
   - [VI. Lois de probabilité continues](#vi-lois-de-probabilité-continues)
       - [Espérance](#espérance)
       - [Variance](#variance)
-  - [Lois de probabilité discrètes](#lois-de-probabilité-discrètes)
+  - [VII. Lois de probabilité discrètes](#vii-lois-de-probabilité-discrètes)
       - [Loi de Bernoulli](#loi-de-bernoulli)
       - [Loi binomiale](#loi-binomiale)
       - [Loi de Poisson](#loi-de-poisson)
@@ -160,7 +164,7 @@ V(X+a)=V(X)
 
 
 
-## Lois de probabilité discrètes
+## VII. Lois de probabilité discrètes
 #### Loi de Bernoulli
 > C'est la loi d'une **variable aléatoire discrète** qui ne prend que deux valeurs.  
 > L(X)=B(p\)
@@ -175,12 +179,19 @@ V(X+a)=V(X)
 
 #### Loi binomiale
 > Un ensemble de probabilités suit la loi binomiale B(n;p) **ssi** il forme un **schéma de Bernoulli** (expériences répétées, identiques et indépendantes).  
-> B(n;p) : :pushpin:P(X=k) = (k parmi n) pᵏ(1-p)ⁿ⁻ᵏ
+> B(n;p) : :pushpin:P(X=k) = (k \\ n) pᵏ(1-p)ⁿ⁻ᵏ
 
 Une loi binomiale, s'applique par exemple
 à un tirage avec remise. 
 
-:pushpin:(k parmi n) = n! / k! (n-k)!
+> Coefficient bionomial : :pushpin:(k \\ n) = n! / k! (n-k)! 
+> - (k \\ n) = (n-k \\ n) 
+> - (k \\ n) + (k+1 \\ n) = (k+1 \\ n+1) - *Formule de Pascal*
+> - (0 \\ n) = 1    
+> - (1 \\ n) = n    
+> - (n \\ n) = 1    
+> - (0 \\ 0) = 1    
+
 
 >**Espérance d'une loi binomiale :** :pushpin:E(X)=np  
 >**Variance d'une loi binomiale :** :pushpin:V(X)=np(1-p)

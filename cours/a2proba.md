@@ -118,12 +118,12 @@ $$📌x:
 ## Lois de probabilité continues
 > **Loi de probabilité de X :** Probabilité que x prenne chacune des valeurs de X(Ω).
 >
-|X=xᵢ|0|1|2|
-|--|--|--|--|
+|xᵢ     |0  |1  |2  |
+|--     |-- |-- |-- |
 |P(X=xᵢ)|1/8|2/8|5/8|
 
 ✍🏻les événements X=xᵢ forment un [Système complet d'événements](#système-complet-dévénements).
-C'est pourquoi $$Σ P(X=xᵢ) = 1$$
+C'est pourquoi $$\sum_{i}P(X=xᵢ)=1$$
 
 #### Espérance
 > **Espérance :** Somme des xᵢ pondérés par leur probabilité :  

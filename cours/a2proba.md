@@ -52,7 +52,7 @@ C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
 **Probabilité :** [Application](#application) :  
 $$ε(Ω) → [0,1]$$  
 $$A → P(A)$$
-> 
+
 > Une probabilité vérifie :  
 > - $$P(A) ⊂ [0,1]$$    
 > - $$P(Ω)=1$$
@@ -75,7 +75,7 @@ Soit les événements A, B et C :
 📌$$P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)$$
 
 > #### Équiprobabilité : règle de Laplace
-> 📌P(A)=card(A) / card(Ω)
+> 📌$$P(A)=\frac{card(A)}{card(Ω)}$$
 
 card(E)=taille de l'ensemble E
 
@@ -85,9 +85,9 @@ card(E)=taille de l'ensemble E
 
 ## III. Indépendance
 > #### Théorème de l'Indépendance
-> A et B indépendants ssi 📌P(A∩B)=P(A)P(B)
+> A et B indépendants ssi 📌$$P(A∩B)=P(A)P(B)$$
 
-Si A et B indépendants Pₐ(B)=P(B).  
+Si A et B indépendants $$P_{A}(B)=P(B)$$.  
 Si A et B indépendants ¬A et B indépendants. 
 
 
@@ -99,24 +99,24 @@ Si A et B indépendants ¬A et B indépendants.
 
 
 ## IV. Probabilité Conditionelle
-> La probabilité de B dépendant de A est notée **Pₐ(B)**.  
-> 📌P(A∩B) / P(A) Dépend de A.
+> La probabilité de B dépendant de A est notée $$P_{A}(B)$$.  
+> 📌$$\frac{P(A∩B)}{P(A)}$$ Dépend de A.
 
 > #### Formule des probabilités composées
-> 📌P(A∩B)=P(A)Pₐ(B)
+> 📌$$P(A∩B)=P(A)P_{A}(B)$$
 
 
 
 
 ## V. Variables aléatoires
-> **Espace probabilisé :** (Ω, P(Ω), p)  
+> **Espace probabilisé :** $$(Ω, P(Ω), p)  $$
 > Ω : univers  
 > P(Ω) : Événement  
 > p : probabilité
 
-> **Variable aléatoire :**  📌  
-> > x:  Ω  ⇒ ℝ  
-> > ωᵢ ⇒ x(ωᵢ)=xᵢ
+**Variable aléatoire :**  📌  
+$$x:  Ω  ⇒ ℝ$$  
+$$ωᵢ ⇒ x(ωᵢ)=xᵢ$$
 
 > **Espace Image :** X(Ω) ensemble des valeurs prises par X. 
 > - Si X(Ω) est discret : x est une **Variable aléatoire discrète**.
@@ -134,28 +134,28 @@ Si A et B indépendants ¬A et B indépendants.
 |P(X=xᵢ)|1/8|2/8|5/8|
 
 ✍🏻les événements X=xᵢ forment un [Système complet d'événements](#système-complet-dévénements).
-C'est pourquoi Σ P(X=xᵢ) = 1
+C'est pourquoi $$Σ P(X=xᵢ) = 1$$
 
 #### Espérance
 > **Espérance :** Somme des xᵢ pondérés par leur probabilité :  
->📌 E(X) = Σ(xᵢ) P(X=xᵢ)  
+>📌 $$E(X) = Σ(xᵢ) P(X=xᵢ)$$  
 
-E(X+Y)=E(X)+E(Y)  
-E(kX)=kE(X)  
-E(X+a)=E(X)+a
+$$E(X+Y)=E(X)+E(Y)$$  
+$$E(kX)=kE(X)$$  
+$$E(X+a)=E(X)+a$$
 
 #### Variance 
 > **Variance :** Somme des carrés des écarts à la moyenne :   
-> = Σ(xᵢ-E(X))² P(X=xᵢ)  
-> = Σ(x² P(X=xᵢ))  
-> = E(X²)-E(X)²  
-> 📌V(X) = E[(X-E(X))²]
+> $$= Σ(xᵢ-E(X))² P(X=xᵢ)$$  
+> $$= Σ(x² P(X=xᵢ))$$  
+> $$= E(X²)-E(X)²$$  
+> 📌$$V(X) = E[(X-E(X))²]$$
 
-> **Écart-type :** 📌σ = √ V(X)
+> **Écart-type :** 📌$$σ = √ V(X)$$
 
-V(X+Y)=V(X)+V(Y)  
-V(kX)=k²V(X)  
-V(X+a)=V(X)
+$$V(X+Y)=V(X)+V(Y)$$  
+$$V(kX)=k²V(X)$$  
+$$V(X+a)=V(X)$$
 
 
 
@@ -165,42 +165,42 @@ V(X+a)=V(X)
 ## VII. Lois de probabilité discrètes
 #### Loi de Bernoulli
 > C'est la loi d'une **variable aléatoire discrète** qui ne prend que deux valeurs.  
-> L(X)=B(p\)
+> $$L(X)=B(p)$$
 
 |X=xᵢ|0|1|
 |--|--|--|
 |P(X=xᵢ)|1-p|p|
 
->**Espérance d'une loi de Bernoulli :** 📌E(X)=p  
->**Variance d'une loi de Bernoulli :** 📌V(X)=p(1-p)
+>**Espérance d'une loi de Bernoulli :** 📌$$E(X)=p$$  
+>**Variance d'une loi de Bernoulli :** 📌$$V(X)=p(1-p)$$
 
 
 #### Loi binomiale
 > Un ensemble de probabilités suit la loi binomiale B(n;p) **ssi** il forme un **schéma de Bernoulli** (expériences répétées, identiques et indépendantes).  
-> B(n;p) : 📌P(X=k) = (k \\ n) pᵏ(1-p)ⁿ⁻ᵏ
+> $$B(n;p)$$ : 📌$$P(X=k) = (k \\ n) pᵏ(1-p)ⁿ⁻ᵏ$$
 
 Une loi binomiale, s'applique par exemple
 à un tirage avec remise. 
 
-> Coefficient bionomial : 📌(k \\ n) = n! / k! (n-k)! 
-> - (k \\ n) = (n-k \\ n) 
-> - (k \\ n) + (k+1 \\ n) = (k+1 \\ n+1) - *Formule de Pascal*
-> - (0 \\ n) = 1    
-> - (1 \\ n) = n    
-> - (n \\ n) = 1    
-> - (0 \\ 0) = 1    
+> Coefficient bionomial : 📌$$(k \\ n) = n! / k! (n-k)!$$ 
+> - $$(k \\ n) = (n-k \\ n)$$ 
+> - $$(k \\ n) + (k+1 \\ n) = (k+1 \\ n+1)$$ - *Formule de Pascal*
+> - $$(0 \\ n) = 1$$    
+> - $$(1 \\ n) = n$$    
+> - $$(n \\ n) = 1$$    
+> - $$(0 \\ 0) = 1$$    
 
 
->**Espérance d'une loi binomiale :** 📌E(X)=np  
->**Variance d'une loi binomiale :** 📌V(X)=np(1-p)
+>**Espérance d'une loi binomiale :** 📌$$E(X)=np$$  
+>**Variance d'une loi binomiale :** 📌$$V(X)=np(1-p)$$
 
 #### Loi de Poisson
 > Pour les événements rares
-> P(X=k) = e⁻λ λᵏ/k!
+> $$P(X=k) = e⁻λ λᵏ/k!$$
 
-X suit la loi de poisson : L(X)=P(λ)
+X suit la loi de poisson : $$L(X)=P(λ)$$
 
->**Espérance et variance d'une loi de poisson :** 📌E(X)=V(X)=λ
+>**Espérance et variance d'une loi de poisson :** 📌$$E(X)=V(X)=λ$$
 
 
 
@@ -209,4 +209,7 @@ X suit la loi de poisson : L(X)=P(λ)
 # Formules
 - $$Ω=\bar{∅}$$
 - Incompatibilité : $$A∩B=∅$$
-- 
+- Dans un SCE : $$P(B)=P(A∩B)+P(\bar{A}∩B)$$
+- Probabilité : $$ε(Ω) → [0,1] \newline A → P(A)$$
+- Probabilités totales : $$P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)$$
+- règle de Laplace : 

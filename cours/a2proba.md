@@ -16,7 +16,7 @@
       - [Espérance](#espérance)
       - [Variance](#variance)
       - [Fonction de répartition](#fonction-de-répartition)
-      - [Différentes lois de probabiilté](#différentes-lois-de-probabiilté)
+      - [Différentes lois de probabiilté discrètes](#différentes-lois-de-probabiilté-discrètes)
 - [Formules](#formules)
 
 
@@ -162,7 +162,7 @@ $$F(t) = P(X⩽t)$$
 ✍🏻 Sa représentation est un escalier toujours montant car on inclut toujours les probabilités inférieures.
 
 
-#### Différentes lois de probabiilté
+#### Différentes lois de probabiilté discrètes
 $$\begin{array} {|r|r|}
 \hline Nom & E(X) & V(X) & P(X=k) \\ 
 \hline B(p) Bernoulli & p & p(1-p) & kn \\ 
@@ -170,7 +170,7 @@ $$\begin{array} {|r|r|}
 \hline P(λ) Poisson & λ & λ & 3_3 \\ 
 \hline  \end{array}$$
 
-- **Loi de Bernoulli :** C'est la loi d'une **variable aléatoire discrète** qui ne prend que deux valeurs.  
+- **Loi de Bernoulli :** pour X ne prenant que 2 valeurs.  
 |X=xᵢ|0|1|
 |--|--|--|
 |P(X=xᵢ)|1-p|p|

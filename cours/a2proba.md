@@ -21,7 +21,6 @@
 
 
 ___
-
 > $$Ω$$ **Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire (totalité d'un diagramme de Venn).
 > $$(Ω, P(Ω))$$ **Espace Probabilisable :** ensemble des événements de l'univers $$Ω$$.
 > $$(Ω, P(Ω), p)$$ **Espace probabilisé :** probabilité $$p$$ sur l'univers $$Ω$$.
@@ -36,8 +35,7 @@ ___
 Un SCE est formé de toutes les parties de $$Ω$$.
 📌 $$∪E_{i}=Ω$$  
 les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$  
-> $$A$$ et $$\bar{A}$$ forment un SCE.  
-> C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$
+✍🏻 $$A$$ et $$\bar{A}$$ forment un SCE. C'est pourquoi 📌$$P(B)=P(A∩B)+P(\bar{A}∩B)$$.
 
 
 
@@ -50,24 +48,23 @@ ___
 Une **probabilité** se définit par l'**application** :  
 $$📌P: 
 \begin{cases}
-ε(Ω) → [0,1] \\
+P(Ω) → [0,1] \\
 A → P(A)
 \end{cases}$$ 
 
-> Une **application** $$A→B$$ est une opération qui fait correspondre à tout élément x de A **un seul** élément y de B.
+✍🏻 Une **application** $$A→B$$ est une opération qui fait correspondre à tout élément x de A **un seul** élément y de B.
 
 > Une probabilité vérifie :  
 > $$P(A)⊂[0,1]$$  
 > $$P(Ω)=1$$  
-> 📌$$P(A)∪P(B) = P(A)+P(B)$$ *si compatibles :* $$-P(A)∩P(B)$$
+> 📌$$P(A)∪P(B) = P(A)+P(B)$$ *(si compatibles :)* $$-P(A)∩P(B)$$
 
-
-Propriétés :
+✍🏻 Propriétés :
 - Additivité : $$P(A∪\bar{A}) = P(A)+P(\bar{A})$$
 - propriété de la réunion : $$A∪\bar{A}=Ω$$
 - propriété de l'intersection : $$A∩\bar{A} = ∅$$
 
-Soit les événements A, B et C :
+✍🏻 Soit les événements A, B et C :
 - au moins un = $$A∪B∪C$$
 - tous = $$A∩B∩C$$
 - au plus 2 = tout sauf tous = $$(\overline{A∩B∩C})$$
@@ -76,7 +73,7 @@ Soit les événements A, B et C :
 > Si B₁, B₂, B₃ forment une partition de Ω, alors  
 > 📌$$P(A)=P(A∩B₁)+P(A∩B₂)+P(A∩B₃)$$
 
-> #### Équiprobabilité : règle de Laplace
+> #### Équiprobabilité
 > 📌$$P(A)=\frac{card(A)}{card(Ω)}$$  
 > avec $$card(E)$$ : taille de l'ensemble E
 
@@ -90,7 +87,7 @@ ___
 > #### Théorème de l'Indépendance
 > 📌A et B indépendants ssi $$P(A∩B)=P(A)P(B)$$
 > 
-> Dans ce cas,
+> ✍🏻 Dans ce cas,
 > $$P_{A}(B)=P(B)$$  
 > $$P_{A}$$ et $$B$$ indépendants. 
 
@@ -137,8 +134,7 @@ ___
 |--     |-- |-- |-- |
 |P(X=xᵢ)|1/8|2/8|5/8|
 
-✍🏻les événements X=xᵢ forment un [Système complet d'événements](#système-complet-dévénements).
-C'est pourquoi $$\sum_{i}P(X=xᵢ)=1$$
+✍🏻 Les événements X=xᵢ forment un [Système complet d'événements](#système-complet-dévénements). C'est pourquoi $$\sum_{i}P(X=xᵢ)=1$$.
 
 #### Espérance
 Somme des xᵢ pondérés par leur probabilité. 
@@ -163,7 +159,7 @@ $$V(X+a)=V(X)$$
 
 #### Fonction de répartition
 $$F(t) = P(X⩽t)$$
-Sa représentation est un escalier toujours montantcar on inclut toujours les probabilités inférieures.
+✍🏻 Sa représentation est un escalier toujours montant car on inclut toujours les probabilités inférieures.
 
 
 #### Différentes lois de probabiilté
@@ -181,7 +177,7 @@ $$\begin{array} {|r|r|}
 
 - **Loi binomiale :** Un ensemble de probabilités suit la loi binomiale **ssi** il forme un **schéma de Bernoulli** (EBRII).  
 
-Une loi binomiale, s'applique par exemple à un tirage avec remise. 
+✍🏻 Une loi binomiale s'applique par exemple à un tirage avec remise. 
 
 > Coefficient bionomial : 📌$$\binom{n}{k} = n! / k! (n-k)!$$ 
 > - $$\binom{n}{k} = \binom{n}{n-k}$$ 
@@ -191,7 +187,7 @@ Une loi binomiale, s'applique par exemple à un tirage avec remise.
 > - $$\binom{n}{n} = 1$$    
 > - $$\binom{0}{0} = 1$$    
 
-- **Loi de Poisson :** Pour les événements rares
+- **Loi de Poisson :** s'applique aux événements rares
 
 
 

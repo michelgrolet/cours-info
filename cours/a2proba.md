@@ -220,7 +220,4 @@ X suit la loi de poisson : $$L(X)=P(λ)$$
 | Poisson   | λ      | λ           | $$\frac{e^{-λ} λ^{k}}{k!}$$ |  
 
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+$$\begin{array} {|r|r|}\hline Nom & E(X) & V(X) & P(X=k) \\ \hline Bernoulli & p & p(1-p) & kn \\ \hline Binomiale & 2_1 & 2_2 & 2_3 \\ \hline 3_0 & 3_1 & 3_2 & 3_3 \\ \hline  \end{array}$$

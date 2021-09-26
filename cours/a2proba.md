@@ -150,7 +150,7 @@ Sa représentation est un escalier toujours montantcar on inclut toujours les pr
 
 #### Différentes lois de probabiilté
 $$\begin{array} {|r|r|}
-hline Nom & E(X) & V(X) & P(X=k) \\ 
+\hline Nom & E(X) & V(X) & P(X=k) \\ 
 \hline B(p) Bernoulli & p & p(1-p) & kn \\ 
 \hline B(n;p) Binomiale & np & np(1-p) & \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ \\ 
 \hline P(λ) Poisson & λ & λ & 3_3 \\ 

@@ -3,7 +3,6 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLor
 https://vincenttam.github.io/javascripts/MathJaxLocal.js"></script>
 
 # 2A - Modèle Probabiliste
-$test/tata$  
 [*Retour à l'accueil*](./../README.md)
 
 ## Menu
@@ -27,24 +26,24 @@ $test/tata$
 
 ___
 
-> **Ω Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire. Ω=¬∅ 
+> **Ω Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire. $Ω=\bar{∅}$ 
 
 ## I. Événements
-> **Espace Probabilisable :** (Ω, P(Ω))  
-> > Ω : univers  
-> > P(Ω) : événements
+> **Espace Probabilisable :** $(Ω, P(Ω))$  
+> > $Ω$ : univers  
+> > $P(Ω)$ : événements
 
-> **Incompatibilité :** :pushpin:A∩B=∅  
-> Dans ce cas P(A)∪P(B) = P(A)+P(B)
+> **Incompatibilité :** :pushpin:$A∩B=∅$  
+> Dans ce cas $P(A)∪P(B) = P(A)+P(B)$
 
 #### Système complet d'événements
-> Est formé de toutes les parties de Ω.
-> > ∪E=Ω  
+> Est formé de toutes les parties de $$.
+> > $∪E=Ω$  
 
-les parties de Ω ne sont prises qu'une fois : E₁∩E₂=∅
+les parties de $Ω$ ne sont prises qu'une fois : $E₁∩E₂=∅$
 
-A et ¬A forment un SCE.  
-C'est pourquoi :pushpin:P(B)=P(A∩B)+P(¬A∩B)
+$A$ et $\bar{A}$ forment un SCE.  
+C'est pourquoi :pushpin:$P(B)=P(A∩B)+P(\bar{A}∩B)$
 
 
 
@@ -52,29 +51,29 @@ C'est pourquoi :pushpin:P(B)=P(A∩B)+P(¬A∩B)
 
 ## II. Probabilités
 > **Probabilité :** [Application](#application) :  
-> > :pushpin: P: ε(Ω) → [0,1]  
-> > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A → P(A)  
+> > $ε(Ω) → [0,1] \newline
+> > A → P(A)$
 > 
 > Une probabilité vérifie :  
-> - P(A) ⊂ [0,1]      
-> - P(Ω)=1
+> - $P(A) ⊂ [0,1]$      
+> - $P(Ω)=1$
 
 > #### Application
 > Une **application** d’un ensemble A dans un ensemble B est une opération qui fait correspondre à tout élément x de A un élément y de B et un seul.
 
 Propriétés :
-- Additivité : P(A∪¬A) = P(A)+P(¬A)
-- propriété de la réunion : A∪¬A=Ω
-- propriété de l'intersection : A∩¬A = ∅
+- Additivité : $P(A∪\bar{A}) = P(A)+P(\bar{A})$
+- propriété de la réunion : $A∪\bar{A}=Ω$
+- propriété de l'intersection : $A∩\bar{A} = ∅$
 
 Soit les événements A, B et C :
-- au moins un = A∪B∪C
-- tous = A∩B∩C
-- au plus 2 = tout sauf tous = ¬(A∩B∩C)
+- au moins un = $A∪B∪C$
+- tous = $A∩B∩C$
+- au plus 2 = tout sauf tous = $(\overline{A∩B∩C})$
 
 > #### Formule des probabilités totales
 > Si B₁, B₂, B₃ forment une partition de Ω, alors  
-:pushpin:P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)
+:pushpin:$P(A)=P(A∪B₁)+P(A∪B₂)+P(A∪B₃)$
 
 > #### Équiprobabilité : règle de Laplace
 > :pushpin:P(A)=card(A) / card(Ω)

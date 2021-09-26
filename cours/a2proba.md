@@ -178,13 +178,13 @@ $$V(X+a)=V(X)$$
 Une loi binomiale, s'applique par exemple
 à un tirage avec remise. 
 
-> Coefficient bionomial : 📌$$(k \\ n) = n! / k! (n-k)!$$ 
-> - $$(k \\ n) = (n-k \\ n)$$ 
-> - $$(k \\ n) + (k+1 \\ n) = (k+1 \\ n+1)$$ - *Formule de Pascal*
-> - $$(0 \\ n) = 1$$    
-> - $$(1 \\ n) = n$$    
-> - $$(n \\ n) = 1$$    
-> - $$(0 \\ 0) = 1$$    
+> Coefficient bionomial : 📌$$\binom{n}{k} = n! / k! (n-k)!$$ 
+> - $$\binom{n}{k} = \binom{n}{n-k}$$ 
+> - $$\binom{n}{k} + \binom{n}{k+1} = \binom{n+1}{k+1}$$ - *Formule de Pascal*
+> - $$\binom{n}{0} = 1$$    
+> - $$\binom{n}{1} = n$$    
+> - $$\binom{n}{n} = 1$$    
+> - $$\binom{0}{0} = 1$$    
 
 
 >**Espérance d'une loi binomiale :** 📌$$E(X)=np$$  

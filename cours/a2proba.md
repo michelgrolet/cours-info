@@ -180,14 +180,14 @@ $$\begin{array} {|r|r|}
 ✍🏻 Une loi binomiale s'applique par exemple à un tirage avec remise. 
 
 > Coefficient bionomial : 📌$$\binom{n}{k} = n! / k! (n-k)!$$ 
-> - $$\binom{n}{k} = \binom{n}{n-k}$$ 
-> - $$\binom{n}{k} + \binom{n}{k+1} = \binom{n+1}{k+1}$$ - *Formule de Pascal*
-> - $$\binom{n}{0} = 1$$    
-> - $$\binom{n}{1} = n$$    
-> - $$\binom{n}{n} = 1$$    
-> - $$\binom{0}{0} = 1$$    
+> - $$\binom{n}{k} = \binom{n}{n-k}$$, 
+> - $$\binom{n}{k} + \binom{n}{k+1} = \binom{n+1}{k+1}$$ - *Formule de Pascal*,
+> - $$\binom{n}{0} = 1$$,    
+> - $$\binom{n}{1} = n$$,    
+> - $$\binom{n}{n} = 1$$,    
+> - $$\binom{0}{0} = 1$$.    
 
-- **Loi de Poisson :** s'applique aux événements rares
+- **Loi de Poisson :** s'applique aux événements rares.
 
 
 

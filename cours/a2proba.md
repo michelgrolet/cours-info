@@ -40,7 +40,7 @@ les parties de $$Ω$$ ne sont prises qu'une fois : $$E₁∩E₂=∅$$
 
 
 ## Probabilité
-Une probabilité se définit par l'application :  
+Une **probabilité** se définit par l'**application** :  
 $$📌P: 
 \begin{cases}
 ε(Ω) → [0,1] \\
@@ -49,10 +49,10 @@ A → P(A)
 
 > Une **application** d’un ensemble A dans un ensemble B est une opération qui fait correspondre à tout élément x de A un élément y de B et un seul.
 
-> 📌 Une probabilité vérifie :  
+> Une probabilité vérifie :  
 > $$P(A)⊂[0,1]$$  
 > $$P(Ω)=1$$  
-> $$P(A)∪P(B) = P(A)+P(B)-P(A)∩P(B)$$ **enlever A∩B si A et B sont incompatibles.**
+> 📌$$P(A)∪P(B) = P(A)+P(B)$$ *si compatibles :* $$-P(A)∩P(B)$$
 
 
 Propriétés :
@@ -70,9 +70,8 @@ Soit les événements A, B et C :
 > 📌$$P(A)=P(A∩B₁)+P(A∩B₂)+P(A∩B₃)$$
 
 > #### Équiprobabilité : règle de Laplace
-> 📌$$P(A)=\frac{card(A)}{card(Ω)}$$
-
-$$card(E)$$=taille de l'ensemble E
+> 📌$$P(A)=\frac{card(A)}{card(Ω)}$$  
+> avec $$card(E)$$ : taille de l'ensemble E
 
 
 
@@ -80,10 +79,11 @@ $$card(E)$$=taille de l'ensemble E
 
 ## Indépendance
 > #### Théorème de l'Indépendance
-> A et B indépendants ssi 📌$$P(A∩B)=P(A)P(B)$$
-
-Si $$A$$ et $$B$$ indépendants $$P_{A}(B)=P(B)$$.  
-Si $$A$$ et $$B$$ indépendants $$P_{A}$$ et $$B$$ indépendants. 
+> 📌A et B indépendants ssi $$P(A∩B)=P(A)P(B)$$
+> 
+> Dans ce cas,
+> $$P_{A}(B)=P(B)$$  
+> $$P_{A}$$ et $$B$$ indépendants. 
 
 
 > **Pour A et B quelconques :**  

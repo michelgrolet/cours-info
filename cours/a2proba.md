@@ -210,8 +210,8 @@ ___
 #### Fonction densité de probabilité
 On suppose que $$F'(t)=f(t)$$.
 
-> $$f(t)≥0$$
-> $$
+$$f(t)≥0$$
+$$
 \begin{align}
 P(a≤X≤b) &= F(b)-F(a) \\
          &= \int_{a}^{b} f(x) \,dx

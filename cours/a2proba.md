@@ -218,10 +218,10 @@ P(a≤X≤b) &= F(b)-F(a) \\
          &= \int_{a}^{b} f(x) \,dx
 \end{align}$$  
 $$\begin{align}
-P(X≤b) &= \int_{-∞}^{b}f(x) \,dx
-       &= \lim_{a→+∞} \int_{a}^{b}f(x) \,dx
+P(X≤b) &= \int_{-∞}^{b}f(x) \,dx \\
+       &= \lim_{a→+∞} \int_{a}^{b}f(x) \,dx \\
        &= F(b)-\lim_{a→-∞}F(a)
-$$\end{align}$$  
+\end{align}$$  
 
 #### Espérance, Variance
 $$E(X)=\int_{-∞}^{+∞}xf(x) \,dx$$
@@ -230,8 +230,8 @@ $$V(X)=E(X²)-E(X)² avec E(X²)=\int_{-∞}^{+∞}x²f(x) \,dx $$
 #### Différentes lois de probabilité continues
 $$\begin{array} {|r|r|}
 \hline Nom & E(X) & V(X) & FDP f(x) & P(c≤X≤d) \\ 
-\hline Uniforme & \frac{a+b}{2} & \frac{(b-a)²}{12} & \int_{a}^{b}f(x) \,dx \\ 
-\hline Exponentielle & \frac{1}{λ} & \frac{1}{λ²} & λe^{-λx} & e^{-λa}-e^{-λb} \\ 
+\hline Uniforme & \frac{a+b}{2} & \frac{(b-a)²}{12} & \frac{d-c}{b-a} \\ 
+\hline Exponentielle & \frac{1}{λ} & \frac{1}{λ²} & λe^{-λx} & e^{-λc}-e^{-λd} \\ 
 \hline \end{array}$$
 
 

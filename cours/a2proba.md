@@ -215,7 +215,11 @@ $$\begin{align}
 P(a≤X≤b) &= F(b)-F(a) \\
          &= \int_{a}^{b} f(x) \,dx
 \end{align}$$  
-
+$$\begin{align}
+P(X≤b) &= \int_{-∞}^{b}f(x) \,dx
+       &= \lim_{a→∞} \int_{a}^{b}f(x) \,dx
+       &= F(b)-\lim_{a→-∞}F(a)
+$$\end{align}$$  
 
 
 

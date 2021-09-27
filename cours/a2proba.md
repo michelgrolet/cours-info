@@ -224,7 +224,7 @@ P(X≤b) &= \int_{-∞}^{b}f(x) \,dx \\
 \end{align}$$  
 
 #### Espérance, Variance
-$$E(X)=\int_{-∞}^{+∞}xf(x) \,dx$$
+$$E(X)=\int_{-∞}^{+∞}xf(x) \,dx$$  
 $$V(X)=E(X²)-E(X)² avec E(X²)=\int_{-∞}^{+∞}x²f(x) \,dx $$
 
 #### Différentes lois de probabilité continues

@@ -113,7 +113,7 @@ ___
 
 ___
 ## Variables aléatoires
-Pour toute VA X :
+Pour toute VA $$X$$ :
 $$📌x: 
 \begin{cases}
 Ω → ℝ \\
@@ -210,13 +210,11 @@ ___
 #### Fonction densité de probabilité
 On suppose que $$F'(t)=f(t)$$.
 
-$$f(t)≥0$$
-$$
-\begin{align}
+$$f(t)≥0$$  
+$$\begin{align}
 P(a≤X≤b) &= F(b)-F(a) \\
          &= \int_{a}^{b} f(x) \,dx
-\end{align}
-$$
+\end{align}$$  
 
 
 

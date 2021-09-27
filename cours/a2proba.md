@@ -12,11 +12,13 @@
   - [Indépendance](#indépendance)
   - [Probabilité Conditionelle](#probabilité-conditionelle)
   - [Variables aléatoires](#variables-aléatoires)
-  - [Lois de probabilité](#lois-de-probabilité)
+  - [Lois de probabilité Discrètes](#lois-de-probabilité-discrètes)
       - [Espérance](#espérance)
       - [Variance](#variance)
       - [Fonction de répartition](#fonction-de-répartition)
       - [Différentes lois de probabiilté discrètes](#différentes-lois-de-probabiilté-discrètes)
+  - [Lois de probabilité Continues](#lois-de-probabilité-continues)
+      - [Fonction densité de probabilité](#fonction-densité-de-probabilité)
 - [Formules](#formules)
 
 
@@ -50,7 +52,7 @@ Une **probabilité** se définit par l'**application** :
 $$📌P: 
 \begin{cases}
 P(Ω) → [0,1] \\
-A → P(A)
+A ↦ P(A)
 \end{cases}$$ 
 
 ✍🏻 Une **application** $$A→B$$ est une opération qui fait correspondre à tout élément x de A **un seul** élément y de B.
@@ -111,22 +113,18 @@ ___
 
 ___
 ## Variables aléatoires
+Pour toute VA X :
 $$📌x: 
 \begin{cases}
-Ω ⇒ ℝ \\
-ωᵢ ⇒ x(ωᵢ)=xᵢ
+Ω → ℝ \\
+ωᵢ ↦ x(ωᵢ)=xᵢ
 \end{cases}$$ 
-
-> **Espace Image** $$X(Ω)$$ : ensemble des valeurs prises par X. 
-> - Si X(Ω) est discret : x est une **Variable aléatoire discrète**.
-> - Si X(Ω) est continu : x est une **Variable aléatoire continue**. 
-
 
 
 
 
 ___
-## Lois de probabilité
+## Lois de probabilité Discrètes
 
 > **Loi de probabilité de X :** Probabilité que x prenne chacune des valeurs de X(Ω).
 >
@@ -158,9 +156,20 @@ $$V(kX)=k²V(X)$$
 $$V(X+a)=V(X)$$
 
 #### Fonction de répartition
-$$F(t) = P(X⩽t)$$
-✍🏻 Sa représentation est un escalier toujours montant car on inclut toujours les probabilités inférieures.
+$$📌x: 
+\begin{cases}
+ℝ → ℝ \\
+t ↦ F(t)=P(X≤t)
+\end{cases}$$ 
+> ✍🏻 Sa représentation est un escalier toujours montant car on inclut toujours les probabilités inférieures.
+> $$F⊂ℝ$$
+> $$F↗$$
+> $$0≤F(t)≤1$$
+> $$\lim_{t→0}F(t)=0$$
+> $$\lim_{t→∞}F(t)=1$$
 
+> $$P(a≤X≤b)=P(X≤b)-P(X≤a)=F(b)-F(a)$$
+> P(X>a)=1-P(X≤a)=1-F(a)
 
 #### Différentes lois de probabiilté discrètes
 $$\begin{array} {|r|r|}
@@ -189,6 +198,28 @@ $$\begin{array} {|r|r|}
 > - $$\binom{0}{0} = 1$$.    
 
 - **Loi de Poisson :** s'applique aux événements rares.
+
+
+
+
+
+
+___
+## Lois de probabilité Continues
+
+#### Fonction densité de probabilité
+On suppose que $$F'(t)=f(t)$$.
+
+> $$f(t)≥0$$
+> $$
+\begin{align}
+P(a≤X≤b) &= F(b)-F(a) \\
+         &= \int_{a}^{b} f(x) \,dx
+\end{align}
+$$
+
+
+
 
 
 

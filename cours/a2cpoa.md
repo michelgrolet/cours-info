@@ -15,6 +15,9 @@ Le framework Collection du package java.util.
 	- [Map<K,V>](#mapkv)
 		- [SortedMap ◦ TreeMap<K,V>](#sortedmap--treemapkv)
 	- [classe Collections](#classe-collections)
+- [Patrons de conception](#patrons-de-conception)
+	- [Patron stratégie](#patron-stratégie)
+	- [Patron adapter](#patron-adapter)
 
 ---
 
@@ -138,3 +141,16 @@ Algorithmes génériques opérant sur certaines collections (souvent des listes)
 - reverse(List<T>)
 - fill(List<T>, T)
 - copy(List<T> dest, List<T> src)
+
+
+
+# Patrons de conception
+Bonnes pratiques de la COO.
+Solutions de haut niveau : s'adaptent à tous les languages.
+
+## Patron stratégie
+- Classe Context : gère une référence à un objet Stratégie
+- Interface Stratégie : implémentée par plusieurs classe concrètes.
+
+## Patron adapter
+- Une classe sert d'**adaptateur** entre le client et les classes à adapter.

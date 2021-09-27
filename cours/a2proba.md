@@ -16,9 +16,11 @@
       - [Espérance](#espérance)
       - [Variance](#variance)
       - [Fonction de répartition](#fonction-de-répartition)
-      - [Différentes lois de probabiilté discrètes](#différentes-lois-de-probabiilté-discrètes)
-  - [Lois de probabilité Continues](#lois-de-probabilité-continues)
+      - [Différentes lois de probabilité discrètes](#différentes-lois-de-probabilité-discrètes)
+  - [Lois de probabilité continues](#lois-de-probabilité-continues)
       - [Fonction densité de probabilité](#fonction-densité-de-probabilité)
+      - [Espérance, Variance](#espérance-variance)
+      - [Différentes lois de probabilité continues](#différentes-lois-de-probabilité-continues)
 - [Formules](#formules)
 
 
@@ -171,7 +173,7 @@ t ↦ F(t)=P(X≤t)
 > $$P(a≤X≤b)=P(X≤b)-P(X≤a)=F(b)-F(a)$$
 > P(X>a)=1-P(X≤a)=1-F(a)
 
-#### Différentes lois de probabiilté discrètes
+#### Différentes lois de probabilité discrètes
 $$\begin{array} {|r|r|}
 \hline Notation & Nom & E(X) & V(X) & P(X=k) \\ 
 \hline B(p) & Bernoulli & p & p(1-p) & kn \\ 
@@ -205,7 +207,7 @@ $$\begin{array} {|r|r|}
 
 
 ___
-## Lois de probabilité Continues
+## Lois de probabilité continues
 
 #### Fonction densité de probabilité
 On suppose que $$F'(t)=f(t)$$.
@@ -217,10 +219,20 @@ P(a≤X≤b) &= F(b)-F(a) \\
 \end{align}$$  
 $$\begin{align}
 P(X≤b) &= \int_{-∞}^{b}f(x) \,dx
-       &= \lim_{a→∞} \int_{a}^{b}f(x) \,dx
+       &= \lim_{a→+∞} \int_{a}^{b}f(x) \,dx
        &= F(b)-\lim_{a→-∞}F(a)
 $$\end{align}$$  
 
+#### Espérance, Variance
+$$E(X)=\int_{-∞}^{+∞}xf(x) \,dx$$
+$$V(X)=E(X²)-E(X)² avec E(X²)=\int_{-∞}^{+∞}x²f(x) \,dx $$
+
+#### Différentes lois de probabilité continues
+$$\begin{array} {|r|r|}
+\hline Nom & E(X) & V(X) & FDP f(x) & P(c≤X≤d) \\ 
+\hline Uniforme & \frac{a+b}{2} & \frac{(b-a)²}{12} & \int_{a}^{b}f(x) \,dx \\ 
+\hline Exponentielle & \frac{1}{λ} & \frac{1}{λ²} & λe^{-λx} & e^{-λa}-e^{-λb} \\ 
+\hline \end{array}$$
 
 
 

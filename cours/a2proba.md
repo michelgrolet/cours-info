@@ -212,6 +212,8 @@ ___
 #### Fonction densité de probabilité
 On suppose que $$F'(t)=f(t)$$.
 
+✍🏻 F(t) est la densité de la loi *continue* de X.
+
 $$f(t)≥0$$  
 $$\begin{align}
 P(a≤X≤b) &= F(b)-F(a) \\
@@ -229,11 +231,11 @@ $$V(X)=E(X²)-E(X)²$$ avec $$E(X²)=\int_{-∞}^{+∞}x²f(x) \,dx$$
 
 #### Différentes lois de probabilité continues
 $$\begin{array} {|r|r|}
-\hline Loi & E(X) & V(X) & FDP f(x) & P(c≤X≤d) \\ 
-\hline Uniforme & \frac{a+b}{2} & \frac{(b-a)²}{12} & \frac{d-c}{b-a} \\ 
+\hline Loi &  & E(X) & V(X) & FDP f(x) & P(c≤X≤d) \\ 
+\hline Uniforme & \frac{a+b}{2} & \frac{(b-a)²}{12} & \frac{1}{b-a} & \frac{d-c}{b-a} \\ 
 \hline Exponentielle & \frac{1}{λ} & \frac{1}{λ²} & λe^{-λx} & e^{-λc}-e^{-λd} \\ 
 \hline \end{array}$$
-
+ 
 
 
 

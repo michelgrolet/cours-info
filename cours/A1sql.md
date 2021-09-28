@@ -59,8 +59,9 @@ SQL est un **langage de définition, de contrôle et de manipulation de données
 ## Vocabulaire
 
 Voici les termes essentiels à maîtriser pour bien comprendre les bases de données :
+
 |Terme|Définition|
-|--- |--- |
+|-- |-- |
 |Table|une relation, un tableau. Plusieurs tables forment une base de données.|
 |Tuple|ligne unique d'une table.|
 |Attribut|titre d’une colonne.|

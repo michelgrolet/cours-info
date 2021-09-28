@@ -389,7 +389,7 @@ END IF;
 
 ### Variables Record
 
-```sql
+```plsql
 DECLARE  
 TYPE maVarComposee IS RECORD (  
   champ type [not null] [val par defaut]  
@@ -402,7 +402,7 @@ Ils permettent de gérer les requêtes qui renvoient plusieurs lignes, en parcou
 
 #### Déclaration (dans le DECLARE)
 
-``plsql
+```plsql
 CURSOR nomCurseur IS SELECT ... ;
 ```
 

@@ -1,60 +1,75 @@
 # Apprenez SQL
 SQL est un **langage de définition, de contrôle et de manipulation de données.** Toute entreprise assez développée se sert de bases de données pour stocker ses informations. Le SQL est l'outil par excellence pour traiter la problématique du big data.
 
-## Plan
+<details>
+<summary> Plan ✨</summary>
 
-[Vocabulaire BDD](#vocabulaire)
-
-[Création de tables](#creation_de_table)
-
-*   Types
-*   Contraintes
-*   Listes
-*   Boucles
-
-[Sélection de données](#selection_de_donnees)
-
-*   Select
-*   From
-*   Where
-*   Group by
-*   Having
-*   Order by
-
-[La sélection en détails](#selection_en_details)
-
-*   Union, intersection et différence
-*   Conditions booléennes
-*   Jointures
-*   All & Any
-*   Projections
-*   Agrégation
-*   Tri
-*   Imbrication
-*   Fonctions
-
-[La modification de tables](#modification_de_tables)
-
-[Redondance](#redondance)
-
-[PL/SQL](#pl_sql)
-
-*   Itérations
-*   Conditionelle
-*   Variables Record
-*   Curseurs
-*   Exceptions
-*   Séquences
-*   Procédures et fonctions
-
-[Droits et privilèges](#droits_et_privileges)
-
-*   Accorder l'accès à des tables
-*   Accorder l'accès à des actions
-*   Retirer des droits
-*   Rôles prédéfinis
-
-[JDBC](#jdbc)
+- [Apprenez SQL](#apprenez-sql)
+	- [Vocabulaire](#vocabulaire)
+	- [Création de tables](#création-de-tables)
+		- [Types](#types)
+		- [Contraintes](#contraintes)
+	- [Sélectionner des données](#sélectionner-des-données)
+		- [SELECT](#select)
+		- [FROM](#from)
+		- [WHERE](#where)
+		- [GROUP BY](#group-by)
+		- [Having](#having)
+		- [Order by](#order-by)
+	- [La sélection en détails](#la-sélection-en-détails)
+		- [Union, intersection et différence](#union-intersection-et-différence)
+			- [Union](#union)
+			- [Intersection](#intersection)
+			- [Différence](#différence)
+		- [Conditions booléennes](#conditions-booléennes)
+		- [Jointures](#jointures)
+		- [All & Any](#all--any)
+			- [All](#all)
+			- [Any](#any)
+		- [Projections](#projections)
+		- [Agrégation](#agrégation)
+			- [Partitionnement](#partitionnement)
+			- [Fonction d’agrégation](#fonction-dagrégation)
+			- [Restriction sur une agrégation](#restriction-sur-une-agrégation)
+		- [Tri](#tri)
+		- [Imbrication](#imbrication)
+		- [Fonctions](#fonctions)
+	- [Modification de tables](#modification-de-tables)
+	- [Redondance](#redondance)
+	- [PL/SQL](#plsql)
+		- [Itérations](#itérations)
+		- [Conditionelle](#conditionelle)
+			- [Fermeture](#fermeture)
+		- [Variables Record](#variables-record)
+		- [Curseurs](#curseurs)
+			- [Déclaration (dans le DECLARE)](#déclaration-dans-le-declare)
+			- [Ouverture (Dans le BEGIN)](#ouverture-dans-le-begin)
+			- [Chargement d'une ligne](#chargement-dune-ligne)
+			- [Fermeture](#fermeture-1)
+		- [Exceptions](#exceptions)
+			- [Exceptions prédéfinies](#exceptions-prédéfinies)
+			- [Exception OTHERS](#exception-others)
+			- [Erreurs applicatives](#erreurs-applicatives)
+				- [Déclaration](#déclaration)
+				- [Déclenchement](#déclenchement)
+				- [Traitement](#traitement)
+		- [Séquences](#séquences)
+		- [Procédures et fonctions](#procédures-et-fonctions)
+			- [Déclarées ou stockées ?](#déclarées-ou-stockées-)
+			- [Déclaration](#déclaration-1)
+	- [Droits et privilèges](#droits-et-privilèges)
+		- [Accorder l'accès à des tables](#accorder-laccès-à-des-tables)
+		- [Accorder l'accès à des actions](#accorder-laccès-à-des-actions)
+		- [Retirer des droits](#retirer-des-droits)
+	- [JDBC](#jdbc)
+		- [Connexion](#connexion)
+		- [Requêtes](#requêtes)
+		- [Requêtes préparées](#requêtes-préparées)
+		- [Actions sur les resultSet](#actions-sur-les-resultset)
+			- [Si le résultat ne contient qu'une ligne](#si-le-résultat-ne-contient-quune-ligne)
+			- [Si le résultat contient plusieurs lignes](#si-le-résultat-contient-plusieurs-lignes)
+		- [Accès aux métadonnées d'un resultSet](#accès-aux-métadonnées-dun-resultset)
+</details>
 
 ## Vocabulaire
 
@@ -81,9 +96,9 @@ CREATE TABLE x (
  nomColonne type contraintes  
  );
 ```
-Pour créer une table à partir d'une [sélection](#select) :
+Pour créer une table à partir d'une [sélection](#SELECT) :
 ```sql
-CREATE TABLE x AS SELECT…```
+CREATE TABLE x AS SELECT…
 ```
 
 ### Types
@@ -112,32 +127,32 @@ Elles servent à réguler ce qu'une colonne peut contenir.
 Maintenant qu'on sait créer des données, apprenons à les sélectionner :
 
 ```sql
-select colonnes  
-from tables  
-where condition  
-group by  
+SELECT colonnes  
+FROM tables  
+WHERE condition  
+GROUP BY  
 having  
 order by colonnes
 ```
-### Select
+### SELECT
 
-dans le select, on met des nom de colonnes séparés par des virgules.
+dans le SELECT, on met des nom de colonnes séparés par des virgules.
 
 Pour sélectionner avec plus de précision, un utilise les [projections](#projections).
 
-### From
+### FROM
 
-Dans le from, on met le nom de la table contenant les colonnes sélectionnées. Pour des colonnes venant de plusieurs tables, on utilise les [jointures](#join).
+Dans le FROM, on met le nom de la table contenant les colonnes sélectionnées. Pour des colonnes venant de plusieurs tables, on utilise les [jointures](#join).
 
-### Where
+### WHERE
 
-Dans le where, om met une [condition](#condition) qui filtre les lignes.
+Dans le WHERE, om met une [condition](#condition) qui filtre les lignes.
 
 Pour les égalités et inégalités entre des **ensembles de lignes**, on utilise [all et any](#all-any).
 
-### Group by
+### GROUP BY
 
-La clause GROUP BYproduit une ligne résultat pour chaque groupede lignes.
+La clause `GROUP BY` produit une ligne résultat pour chaque groupede lignes.
 
 Un **groupe** est un ensemble de lignes qui ont même valeur pour les attributs sur lesquels le regroupement est construit.
 
@@ -160,28 +175,28 @@ On peut ajouter le mot-clé `desc` qui trie les valeurs dans le sens inverse (d�
 L'union combine le résultat de deux sélections :
 
 ```sql
-select x from y  
+SELECT x FROM y  
 union  
-select x from z```
+SELECT x FROM z
 ```
 #### Intersection
 
 L'intersection renvoie ce qui est commun entre les renvois de deux sélections :
 
 ```sql
-select x from y  
+SELECT x FROM y  
 intersect  
-select x from z```
+SELECT x FROM z
 ```
 
-#### différence
+#### Différence
 
 La différence renvoie le renvoi d'une sélection auquel on a retiré le renvoi d'une seconde sélection :
 
 ```sql
-select x from y  
+SELECT x FROM y  
 minus  
-select x from z
+SELECT x FROM z
 ```
 
 ### Conditions booléennes
@@ -201,7 +216,7 @@ Voici les opérateurs disponible en SQL pour construire des conditions :
 
 ### Jointures
 
-Les jointures, c'est associer plusieurs tables dans un `select` pour faire des sélections sur l'ensemble.
+Les jointures, c'est associer plusieurs tables dans un `SELECT` pour faire des sélections sur l'ensemble.
 
 Jointure interne : association entre 2 tables par 2 colonnes correspondantes.
 
@@ -215,7 +230,7 @@ Jointure interne : à droite et à gauche.
 
 `outer x join on ...`
 
-Jointure naturelle : choix automatique entre les 2 colonnes.
+Jointure naturelle : choix automatique des 2 colonnes.
 
 `natural join x`
 
@@ -223,15 +238,16 @@ Jointure naturelle : choix automatique entre les 2 colonnes.
 
 #### All
 
+```sql
+WHERE x > all(y)
 ```
-where x > all(y)
 Le x doit être au dessus de **tout** ce que contient le y.
-```
+
 
 #### Any
 
-```
-where x = any(y)
+```sql
+WHERE x = any(y)
 ```
 
 Le x doit être au dessus d'**une ligne** du y.
@@ -240,15 +256,15 @@ Le x doit être au dessus d'**une ligne** du y.
 
 On peut appliquer des [fonctions](#fonctions) sur des colonnes.
 
-`Select abs(id*2)`
+`SELECT abs(id*2)`
 
 On peut ajouter `as` pour renommer une colonne, et appliquer des fonctions liées aux chaînes de caractères.
 
-`Select name || ‘(‘ || status || ‘)’ as name_and_status`
+`SELECT name || ‘(‘ || status || ‘)’ as name_and_status`
 
 On peut aussi appliquer des fonctions de booléens.
 
-`Select CURRENT_DATE() > incorporation_date`
+`SELECT CURRENT_DATE() > incorporation_date`
 
 ### Agrégation
 
@@ -256,15 +272,15 @@ On peut aussi appliquer des fonctions de booléens.
 
 On fait un partitionnement sur une ou plusieurs colonnes. Ce partitionnement groupe les lignes qui ont la même valeur pour les colonnes sélectionnées. Chacun de ces groupes est appelé agrégat.
 
-`Group by colonneY, colonneZ …`
+`GROUP BY colonneY, colonneZ …`
 
 #### Fonction d’agrégation
 
 Cette fonction prend chaque agrégat et renvoie 1 unique valeur.
 
-`Select count(*) from x`
+`SELECT count(*) FROM x`
 
-Dans le select, on peut trouver soit des colonnes qui résultent d’une fonction d’agrégation, soit des colonnes qui sont dans le group by.
+Dans le SELECT, on peut trouver soit des colonnes qui résultent d’une fonction d’agrégation, soit des colonnes qui sont dans le GROUP BY.
 
 #### Restriction sur une agrégation
 
@@ -282,19 +298,19 @@ Ajouter desc pour trier dans l’ordre décroissant.
 
 Z doit se trouver dans la sous-requête :
 
-`Select x from y where z in ( Select … )`
+`SELECT x FROM y WHERE z in ( SELECT … )`
 
 Toutes les valeurs de la sous-requête doivent être inférieures à z :
 
-`Select x from y where z > all ( Select … )`
+`SELECT x FROM y WHERE z > all ( SELECT … )`
 
 Une des valeurs de la sous-requête doivent être inférieures à z :
 
-`Select x from y where z > any ( Select … )`
+`SELECT x FROM y WHERE z > any ( SELECT … )`
 
 La sous-requête doit contenir au moins une ligne :
 
-`Select x from y where exists ( Select … )`
+`SELECT x FROM y WHERE exists ( SELECT … )`
 
 ### Fonctions
 

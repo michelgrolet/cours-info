@@ -1,7 +1,7 @@
 # Cours Info
 ## Probabilités [➡](./cours/a2proba.md)
 
-## Conception et programmation orientée objet [➡](./cours/a2cpoa.md)
+## Conception et Programmation Objet Avancées [➡](./cours/a2cpoa.md)
 
 ## SGBD [➡](./cours/a2sgbd.md)
 

@@ -19,8 +19,7 @@ Le framework Collection du package java.util.
 	- [Patron stratégie](#patron-stratégie)
 	- [Patron adapter](#patron-adapter)
 
----
-
+___
 ## Collection
 - `size()`
 - `isEmpty()`

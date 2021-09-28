@@ -1,16 +1,21 @@
 # Cours Info
-## Probabilités [➡](./cours/a2proba.md)
+## [📐 Probabilités](./cours/a2proba.md)
 
-## Conception et Programmation Objet Avancées [➡](./cours/a2cpoa.md)
+## [☕ Conception objet Java](./cours/a2cpoa.md)
 
-## SGBD [➡](./cours/a2sgbd.md)
+## [📊 SQL & PL/SQL](./cours/a1sql.md)
 
-## Systèmes Réseaux [➡](./cours/a2reseaux.md)
+## [📊 SGBD](./cours/a2sgbd.md)
 
-## Algorithmique [➡](./cours/a2algo.md)
+## [🖧 Réseaux](./cours/a2reseaux.md)
 
-#### Structures de données [➡](./cours/a1str.md)
+## [💽 Algorithmique](./cours/a2algo.md)
 
-#### Maths [➡](./cours/a1maths.md)
 
-#### JS [➡](./cours/javascript.md)
+
+## En construction :
+#### [Structures de données](./cours/a1str.md)
+
+#### [Maths](./cours/a1maths.md)
+
+#### [JS](./cours/javascript.md)

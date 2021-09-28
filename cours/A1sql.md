@@ -88,7 +88,7 @@ CREATE TABLE x AS SELECT…```
 
 ### Types
 |Nom|Type SQL|
-|--- |--- |
+|-- |-- |
 |Nombre|number(size)|
 |Chaîne|varchar(size)|
 |Binaire|varbinary(size)|
@@ -99,7 +99,7 @@ CREATE TABLE x AS SELECT…```
 ### Contraintes
 Elles servent à réguler ce qu'une colonne peut contenir.
 |Contrainte|Description|
-|--- |--- |
+|-- |-- |
 |not null|interdit les valeurs nulles|
 |unique|interdit les valeurs similaires|
 |primary key|la colonne est une [clé primaire](#pk).|
@@ -189,7 +189,7 @@ select x from z
 Voici les opérateurs disponible en SQL pour construire des conditions :
 
 |Condition|Description|
-|--- |--- |
+|-- |-- |
 |a = b|a égal b|
 |a >< b|a supérieur/inférieur à b|
 |a like 'chaîne de caractères'|Jokers : **%** remplace n caractères et **_** en remplace un.|
@@ -299,7 +299,7 @@ La sous-requête doit contenir au moins une ligne :
 ### Fonctions
 
 |Description|Fonction SQL|
-|--- |--- |
+|-- |-- |
 |Valeur absolue|ABS(a)|
 |Exponentielle|EXP(a)|
 |Plus petit entier supérieur ou égal|CEIL(a)|
@@ -390,7 +390,7 @@ END IF;
 
 ### Variables Record
 
-```plsql
+```sql
 DECLARE  
 TYPE maVarComposee IS RECORD (  
   champ type [not null] [val par defaut]  
@@ -403,16 +403,13 @@ Ils permettent de gérer les requêtes qui renvoient plusieurs lignes, en parcou
 
 #### Déclaration (dans le DECLARE)
 
-```plsql
+```sql
 CURSOR nomCurseur IS SELECT ... ;
 ```
 
 #### Ouverture (Dans le BEGIN)
 
 ```
-
-
-
 OPEN nomCurseur;```
 
 #### Chargement d'une ligne

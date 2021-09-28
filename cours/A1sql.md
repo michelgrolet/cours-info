@@ -62,9 +62,14 @@ SQL est un **langage de définition, de contrôle et de manipulation de données
 		- [Accorder l'accès à des actions](#accorder-laccès-à-des-actions)
 		- [Retirer des droits](#retirer-des-droits)
 	- [JDBC](#jdbc)
-		- [Connexion](#connexion)
-		- [Requêtes](#requêtes)
-		- [Requêtes préparées](#requêtes-préparées)
+	- [Création d'un Statement](#création-dun-statement)
+			- [Statement](#statement)
+			- [PreparedStatement](#preparedstatement)
+			- [CallableStatement](#callablestatement)
+	- [Exécution d'un Statement](#exécution-dun-statement)
+			- [consultation - SELECT](#consultation---select)
+			- [modification - INSERT, UPDATE, DELETE, CREATE, DROP](#modification---insert-update-delete-create-drop)
+	- [Traitement des données retournées dans un ResultSet](#traitement-des-données-retournées-dans-un-resultset)
 		- [Actions sur les resultSet](#actions-sur-les-resultset)
 			- [Si le résultat ne contient qu'une ligne](#si-le-résultat-ne-contient-quune-ligne)
 			- [Si le résultat contient plusieurs lignes](#si-le-résultat-contient-plusieurs-lignes)
@@ -569,48 +574,135 @@ GRANT [WITH GRANT OPTION]
 ___
 ## JDBC
 
-<div class="exemple">Attention :  
-JDBC est une API de Java qui permet d'interagir avec des bases de données en SQL ! il est donc nécessaire de maîtriser le langage Java pour suivre cette partie. Pour cela, rien de plus simple : allez voir [mon cours](article6).
+Librairie Java (`java.sql`) permettant un accès homogène à toute catégorie de base de donnée.  
+✍🏻 Homogénéité grâce à des drivers propres à chaque SGBD (oracle, access, sqlite...) qui convertissent les requêtes JDBC dans le dialecte SQL du SGBD. Tout ce qui concerne le SQL est géré par le driver. Une erreur à ce niveau va lever une `SQLException`.
 
-Étapes de JDBC :
+Interfaces JDBC     | Description
+--                  |--
+`Driver`            | renvoie une instance de Connection
+`Connection`        | connection à une BDD
+`Statement`         | instruction SQL
+`PreparedStatement` | instruction SQL paramétrée
+`CallableStatement` | procédure stockée dans la BDD
+`ResultSet`         | tuples récupérés par une instruction SQL
+`ResultSetMetadata` | description des tuples récupérés
+`DatabaseMetadata`  | informations sur la BDD
 
-*   Connexion à la base de données
-*   Envoi des requêtes SQL
-*   Traitement des résultats
+Classes JDBC        | Description
+--                  |--
+DriverManager       | gère les drivers
+Date                | date SQL
+Time                | heures, minutes, secondes SQL
+TimeStamp           | timestamp SQL
+Types               | désigne les types SQL
 
-### Connexion
+
 
 ```java
-// Connexion de "nom" à la BDD oracle "sid" tournant sur "host" à travers le port 1521  
-Connnexion connexionBdd=DriverManager.getConnexion(url, "nom", "mdp");  
+// Importer le package JDBC
+import java.sql.*;
+
+// Enregistrer le driver
+Class.forName("oracle.jdbc.driver.OracleDriver")
+// ou
+Class.forName("driverName").newInstance();
+
+// Connection à la BDD
 String url="jdbc:oracle:thin:@host:1521:sid";
-```
+Connnexion connexionBdd=DriverManager.getConnexion(url, "nom", "mdp");  
 
-### Requêtes
-
-```java
-// Création :  
+// Création d'une requête
 Statement statementSql=connexionBdd.createStatement();  
-// Exécution :  
-ResultSet resultat=statementSql.executeQuery("SELECT...");  
-ResultSet resultat=statementSql.executeUpdate("UPDATE... - INSERT... - DELETE...");  
 
+// Exécution
+ResultSet resultat=statementSql.executeQuery("SELECT...");  
+ResultSet resultat=statementSql.executeUpdate("UPDATE... - INSERT... - DELETE...");
+
+// Traitement des données
+// TODO
+
+// Fermer la connection
 connexionBdd.close();  
 statementSql.close();  
 resultat.close();
 ```
+✍🏻 Pendant la connection, le `DriverManager` essaye tous les drivers chargés en mémoire avec `Class.forName()` jusqu'à qu'il réussisse à se connecter.
 
-### Requêtes préparées
 
+
+
+
+
+___
+## Création d'un Statement
+
+#### Statement
 ```java
-PreparedStatement ps=connexionBdd.prepareStatement("SELECT * FROM x WHERE y=**?**");  
+Statement req = connexion.createStatement();
+```
+
+#### PreparedStatement
+```java
+PreparedStatement req = connexion.prepareStatement("SELECT * FROM x WHERE y=**?**");  
 ResultSet resultat=ps.executeQuery();  
 // on passe ensuite un paramètre dans le ? :  
 ps.setInt(1, 1000); // valeur 1000 au premier "?" de "ps"  
 ps.close();
 ```
-
 Il existe des setters pour tous les types.
+
+#### CallableStatement
+```java
+CallableStatement req = connexion.prepareCall("PROCEDURE ...");
+```
+
+
+
+
+
+
+___
+## Exécution d'un Statement
+
+#### consultation - SELECT
+```java
+ResultSet res = req.executeQuery("SELECT ..."); // return ResultSet
+```
+
+
+#### modification - INSERT, UPDATE, DELETE, CREATE, DROP
+```java
+int tuplesAffectes = req.executeUpdate("INSERT INTO ..."); // return int : nombre de tuples affectés
+```
+
+
+
+
+
+___
+## Traitement des données retournées dans un ResultSet
+Si on a fait un `SELECT`, on récupère un `ResultSet` qu'il va falloir lire :
+```java
+// Parcours d'un ResultSet
+while(rs.next()) {
+	int c = rs.getInt("col1"); // c prends le "col1" du tuple courant.
+	int d = rs.getInt(2); // d prends la valeur de la colonne 2 du tuple courant.
+	if (rs.wasNull()){} // on peut faire des actions si la dernière donnée lue était nulle. 
+	rs.previous(); // reviens au tuple précédent.
+	rs.absolute(2); // va au tuple 2.
+	rs.relative(2); // va au 2e tuple avant le tuple courant.
+	rs.first(); // va au premier tuple.
+}
+```
+
+
+
+
+
+
+
+
+
 
 ### Actions sur les resultSet
 

@@ -3,7 +3,7 @@
 
 ## [☕ Conception objet Java](./cours/a2cpoa.md)
 
-## [📊 SQL & PL/SQL](./cours/a1sql.md)
+## [📊 SQL - PL/SQL - JDBC](./cours/a1sql.md)
 
 ## [📊 SGBD](./cours/a2sgbd.md)
 

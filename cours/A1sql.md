@@ -344,6 +344,15 @@ Il existe 4 opérateurs en algèbre relationnelle :
 
 Pour éviter la redondance, il faut diviser les tables. Tous les attributs « en double » peuvent être déplacés dans une nouvelle table.
 
+
+
+
+
+
+
+
+
+___
 ## PL/SQL
 
 PL/SQL est une extension de SQL qui permet de faire de la programmation avec des requêtes SQL.
@@ -409,90 +418,44 @@ CURSOR nomCurseur IS SELECT ... ;
 
 #### Ouverture (Dans le BEGIN)
 
+```sql
+OPEN nomCurseur;
 ```
-OPEN nomCurseur;```
 
 #### Chargement d'une ligne
 
+```sql
+FETCH nomCurseur INTO v1, v2, ...;
 ```
-
-
-
-FETCH nomCurseur INTO v1, v2, ...;```
 
 #### Fermeture
 
+```sql
+CLOSE nomCurseur;
 ```
-
-
-
-CLOSE nomCurseur;```
 
 ### Exceptions
 
+```sql
+WHEN nom_exception THEN instructions
 ```
-
-
-
-WHEN nom_exception THEN instructions```
 
 #### Exceptions prédéfinies
 
-<table>
+|Exception SQL|Description|
+|-- |-- |
+|`DUP_VAL_ON_INDEX`|Deux fois la même valeur dans une colonne contrainte à un index unique.|
+|`NO_DATA_FOUND`|Le SELECT ne renvoie rien.|
+|`TOO_MANY_ROWS`|SELECT renvoie plus d'une ligne dans un into.|
+|`INVALID_NUMBER`|Nombre invalide.|
+|`VALUE_ERROR`|Erreur de troncature ou de conversion.|
 
-<tbody>
-
-<tr>
-
-<td>`DUP_VAL_ON_INDEX</td>
-
-<td>Deux fois la même valeur dans une colonne contrainte à un index unique.</td>
-
-</tr>
-
-<tr>
-
-<td>`NO_DATA_FOUND</td>
-
-<td>Le SELECT ne renvoie rien.</td>
-
-</tr>
-
-<tr>
-
-<td>`TOO_MANY_ROWS</td>
-
-<td>SELECT renvoie plus d'une ligne dans un into.</td>
-
-</tr>
-
-<tr>
-
-<td>`INVALID_NUMBER</td>
-
-<td>Nombre invalide.</td>
-
-</tr>
-
-<tr>
-
-<td>`VALUE_ERROR</td>
-
-<td>Erreur de troncature ou de conversion.</td>
-
-</tr>
-
-</tbody>
-
-</table>
 
 #### Exception OTHERS
 
+```sql
+WHEN OTHERS THEN dbms_output.put_line('erreur: '||SQLCODE||SQLERRM);
 ```
-
-
-
-WHEN OTHERS THEN dbms_output.put_line('erreur: '||SQLCODE||SQLERRM);```
 
 #### Erreurs applicatives
 
@@ -500,27 +463,25 @@ Elles ne sont pas liées à l'exécution du programme mais à sa logique.
 
 ##### Déclaration
 
-`nom_exception EXCEPTION;
+`nom_exception EXCEPTION;`
 
 ##### Déclenchement
 
-`IF ... THEN RAISE nom_exception; END IF;
+`IF ... THEN RAISE nom_exception; END IF;`
 
 ##### Traitement
 
-`WHEN nom_exception THEN dbms_output.put_line('erreur: description');
+`WHEN nom_exception THEN dbms_output.put_line('erreur: description');`
 
 ### Séquences
 
 Génération d'une suite d'entiers.
 
-```
-
-
-
+```sql
 CREATE SEQUENCE seq START WITH ... INCREMENT BY ...;  
 SELECT seq.nextval FROM dual;  
-SELECT seq.currval FROM dual;```
+SELECT seq.currval FROM dual;
+```
 
 *   Currval ne s'appelle qu'après nextval.
 *   Nextval génère la même valeur pour une même ligne.
@@ -536,52 +497,60 @@ Procédure : fonction sans retour.
 
 #### Déclaration
 
-```
-
-
-
+```sql
 [DECLARE/CREATE] _OR REPLACE_ [FUNCTION/PROCEDURE f_fonc(p_param TYPE) _RETURN TYPE IS v_var TYPE(taille)_;  
 BEGIN ...  
 EXCEPT ...  
 END;  
-_DROP PROCEDURE nom; -- si stockée_```
+DROP PROCEDURE nom; -- si stockée
+```
 
 On ne spécifie pas la taille des paramètres.
 
-Les paramètres des procédures peuvent être définis comme IN, OUT, ou IN OUT.
+Les paramètres des procédures peuvent être définis comme `IN`, `OUT`, ou `IN OUT`.
 
+
+
+
+
+___
 ## Droits et privilèges
 
 ### Accorder l'accès à des tables
 
+```sql
+GRANT privilege ON table/vue TO utilisateur/rôle/public [WITH GRANT OPTION]
 ```
 
+`PUBLIC` permet d'accorder les privilèges à tous les utilisateurs.
 
-
-GRANT privilege ON table/vue TO utilisateur/rôle/public [WITH GRANT OPTION]```
-
-PUBLIC permet d'accorder les privilèges à tous les utilisateurs.
-
-All à la place de table/vue permet d'accorder l'accès avec tous les privilèges à toutes les données.
+`All` à la place de table/vue permet d'accorder l'accès avec tous les privilèges à toutes les données.
 
 ### Accorder l'accès à des actions
 
+```sql
+GRANT privilege TO utilisateurs [WITH GRANT OPTION]
 ```
-
-
-
-GRANT privilege TO utilisateurs [WITH GRANT OPTION]```
 
 ### Retirer des droits
 
+```sql
+GRANT [WITH GRANT OPTION]
 ```
 
 
 
-GRANT [WITH GRANT OPTION]```
 
-### Rôles prédéfinis
 
+
+
+
+
+
+
+
+
+___
 ## JDBC
 
 <div class="exemple">Attention :  
@@ -593,24 +562,17 @@ JDBC est une API de Java qui permet d'interagir avec des bases de données en SQ
 *   Envoi des requêtes SQL
 *   Traitement des résultats
 
-```
-
 ### Connexion
 
-```
-
-<div class="lang">Java```
-
+```java
 // Connexion de "nom" à la BDD oracle "sid" tournant sur "host" à travers le port 1521  
 Connnexion connexionBdd=DriverManager.getConnexion(url, "nom", "mdp");  
-String url="jdbc:oracle:thin:@host:1521:sid";```
+String url="jdbc:oracle:thin:@host:1521:sid";
+```
 
 ### Requêtes
 
-```
-
-<div class="lang">Java```
-
+```java
 // Création :  
 Statement statementSql=connexionBdd.createStatement();  
 // Exécution :  
@@ -619,19 +581,18 @@ ResultSet resultat=statementSql.executeUpdate("UPDATE... - INSERT... - DELETE...
 
 connexionBdd.close();  
 statementSql.close();  
-resultat.close();```
+resultat.close();
+```
 
 ### Requêtes préparées
 
-```
-
-<div class="lang">Java```
-
+```java
 PreparedStatement ps=connexionBdd.prepareStatement("SELECT * FROM x WHERE y=**?**");  
 ResultSet resultat=ps.executeQuery();  
 // on passe ensuite un paramètre dans le ? :  
 ps.setInt(1, 1000); // valeur 1000 au premier "?" de "ps"  
-ps.close();```
+ps.close();
+```
 
 Il existe des setters pour tous les types.
 
@@ -639,20 +600,18 @@ Il existe des setters pour tous les types.
 
 #### Si le résultat ne contient qu'une ligne
 
-On interagit avec les resultSet par l'intermédiaire des getters auquels on fournit la colonne qui nous intéresse afin de parcourir le résultat de la requête :
+On interagit avec les `resultSet` par l'intermédiaire des getters auquels on fournit la colonne qui nous intéresse afin de parcourir le résultat de la requête :
 
+```java
+String colonne1=monResultSet.getString("colonne1");
 ```
-
-<div class="lang">Java```
-
-String colonne1=monResultSet.getString("colonne1");```
 
 #### Si le résultat contient plusieurs lignes
 
-On passe d'une ligne à la suivante avec `**monResultSet.next()** (à utiliser avec un while).
+On passe d'une ligne à la suivante avec `monResultSet.next()` (à utiliser avec un while).
 
 ### Accès aux métadonnées d'un resultSet
 
-*   `r.getColumnCount()
-*   `r.getColumnTypeName(numColonne)
-*   `r.getColumnName(numColonne)
+*   `r.getColumnCount()`
+*   `r.getColumnTypeName(numColonne)`
+*   `r.getColumnName(numColonne)`

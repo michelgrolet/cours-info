@@ -18,6 +18,7 @@ Le framework Collection du package java.util.
 - [Patrons de conception](#patrons-de-conception)
 	- [Patron stratégie](#patron-stratégie)
 	- [Patron adapter](#patron-adapter)
+	- [Patron itérateur](#patron-itérateur)
 
 ___
 ## Collection
@@ -153,3 +154,15 @@ Solutions de haut niveau : s'adaptent à tous les languages.
 
 ## Patron adapter
 - Une classe sert d'**adaptateur** entre le client et les classes à adapter.
+- L'adaptateur peut se lier aux classes à adapter par 2 moyens :
+  - Extends les classes à adapter
+  - Prendre les classes à adapter en paramètre
+
+## Patron itérateur
+- L'itérateur fournit un objet qui permet de parcourir toute Collection indépendamment de sa structure.
+
+4 Opérations :
+- `premier()`
+- `suivant()`
+- `termine()` : booleen vrai si on est à la fin
+- `elementCourant()` : dans Java, cette méthode est dans `suivant()`.

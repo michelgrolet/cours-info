@@ -11,7 +11,7 @@
   - [Probabilité](#probabilité)
   - [Indépendance](#indépendance)
   - [Probabilité Conditionelle](#probabilité-conditionelle)
-  - [Variables aléatoires](#variables-aléatoires)
+  - [Variables aléatoires discrètes](#variables-aléatoires-discrètes)
   - [Lois de probabilité Discrètes](#lois-de-probabilité-discrètes)
       - [Espérance](#espérance)
       - [Variance](#variance)
@@ -114,7 +114,7 @@ ___
 
 
 ___
-## Variables aléatoires
+## Variables aléatoires discrètes
 Pour toute VA $$X$$ :
 $$📌x: 
 \begin{cases}
@@ -180,6 +180,14 @@ $$\begin{array}{|l|cr}
 \hline B(n;p) & Binomiale & np & np(1-p) & \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ \\ 
 \hline P(λ) & Poisson & λ & λ & \frac{e^{-λ}λ^{k}}{k!} \\ 
 \hline  \end{array}$$
+
+|||
+|--|--|
+test|test$$dez$$
+
+|||
+|--|--|
+test|$$dez$$
 
 - **Loi de Bernoulli :** pour X ne prenant que 2 valeurs.  
   

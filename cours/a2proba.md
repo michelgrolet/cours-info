@@ -181,13 +181,11 @@ $$\begin{array}{|l|cr}
 \hline P(λ) & Poisson & λ & λ & \frac{e^{-λ}λ^{k}}{k!} \\ 
 \hline  \end{array}$$
 
-|Notation|Nom|V(X)|P(X=k)|
-|--|--|--|--|
-test|test$$dez$$|$$dez$$|g
-
-|||
-|--|--|
-test|$$dez$$
+|Notation|Nom      |E(X)  |V(X)       |P(X=k)|
+|--      |--       |--    |--         |--|
+B(p\)     |Bernoulli|$$p$$ |$$p(1-p)$$ |$$kn$$
+B(n;p)   |Binomiale|$$np$$|$$np(1-p)$$|$$\binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ$$
+P(λ)     |Poisson  |$$λ$$ |$$λ$$      |$$\frac{e^{-λ}λ^{k}}{k!}$$
 
 - **Loi de Bernoulli :** pour X ne prenant que 2 valeurs.  
   

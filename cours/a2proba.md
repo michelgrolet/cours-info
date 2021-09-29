@@ -181,9 +181,9 @@ $$\begin{array}{|l|cr}
 \hline P(λ) & Poisson & λ & λ & \frac{e^{-λ}λ^{k}}{k!} \\ 
 \hline  \end{array}$$
 
-|||
-|--|--|
-test|test$$dez$$
+|Notation|Nom|V(X)|P(X=k)|
+|--|--|--|--|
+test|test$$dez$$|$$dez$$|g
 
 |||
 |--|--|

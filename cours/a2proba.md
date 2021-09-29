@@ -174,12 +174,6 @@ t ↦ F(t)=P(X≤t)
 > P(X>a)=1-P(X≤a)=1-F(a)
 
 #### Différentes lois de probabilité discrètes
-$$\begin{array}{|l|cr}
-\hline Notation & Nom & E(X) & V(X) & P(X=k) \\ 
-\hline B(p) & Bernoulli & p & p(1-p) & kn \\ 
-\hline B(n;p) & Binomiale & np & np(1-p) & \binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ \\ 
-\hline P(λ) & Poisson & λ & λ & \frac{e^{-λ}λ^{k}}{k!} \\ 
-\hline  \end{array}$$
 
 |Notation|Nom      |E(X)  |V(X)       |P(X=k)|
 |--      |--       |--    |--         |--|
@@ -236,11 +230,11 @@ $$E(X)=\int_{-∞}^{+∞}xf(x) \,dx$$
 $$V(X)=E(X²)-E(X)²$$ avec $$E(X²)=\int_{-∞}^{+∞}x²f(x) \,dx$$
 
 #### Différentes lois de probabilité continues
-$$\begin{array}{|l|cr}
-\hline Loi           & E(X)          & V(X)              & FDP f(x)      & f(x)⊂ & P(c≤X≤d) \\ 
-\hline Uniforme      & \frac{a+b}{2} & \frac{(b-a)²}{12} & \frac{1}{b-a} & [a;b]  & \frac{d-c}{b-a} \\ 
-\hline Exponentielle & \frac{1}{λ}   & \frac{1}{λ²}      & λe^{-λx}      & [a;+∞[ & e^{-λc}-e^{-λd} \\ 
-\hline \end{array}$$
+|Loi          | E(X)              | V(X)                  | FDP f(x)         | f(x)⊂      | P(c≤X≤d)           |
+|--           |--                 |--                     |--                |--          |--                  |
+Uniforme      | $$\frac{a+b}{2}$$ | $$\frac{(b-a)²}{12}$$ | $$\frac{1}{b-a}$$| $$[a;b]$$  | $$\frac{d-c}{b-a}$$
+Exponentielle | $$\frac{1}{λ}$$   | $$\frac{1}{λ²}$$      | $$λe^{-λx}$$     | $$[a;+∞[$$ | $$e^{-λc}-e^{-λd}$$
+
  
 
 

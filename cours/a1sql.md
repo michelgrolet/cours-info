@@ -725,7 +725,3 @@ On passe d'une ligne à la suivante avec `monResultSet.next()` (à utiliser avec
 *   `r.getColumnCount()`
 *   `r.getColumnTypeName(numColonne)`
 *   `r.getColumnName(numColonne)`
-
-
-
-

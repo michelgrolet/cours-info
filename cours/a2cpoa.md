@@ -9,7 +9,7 @@ Collections, patrons de conception.
 
 - [CPOA](#cpoa)
 - [Collections de java.util](#collections-de-javautil)
-		- [List](#list)
+		- [List\<E\>](#liste)
 		- [Set](#set)
 		- [Itérateurs](#itérateurs)
 	- [Map<K,V>](#mapkv)
@@ -39,7 +39,7 @@ ___
 ___
 # Collections de java.util
 
-![](../assets/cpoa_collection.png)
+![Image : interfaces/classes implémentant Collection.](../assets/cpoa_collection.png)
 
 > ❗ Les collections ne manipulent que des objets héritant de `Object`. Elles ne prennent pas les types de base java.  
 > - Il faut utiliser les objets `Wrapper` (Integer, Boolean, Double, ...).  
@@ -53,23 +53,39 @@ ___
 > Generique j; //raw type ≈ Object
 > ```
 
-- `size()`
-- `isEmpty()`
-- `contains(e)`
-- `clear()`
-- `iterator()`
-- `toArray([array])`
+```java
+interface Collection<E> {
+	add(e);
+	AddAll(Collection<E>);
+	clear();
+	contains(Object);
+	containsAll(Collection<E>);
+	hashCode();
+	iterator();
+	remove(Object);
+	removeAll(Collection<E>); //enleve ce qui est en commun
+	size();
+	toArray();
+}
+```
 
-### List
+### List\<E\>
 Accès à partir de l'index.
+```java
+interface List<E> implements Collection<E> {
+
+}
+```
+
 > #### ArrayList - tableau de taille variable
 > Constructeur : `ArrayList([taille]ou[collec])`
 > - `get(i)`
-> - `set(i,e)`
-> - `add([i],e)`
+> - `set(i,e)` *Remplace en i.*
+> - `add([i],e)` *Ajoute et décale à la fin ou en i.*
+> - `addAll([i],collec)` *Ajoute la collec à la fin ou à partir de i.*
 > - `remove(i)`
 > - `indexOf(e)` *Nécessite equals()*
-> - `lastIndexOf(e)`
+> - `lastIndexOf(e)` *Dernière occurence de e.*
 > - `listIterator([i])` *i (optionnel): index de départ*
 
 > #### LinkedList - listes doublement chaînées
@@ -128,7 +144,8 @@ while(i.hasPrevious()) {
 On peut aussi utiliser la boucle **foreach** avec un tableau ou une instance d'Iterable (les collections par exemple).
 
 ## Map<K,V> 
-Map : table avec des clés uniques. Un parcours se fait sur les clés.
+![Image : classes implémentant Map.](../assets/cpoa_map.png)
+Une Map est comme un dictionnaire. Un parcours se fait sur les clés.
 - put(K,V) associe V à K.
 - get(K)
 - remove(K)

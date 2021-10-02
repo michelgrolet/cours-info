@@ -2,7 +2,7 @@
 
 [Retour à l'accueil](./../README.md)
 
-Le framework Collection du package java.util.
+Collections, patrons de conception.
 
 <details>
 <summary> Plan ✨</summary>
@@ -22,7 +22,24 @@ Le framework Collection du package java.util.
 </details>
 
 ___
+> ## Conventions de notation
+> - noms de méthodes : **verbes**.
+> - chaque fichier possède une **Javadoc** complète.
+> - **commenter l'intérieur des méthodes** complexes.
+> - **limiter le nombre de méthodes** par classe.
+> - pas plus de **5 attributs** par classe.
+> - pas plus de **30 lignes** par méthode.
+> - pas plus de **4 boucles imbriquées**.
+> - pas de **duplication de code**. Utiliser le [patron stratégie](#patron-stratégie).
+
+
+
+
+
+___
 # Collections de java.util
+
+![](../assets/cpoa_collection.png)
 
 > ❗ Les collections ne manipulent que des objets héritant de `Object`. Elles ne prennent pas les types de base java.  
 > - Il faut utiliser les objets `Wrapper` (Integer, Boolean, Double, ...).  
@@ -42,15 +59,6 @@ ___
 - `clear()`
 - `iterator()`
 - `toArray([array])`
-
-> Iterable ◦ Collection
-> - List
->   - ArrayList
->   - LinkedList
->   - Vector ◦ Stack
-> - Set
->   - HashSet
->   - SortedSet ◦ TreeSet
 
 ### List
 Accès à partir de l'index.

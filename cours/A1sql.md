@@ -62,6 +62,7 @@ SQL est un **langage de définition, de contrôle et de manipulation de données
 		- [Accorder l'accès à des actions](#accorder-laccès-à-des-actions)
 		- [Retirer des droits](#retirer-des-droits)
 	- [JDBC](#jdbc)
+	- [Connection](#connection)
 	- [Création d'un Statement](#création-dun-statement)
 			- [Statement](#statement)
 			- [PreparedStatement](#preparedstatement)
@@ -609,10 +610,15 @@ Class.forName("driverName").newInstance();
 
 // Connection à la BDD
 String url="jdbc:oracle:thin:@host:1521:sid";
-Connnexion connexionBdd=DriverManager.getConnexion(url, "nom", "mdp");  
+Connnexion connectionBdd=DriverManager.getConnection(url, "nom", "mdp");
+
+// Gestion des commits
+connectionBdd.setAutoCommit(false); // pour désactiver les commit auto.
+connectionBdd.commit();
+connectionBdd.rollback();
 
 // Création d'une requête
-Statement statementSql=connexionBdd.createStatement();  
+Statement statementSql=connectionBdd.createStatement();  
 
 // Exécution
 ResultSet resultat=statementSql.executeQuery("SELECT...");  
@@ -622,15 +628,19 @@ ResultSet resultat=statementSql.executeUpdate("UPDATE... - INSERT... - DELETE...
 // TODO
 
 // Fermer la connection
-connexionBdd.close();  
+connectionBdd.close();  
 statementSql.close();  
 resultat.close();
 ```
 ✍🏻 Pendant la connection, le `DriverManager` essaye tous les drivers chargés en mémoire avec `Class.forName()` jusqu'à qu'il réussisse à se connecter.
 
 
+___
+## Connection
+✍🏻 On ne peux pas réutiliser une connection dans plusieurs threads. A la place des threads on peut utiliser `java.lang.ThreadLocal`.
 
-
+> Connection à la base de l'IUT :  
+> `jdbc:oracle:thin:@charlemagne.iutnc.univ-lorraine.fr:1521:infodb`
 
 
 ___
@@ -638,12 +648,12 @@ ___
 
 #### Statement
 ```java
-Statement req = connexion.createStatement();
+Statement req = connection.createStatement();
 ```
 
 #### PreparedStatement
 ```java
-PreparedStatement req = connexion.prepareStatement("SELECT * FROM x WHERE y=**?**");  
+PreparedStatement req = connection.prepareStatement("SELECT * FROM x WHERE y=**?**");  
 ResultSet resultat=ps.executeQuery();  
 // on passe ensuite un paramètre dans le ? :  
 ps.setInt(1, 1000); // valeur 1000 au premier "?" de "ps"  
@@ -653,8 +663,9 @@ Il existe des setters pour tous les types.
 
 #### CallableStatement
 ```java
-CallableStatement req = connexion.prepareCall("PROCEDURE ...");
+CallableStatement req = connection.prepareCall("{? = call nomProcedure(?,?)}");
 ```
+Le premier `?`, optionnel, correspond au retour de la procédure.
 
 
 
@@ -695,15 +706,6 @@ while(rs.next()) {
 }
 ```
 
-
-
-
-
-
-
-
-
-
 ### Actions sur les resultSet
 
 #### Si le résultat ne contient qu'une ligne
@@ -723,3 +725,7 @@ On passe d'une ligne à la suivante avec `monResultSet.next()` (à utiliser avec
 *   `r.getColumnCount()`
 *   `r.getColumnTypeName(numColonne)`
 *   `r.getColumnName(numColonne)`
+
+
+
+

@@ -4,11 +4,11 @@
 
 Le framework Collection du package java.util.
 
-## Menu
+<details>
+<summary> Plan ✨</summary>
 
 - [CPOA](#cpoa)
-	- [Menu](#menu)
-	- [Collection](#collection)
+- [Collections de java.util](#collections-de-javautil)
 		- [List](#list)
 		- [Set](#set)
 		- [Itérateurs](#itérateurs)
@@ -19,9 +19,23 @@ Le framework Collection du package java.util.
 	- [Patron stratégie](#patron-stratégie)
 	- [Patron adapter](#patron-adapter)
 	- [Patron itérateur](#patron-itérateur)
+</details>
 
 ___
-## Collection
+# Collections de java.util
+
+> ❗ Les collections ne manipulent que des objets héritant de `Object`. Elles ne prennent pas les types de base java.  
+> - Il faut utiliser les objets `Wrapper` (Integer, Boolean, Double, ...).  
+> - Les types de base possèdent une méthode `typeValue()` qui retourne le Wrapper de l'objet.
+> - Java passe automatiquement des wrappers aux types de base et inversement.
+
+> **Généricité :** Permet à une classe d'accepter tous types d'objets. 
+> ```java
+> public class Generique<E>{}
+> Generique<Integer> i;
+> Generique j; //raw type ≈ Object
+> ```
+
 - `size()`
 - `isEmpty()`
 - `contains(e)`

@@ -9,10 +9,15 @@ Collections, patrons de conception.
 
 - [CPOA](#cpoa)
 - [Collections de java.util](#collections-de-javautil)
-		- [List\<E\>](#liste)
-		- [Set](#set)
-		- [Itérateurs](#itérateurs)
+	- [List\<E\>](#liste)
+		- [ArrayList\<E\>](#arrayliste)
+		- [LinkedList\<E\> - listes doublement chaînées](#linkedliste---listes-doublement-chaînées)
+	- [Set](#set)
+		- [HashSet - valeur→clé](#hashset---valeurclé)
+		- [TreeSet - nécessite Comparable](#treeset---nécessite-comparable)
+	- [Itérateurs](#itérateurs)
 	- [Map<K,V>](#mapkv)
+		- [HashMap<K,V> - Implémente Cloneable](#hashmapkv---implémente-cloneable)
 		- [SortedMap ◦ TreeMap<K,V>](#sortedmap--treemapkv)
 	- [classe Collections](#classe-collections)
 - [Patrons de conception](#patrons-de-conception)
@@ -69,67 +74,91 @@ interface Collection<E> {
 }
 ```
 
-### List\<E\>
+## List\<E\>
 Accès à partir de l'index.
 ```java
+// Méthodes qui ne sont pas déjà dans Collection.
 interface List<E> implements Collection<E> {
-
+	add(i, E);
+	addAll(i, Collection<E>);
+	get(i);
+	indexOf(Object);
+	lastIndexOf(Object);
+	listIterator([i]); //i : indice de départ
+	remove(i);
+	set(i, E); //remplace x par E en i.
+	sort(Comparator);
+	subList(from, to); //from inclus, to exclus.
 }
 ```
 
-> #### ArrayList - tableau de taille variable
-> Constructeur : `ArrayList([taille]ou[collec])`
-> - `get(i)`
-> - `set(i,e)` *Remplace en i.*
-> - `add([i],e)` *Ajoute et décale à la fin ou en i.*
-> - `addAll([i],collec)` *Ajoute la collec à la fin ou à partir de i.*
-> - `remove(i)`
-> - `indexOf(e)` *Nécessite equals()*
-> - `lastIndexOf(e)` *Dernière occurence de e.*
-> - `listIterator([i])` *i (optionnel): index de départ*
-
-> #### LinkedList - listes doublement chaînées
-> - `addLast(e)`
-> - `addFirst(e)`
-> - `getLast()`
-> - `getFirst()`
-> - `removeLast()`
-> - `removeFirst(e)`
-
-### Set
-Pas de doublons : permet de gérer des ensembles d'objets.
-> - `s1.containsAll(s2)` return **true ssi s2∈s1**
-> - `s1.addAll(s2)` **s1 ← s1∪s2**
-> - `s1.retainAll(s2)` **s1 ← s1∩s2**
-> - `s1.removeAll(s2)` **s1 ← s1-s2**
-
-> #### HashSet - valeur→clé
-> Constructeurs : `HashSet([collec])` ou `HashSet(taille, [loadFactor])`
-> - `add(e)`
-> - `remove(e)`
-> - `clear()`
-> - `contains(e)`
-> - `isEmpty()`
-> - `size()`
-> - `iterator()`
-
-> #### TreeSet - nécessite Comparable
-> Constructeurs : `TreeSet([Comparator])` ou `TreeSet(Collection)` ou `TreeSet(SortedSet)`
-> - `add(e)`
-> - `addAll(Collection)`
-> - `clear()`
-> - `clone()`
-> - `comparator()`
-> - `contains(e)`
-> - `first()`
-> - `last()`
-> - `remove(e)`
-> - `size()`
-
-### Itérateurs
-Permet de parcourir une Collection élément par élément.
+### ArrayList\<E\>
 ```java
-Collection<Integer>
+// Méthodes qui ne sont pas déjà dans List et Collection.
+class ArrayList<E> implements List<E> {
+	ArrayList(taille ou collectionInit);
+	clone();
+	forEach((x) -> /*action sur x*/);
+}
+```
+
+### LinkedList\<E\> - listes doublement chaînées
+```java
+// Méthodes qui ne sont pas déjà dans List et Collection.
+class LinkedList<E> implements List<E> {
+	LinkedList([collectionInit]);
+	addFirst(E);
+	addLast(E);
+	clone();
+	descendingIterator();
+	getFirst();
+	getLast();
+	removeLast();
+	removeFirst();
+}
+```
+
+## Set
+Pas de doublons : permet de gérer des ensembles d'objets.
+
+### HashSet - valeur→clé
+
+```java
+// Méthodes qui ne sont pas déjà dans Set et Collection.
+class HashSet<E> implements Set<E> {
+	HashSet();
+	HashSet(Collection<E>);
+	HashSet(taille, [loadFactor]);
+}
+```
+
+### TreeSet - nécessite Comparable
+
+```java
+// Méthodes qui ne sont pas déjà dans Set et Collection.
+class TreeSet<E> implements AbstractSet<E> {
+	TreeSet();
+	TreeSet(Collection<E>);
+	TreeSet(Comparator<E>);
+	TreeSet(SortedSet<E>);
+	comparator();
+	descendingIterator();
+	descendingSet();
+	first();
+	last();
+	ceiling(E); //element >=
+	higher(E); //element >
+	floor(E); //element <=
+	lower(E); //element <
+	subSet(E from, E to)
+}
+```
+
+
+## Itérateurs
+Les itérateurs permettent de parcourir une Collection élément par élément.
+```java
+Collection<Integer> maCollection;
 Iterator<Integer> i = maCollection.iterator();
 while(i.hasNext()) {
 	System.out.println(i.next());
@@ -146,33 +175,44 @@ On peut aussi utiliser la boucle **foreach** avec un tableau ou une instance d'I
 ## Map<K,V> 
 ![Image : classes implémentant Map.](../assets/cpoa_map.png)
 Une Map est comme un dictionnaire. Un parcours se fait sur les clés.
-- put(K,V) associe V à K.
-- get(K)
-- remove(K)
-- containsKey(K)
-- containsValue(V)
-- keySet() retourne un set contenant les clés.
-- values() retourne une collection contenant les valeurs.
 
-> Map
-> - HashMap
-> - SortedMap ◦ TreeMap
+```java
+interface Map<E> {
+	put(K,V);
+	get(K);
+	remove(K);
+	containsKey(K);
+	containsValue(V);
+	keySet(); // set des clés
+	values(); // set des valeurs
+	entrySet(); // set double :getKey(), getValue().
+}
+```
 
-> ### HashMap<K,V> - Implémente Cloneable  
+### HashMap<K,V> - Implémente Cloneable  
 > Constructeurs : `HashMap([cap])` ou `HashMap(cap,load)` cap*2 quand (load)% de la table est atteint.
-> - **hashCode()** (nécessaire) : génère K à partir de V
-> - **equals()** (nécessaire) : permet de savoir la position dans la table. Deux éléments égaux doivent avoir le même hashCode.
-> - containsValue(v)
-> - containsKey(k)
-> - get(k)
-> - put(k,v)
-> - remove(k)
-> - values() retourne la Collection des valeurs
-> - keySet() retourne le Set des clés
-> - clone()
+```java
+Class HashMap<E> {
+	HashMap();
+	HashMap(cap);
+	HashMap(cap, load); //cap*2 quand (load)% de la table est atteint.
+}
+```
+
+- **hashCode()** (nécessaire) : génère K à partir de V
+- **equals()** (nécessaire) : permet de savoir la position dans la table. Deux éléments égaux doivent avoir le même hashCode.
+
 
 ### SortedMap ◦ TreeMap<K,V>
-Implémente SortedMap.
+```java
+Class TreeMap<E> {
+	TreeMap();
+	TreeMap(Comparator);
+	TreeMap(Map);
+	TreeMap(SortedMap);
+
+}
+```
 
 ## classe Collections
 Algorithmes génériques opérant sur certaines collections (souvent des listes).
@@ -203,5 +243,5 @@ Solutions de haut niveau : s'adaptent à tous les languages.
 4 Opérations :
 - `premier()`
 - `suivant()`
-- `termine()` : booleen vrai si on est à la fin
+- `termine()` : booléen vrai si on est à la fin
 - `elementCourant()` : dans Java, cette méthode est dans `suivant()`.

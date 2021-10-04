@@ -26,6 +26,7 @@ Collections, patrons de conception.
 	- [Patron stratégie (comportement)](#patron-stratégie-comportement)
 	- [Patron adapter (structure)](#patron-adapter-structure)
 	- [Patron itérateur (comportement)](#patron-itérateur-comportement)
+	- [Patron décorateur](#patron-décorateur)
 </details>
 
 ___
@@ -278,3 +279,17 @@ requête en utilisant une instance d’Adapte `(adapte.method())`.
 - `suivant()`
 - `termine()` : booléen vrai si on est à la fin
 - `elementCourant()` : dans Java, cette méthode est dans `suivant()`.
+
+
+## Patron décorateur
+![](../assets/cpoa_decorateur.png)
+
+> **Agrégations UML :** Quand une classe 1 est composée d'objets d'une classe 2. Losange vide.
+
+> **Composition UML :** Agrégation plus forte : quand on détruit un objet de la classe 1, tous les sous-objets sont détruits. Losange plein.
+
+Un décorateur enveloppe une classe décorée en lui ajoutant des méthodes.
+Le constructeur du décorateur prends une instance du décoré en paramètre. Le décoré est agrégé dans le décorateur.
+```java
+Décorateur d = new Décorateur(new Décoré());
+```

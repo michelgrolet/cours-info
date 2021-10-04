@@ -230,12 +230,12 @@ $$E(X)=\int_{-∞}^{+∞}xf(x) \,dx$$
 $$V(X)=E(X²)-E(X)²$$ avec $$E(X²)=\int_{-∞}^{+∞}x²f(x) \,dx$$
 
 #### Différentes lois de probabilité continues
-|Loi          | E(X)              | V(X)                  | FDP f(x)         | f(x)⊂      | P(c≤X≤d)           |
-|--           |--                 |--                     |--                |--          |--                  |
-Uniforme      | $$\frac{a+b}{2}$$ | $$\frac{(b-a)²}{12}$$ | $$\frac{1}{b-a}$$| $$[a;b]$$  | $$\frac{d-c}{b-a}$$
-Exponentielle | $$\frac{1}{λ}$$   | $$\frac{1}{λ²}$$      | $$λe^{-λx}$$     | $$[a;+∞[$$ | $$e^{-λc}-e^{-λd}$$
+Notation|Nom            | E(X)              | V(X)                  | FDP f(x)         | f(x)⊂      | P(c≤X≤d)
+--      |--             |--                 |--                     |--                |--          |--   
+U(a;b)  | Uniforme      | $$\frac{a+b}{2}$$ | $$\frac{(b-a)²}{12}$$ | $$\frac{1}{b-a}$$| $$[a;b]$$  | $$\frac{d-c}{b-a}$$
+E(λ)    | Exponentielle | $$\frac{1}{λ}$$   | $$\frac{1}{λ²}$$      | $$λe^{-λx}$$     | $$[a;+∞[$$ | $$e^{-λc}-e^{-λd}$$
+N(m;σ²) | Normale       | $$m$$             | $$σ²$$                | $$\frac{\exp^{-0,5(\frac{x-n}{σ})²}}{σ\sqrt{2\pi}}$$|$$\R$$|$$\int_{a}^{b}f(x) \,dx$$
 
- 
 
 
 

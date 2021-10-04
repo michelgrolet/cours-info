@@ -12,18 +12,20 @@ Collections, patrons de conception.
 	- [List\<E\>](#liste)
 		- [ArrayList\<E\>](#arrayliste)
 		- [LinkedList\<E\> - listes doublement chaînées](#linkedliste---listes-doublement-chaînées)
+		- [Vector\<E\>](#vectore)
+		- [Stack\<E\> - Piles](#stacke---piles)
 	- [Set](#set)
 		- [HashSet - valeur→clé](#hashset---valeurclé)
-		- [TreeSet - nécessite Comparable](#treeset---nécessite-comparable)
+		- [*SortedSet* ◦ TreeSet\<E\>](#sortedset--treesete)
 	- [Itérateurs](#itérateurs)
 	- [Map<K,V>](#mapkv)
-		- [HashMap<K,V> - Implémente Cloneable](#hashmapkv---implémente-cloneable)
-		- [SortedMap ◦ TreeMap<K,V>](#sortedmap--treemapkv)
+		- [HashMap<K,V>](#hashmapkv)
+		- [*SortedMap* ◦ TreeMap<K,V>](#sortedmap--treemapkv)
 	- [classe Collections](#classe-collections)
 - [Patrons de conception](#patrons-de-conception)
-	- [Patron stratégie](#patron-stratégie)
-	- [Patron adapter](#patron-adapter)
-	- [Patron itérateur](#patron-itérateur)
+	- [Patron stratégie (comportement)](#patron-stratégie-comportement)
+	- [Patron adapter (structure)](#patron-adapter-structure)
+	- [Patron itérateur (comportement)](#patron-itérateur-comportement)
 </details>
 
 ___
@@ -55,8 +57,10 @@ ___
 > ```java
 > public class Generique<E>{}
 > Generique<Integer> i;
-> Generique j; //raw type ≈ Object
 > ```
+
+> **Raw type :** Quand on ne spécifie pas le type d'une classe générique, la classe accepte n'importe quel `Object`.  
+> `get()` retourne un `Object` qu'il faut caster au bon type.
 
 ```java
 interface Collection<E> {
@@ -67,6 +71,7 @@ interface Collection<E> {
 	containsAll(Collection<E>);
 	hashCode();
 	iterator();
+	isEmpty();
 	remove(Object);
 	removeAll(Collection<E>); //enleve ce qui est en commun
 	size();
@@ -75,18 +80,18 @@ interface Collection<E> {
 ```
 
 ## List\<E\>
-Accès à partir de l'index.
+Représente des éléments ordonnés.
 ```java
 // Méthodes qui ne sont pas déjà dans Collection.
 interface List<E> implements Collection<E> {
-	add(i, E);
+	add(i, E); //décale et ajoute.
+	set(i, E); //remplace.
 	addAll(i, Collection<E>);
 	get(i);
-	indexOf(Object);
-	lastIndexOf(Object);
-	listIterator([i]); //i : indice de départ
-	remove(i);
-	set(i, E); //remplace x par E en i.
+	indexOf(Object); // utilise equals()
+	lastIndexOf(Object); // utilise equals()
+	listIterator([i]); //i (optionnel) : indice de départ
+	remove(i); // utilise equals()
 	sort(Comparator);
 	subList(from, to); //from inclus, to exclus.
 }
@@ -95,9 +100,9 @@ interface List<E> implements Collection<E> {
 ### ArrayList\<E\>
 ```java
 // Méthodes qui ne sont pas déjà dans List et Collection.
-class ArrayList<E> implements List<E> {
+class ArrayList<E> {
 	ArrayList(taille ou collectionInit);
-	clone();
+	clone(); // ArrayList implements Clonable
 	forEach((x) -> /*action sur x*/);
 }
 ```
@@ -105,38 +110,55 @@ class ArrayList<E> implements List<E> {
 ### LinkedList\<E\> - listes doublement chaînées
 ```java
 // Méthodes qui ne sont pas déjà dans List et Collection.
-class LinkedList<E> implements List<E> {
+class LinkedList<E> {
 	LinkedList([collectionInit]);
 	addFirst(E);
-	addLast(E);
+	addLast(E); // <=> add(E)
 	clone();
 	descendingIterator();
 	getFirst();
 	getLast();
 	removeLast();
-	removeFirst();
+	removeFirst(); // <=> remove()
+}
+```
+
+### Vector\<E\>
+Similaire à ArrayList.
+
+### Stack\<E\> - Piles
+```java
+class Stack<E> extend Vector {
+	push(E); //empile E
+	pop(); //retourne le sommet et dépile
+	peek(); //retourne le sommet
+	empty(); //retourne si la pile est vide
 }
 ```
 
 ## Set
-Pas de doublons : permet de gérer des ensembles d'objets.
+Représente des éléments uniques.
+Si on `add(j)` alors que i est dans la liste et que `i.equals(j)`, j ne sera pas ajouté. Aucune erreur n'apparait.
 
 ### HashSet - valeur→clé
 
 ```java
 // Méthodes qui ne sont pas déjà dans Set et Collection.
-class HashSet<E> implements Set<E> {
+class HashSet<E> {
 	HashSet();
 	HashSet(Collection<E>);
 	HashSet(taille, [loadFactor]);
 }
 ```
 
-### TreeSet - nécessite Comparable
+### *SortedSet* ◦ TreeSet\<E\>
+Cette classe nécessite `compareTo(o)`, car elle représente un ensemble d'éléments ordonnés.  
+❗ Pour utiliser `TreeSet<Classe>` il faut que `Classe implements Comparable`.  
+Bien sûr, TreeSet ne permet pas d'ajouter deux fois la même valeur.
 
 ```java
 // Méthodes qui ne sont pas déjà dans Set et Collection.
-class TreeSet<E> implements AbstractSet<E> {
+class TreeSet<E> implements SortedSet<E> {
 	TreeSet();
 	TreeSet(Collection<E>);
 	TreeSet(Comparator<E>);
@@ -173,8 +195,8 @@ while(i.hasPrevious()) {
 On peut aussi utiliser la boucle **foreach** avec un tableau ou une instance d'Iterable (les collections par exemple).
 
 ## Map<K,V> 
-![Image : classes implémentant Map.](../assets/cpoa_map.png)
-Une Map est comme un dictionnaire. Un parcours se fait sur les clés.
+![Image : classes implémentant Map.](../assets/cpoa_map.png)  
+Permet d'associer des valeurs à des clés comme dans un dictionnaire.
 
 ```java
 interface Map<E> {
@@ -189,13 +211,13 @@ interface Map<E> {
 }
 ```
 
-### HashMap<K,V> - Implémente Cloneable  
-> Constructeurs : `HashMap([cap])` ou `HashMap(cap,load)` cap*2 quand (load)% de la table est atteint.
+### HashMap<K,V>  
 ```java
-Class HashMap<E> {
+class HashMap<E> {
 	HashMap();
 	HashMap(cap);
 	HashMap(cap, load); //cap*2 quand (load)% de la table est atteint.
+	clone();
 }
 ```
 
@@ -203,9 +225,9 @@ Class HashMap<E> {
 - **equals()** (nécessaire) : permet de savoir la position dans la table. Deux éléments égaux doivent avoir le même hashCode.
 
 
-### SortedMap ◦ TreeMap<K,V>
+### *SortedMap* ◦ TreeMap<K,V>
 ```java
-Class TreeMap<E> {
+class TreeMap<E> {
 	TreeMap();
 	TreeMap(Comparator);
 	TreeMap(Map);
@@ -217,7 +239,7 @@ Class TreeMap<E> {
 ## classe Collections
 Algorithmes génériques opérant sur certaines collections (souvent des listes).
 - sort (List<T> [Comparator<T>]) tri avec compareTo de Comparable (ou de comparator si il est fourni).
-- reverse(List<T>)
+- reverse(List<T>) 
 - fill(List<T>, T)
 - copy(List<T> dest, List<T> src)
 
@@ -226,18 +248,29 @@ Algorithmes génériques opérant sur certaines collections (souvent des listes)
 # Patrons de conception
 Bonnes pratiques de la COO.
 Solutions de haut niveau : s'adaptent à tous les languages.
+Types de patrons de conception :
+- patrons de **construction** (créer/configurer des objets)
+- patrons de **structure** (créer des structures)
+- patrons de **comportement** (gérer les interactions entre objets)
 
-## Patron stratégie
-- Classe Context : gère une référence à un objet Stratégie
+
+## Patron stratégie (comportement)
+![](..//assets/cpoa_strategie.png)
+- Classe Context : gère une référence à un objet qui implémente Stratégie
 - Interface Stratégie : implémentée par plusieurs classe concrètes.
 
-## Patron adapter
+## Patron adapter (structure)
+![](..//assets/cpoa_adaptateur.png)
 - Une classe sert d'**adaptateur** entre le client et les classes à adapter.
 - L'adaptateur peut se lier aux classes à adapter par 2 moyens :
   - Extends les classes à adapter
   - Prendre les classes à adapter en paramètre
 
-## Patron itérateur
+> Le client envoie `requete()` et l’adapté doit exécuter `methode()`
+pour satisfaire la demande. L’adaptateur répond à cette
+requête en utilisant une instance d’Adapte `(adapte.method())`.
+
+## Patron itérateur (comportement)
 - L'itérateur fournit un objet qui permet de parcourir toute Collection indépendamment de sa structure.
 
 4 Opérations :

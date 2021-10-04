@@ -53,7 +53,7 @@ ___
 Une **probabilité** se définit par l'**application** :  
 $$📌P: 
 \begin{cases}
-P(Ω) → [0,1] \\
+Ω → [0,1] \\
 A ↦ P(A)
 \end{cases}$$ 
 

@@ -108,9 +108,38 @@ avec $$MCV = CA - CV$$
 
 Permet de savoir quel CA il faut avoir pour dégager un résultat positif.
 
-> **Seuil de rentabilité :** CA pour lequel l'entreprise couvre la totalité de ses charges et dégage un résulat nul.  (=CA critique, =point mort)  
+> **Seuil de rentabilité :** CA pour lequel l'entreprise couvre la totalité de ses charges et dégage un résulat nul.  (=CA critique)  
 > SR en valeur : $$SR\ val=\frac{CF\ nettes}{Taux\ MCV}$$
 > SR en quantités : $$SR\ q=\frac{SR\ val}{Prix\ unitaire}=\frac{Charges\ fixes\ nettes}{Marge\ sur\ CVU}$$
 
 > **Point mort :** jour ou mois auquel le SR est atteint.  
 > Nombre de mois pour atteindre le SR : $$=\frac{SR\ val}{CA\ mensuel}$$
+
+
+#### Exemple
+> CA : 10M  
+Charges variables : 8M  
+Charges fixes : 1.5M
+
+1. Compte de résultat différentiel
+
+|                           | Montant    | Taux |
+| ------------------------- | ---------- | ---- |
+| CA                        | 10 000 000 | 100% |
+| - charges variable        | 8 000 000  | 80%  |
+| = marge sur coût variable | 2 000 000  | 20%  |
+| - charges fixes           | 1 500 000  | 15%  |
+| = Resultat                | 500 000    | 5%   |
+
+2. Seuil de rentabilité
+
+SR = CF / Taux MCV  
+SR = 1 500 000 / 0.2  
+SR = 7 500 000
+
+3. Point mort
+
+PM = SR val / CA mensuel  
+PM = 7 500 000 / 10 000 000 / 12  
+PM = 7 500 000 / 833 333  
+PM = 9 mois, soit le 1 octobre

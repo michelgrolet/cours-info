@@ -96,3 +96,21 @@ Taux de marge sur coût variable : $$= \frac{MCV}{CA}×100$$
 avec $$MCV = CA - CV$$
 
 > ✍️ Dans l'industrie, on veut maximiser la MCV. Dans le tertiaire (services) on a beaucoup de charges fixes. **La méthode des coûts partiels pert de sa pertinence.**
+
+## Seuil de rentabilité
+
+
+|             | CA   | CV  | CF  | Résultat |
+| ----------- | ---- | --- | --- | -------- |
+| hypothèse 1 | 100k | 60k | 30k | 10k      |
+| hypothèse 2 | 75k  | 45k | 30k | 0        |
+| hypothèse 3 | 50k  | 30k | 30k | -10k     |
+
+Permet de savoir quel CA il faut avoir pour dégager un résultat positif.
+
+> **Seuil de rentabilité :** CA pour lequel l'entreprise couvre la totalité de ses charges et dégage un résulat nul.  (=CA critique, =point mort)  
+> SR en valeur : $$SR\ val=\frac{CF\ nettes}{Taux\ MCV}$$
+> SR en quantités : $$SR\ q=\frac{SR\ val}{Prix\ unitaire}=\frac{Charges\ fixes\ nettes}{Marge\ sur\ CVU}$$
+
+> **Point mort :** jour ou mois auquel le SR est atteint.  
+> Nombre de mois pour atteindre le SR : $$=\frac{SR\ val}{CA\ mensuel}$$

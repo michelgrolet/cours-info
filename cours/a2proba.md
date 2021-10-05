@@ -158,11 +158,13 @@ $$V(kX)=k²V(X)$$
 $$V(X+a)=V(X)$$
 
 #### Fonction de répartition
+
 $$📌x: 
 \begin{cases}
 ℝ → ℝ \\
 t ↦ F(t)=P(X≤t)
-\end{cases}$$ 
+\end{cases}$$
+
 > ✍🏻 Sa représentation est un escalier toujours montant car on inclut toujours les probabilités inférieures.
 > $$F⊂ℝ$$
 > $$F↗$$
@@ -210,6 +212,7 @@ ___
 ## Lois de probabilité continues
 
 #### Fonction densité de probabilité
+
 On suppose que $$F'(t)=f(t)$$.
 
 ✍🏻 F(t) est la densité de la loi *continue* de X.
@@ -226,6 +229,7 @@ P(X≤b) &= \int_{-∞}^{b}f(x) \,dx \\
 \end{align}$$  
 
 #### Espérance, Variance
+
 $$E(X)=\int_{-∞}^{+∞}xf(x) \,dx$$  
 $$V(X)=E(X²)-E(X)²$$ avec $$E(X²)=\int_{-∞}^{+∞}x²f(x) \,dx$$
 

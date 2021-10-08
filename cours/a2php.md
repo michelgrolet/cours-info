@@ -29,7 +29,7 @@ Php est faiblement typé. On récupère le type avec `gettype($var)`. On récup�
 - Les variables sont interprétées dans les doubles quotes
 
 ## Tableaux
-````php
+```php
 $array = array($val1, "val2", 3);
 ```
 On boucle sur un tableau avec `foreach()`: 
@@ -52,7 +52,6 @@ class X {
 		return ...
 	}
 }
-
 $p = new Personne('param', x, ...);
 $p->nomMethode();
 ```

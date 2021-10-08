@@ -35,6 +35,17 @@
       - [SRX (share row exclusive lock)](#srx-share-row-exclusive-lock)
       - [X (exclusive lock)](#x-exclusive-lock)
       - [(global lock)](#global-lock)
+- [Indexation des données et Optimisation des requêtes](#indexation-des-données-et-optimisation-des-requêtes)
+  - [Types de recherche](#types-de-recherche)
+  - [Index multi-niveaux](#index-multi-niveaux)
+  - [Index en arbre B](#index-en-arbre-b)
+  - [Index en arbre B+](#index-en-arbre-b-1)
+  - [Index par hashage](#index-par-hashage)
+- [Optimisation](#optimisation)
+  - [Étapes](#étapes)
+  - [sélection](#sélection)
+  - [jointure](#jointure)
+  - [Plan d'exécution](#plan-dexécution)
 
 
 ---
@@ -269,3 +280,107 @@ LOCK TABLE tab IN EXCLUSIVE MODE
 -- Empêche l'accès à une table.
 ??
 ```
+
+
+
+
+___
+# Indexation des données et Optimisation des requêtes
+> **Disque :**  moyen de stockage binaire magnétique sur des disques empilés.
+
+- Disque (ensemble)
+  - Pistes (un disque)
+    - Blocs (portion d'une piste)
+      - Secteurs (portion d'un bloc)
+
+> **Piste :** ensemble des **blocs** lus pendant une rotation.
+> **Cylindre :** pistes de chaque disque, situées sous la tête de lecture.
+
+✍️ Une BDD est stockée sur plusieurs fichiers situés eux-même sur plusieurs blocs. Les SGBD permettent autant que possible de
+- Rentabiliser l'espace disque
+- Faciliter les recherches
+- Faciliter les mises à jour
+- Sécuriser les données
+
+Pour faciliter la recherche dans une BDD, on utilise l'**indexage**.
+
+> **Indexation :** Permet de parcourir un index au lieu de parcourir la table. La recherche est plus rapide mais les mises à jour sont plus coûteuses.
+
+> **Clé de recherche :** Liste d'attributs sur lesquels portent une sélection.
+> 
+> **Index sur l'attribut x :** Entrées de la table sous la forme \<x, adresse\>. L'index est beaucoup plus petit que la table. Par contre l'index ne peut porter que sur un seul attribut.
+
+
+## Types de recherche
+- par clé : on associe une valeur à chaque attribut de la clé. On recherche une unique valeur dans la table : [id 20]. Pour la trouver, on réalise une dichotomie sur l'index.
+- par intervalle : On associe un intervalle de valeurs à chaque attribut de la clé : [id 10 - id 100]. On recherche le début de cet intervalle.
+- par préfixe : 
+
+## Index multi-niveaux
+Si l'index est trop gros, on l'indexe en créant un **index non-dense** : il faut grouper chaque colonne en plusieurs intervalles. **Pour cela il faut que le fichier soit trié.**  
+✍️ On peut avoir qu'un index non-dense sur un fichier, mais plusieurs index denses.
+
+## Index en arbre B
+Chaque noeud est un bloc de deux couples \<valeur, adresse\>. On parcours l'arbre en partant de la racine.  
+Les éléments sont triés.  
+Si on bloc déborde, on le divise et on remonte la partie centrale du bloc.
+
+## Index en arbre B+
+
+## Index par hashage
+Comparé à l'arbre B+ :
+- Meilleur pour la recherche par clé
+- N'occupe pas de place
+- S'organise difficilement
+
+
+
+# Optimisation
+Critères :
+- temps d'exécution
+
+
+Techniques d'opti :
+- algébrique/logique On fait un arbre de la requête
+- statique/physique On estime le coût d'exécution
+
+## Étapes
+PEL = Plan d'Exécution Logique
+PEP = Plan d'Exécution Physique
+
+{T} nombre de requêtes
+|T| 
+
+Stratégie : choix de l'ordre des requêtes SQL
+
+Il faut trouver la stratégie qui fait le moins d'opérations
+Il y a des règles logiques pour trouver l'ordre optimal ou les changements d'ordres qui ne changent pas {T}.
+- Commutativité des jointures
+- Associativité des jointures
+- Regroupement des sélections
+- Commutativité de la sélection et de la projection
+- ...
+
+## sélection
+- séquentiel : on parcours tout le fichier
+- par adresse : aller lire les données à leur adresse (un bloc)
+
+## jointure
+- sans index : choix jointure
+  - par tri-fusion (on trie les tables sur les attributs communs puis on fusionne les deux)
+  - par boucles imbriquées
+  - par hachage
+- avec index : 
+  - index sur une seule table : par boucles indexées (on balaye la table non indexée et pour chaque ligne on recherche dans l'autre table)
+  - index sur les deux tables : on les fusionne 
+
+## Plan d'exécution
+arbre avec toutes les étapes pour réaliser une requête.  
+Pour chaque requête il en existe plusieurs (un pour chaque bloc imbriqué dans une requête). Il faut trouver celle qui fait manipuler le moins de données possible.  
+**Plan d'exécution = PEL + PEP**
+
+Différences entre deux plans :
+- ordre (PEL)
+- algo (PEP)
+- chemin d'accès (PEP) : moyen d'accès aux données
+

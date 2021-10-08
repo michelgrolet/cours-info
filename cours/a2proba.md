@@ -25,11 +25,11 @@
 
 
 ___
-> $$Ω$$ **Espace fondamental :** ensemble des résultats possibles d'une expérience aléatoire (totalité d'un diagramme de Venn).
-> $$(Ω, P(Ω))$$ **Espace Probabilisable :** ensemble des événements de l'univers $$Ω$$.
+> $$Ω$$ **Espace fondamental :** ensemble des événements élémentaires d'une expérience aléatoire (P(Ω) = totalité d'un diagramme de Venn = 1).  
+> $$(Ω, P(Ω))$$ **Espace Probabilisable :** ensemble des événements de l'univers $$Ω$$.  
 > $$(Ω, P(Ω), p)$$ **Espace probabilisé :** probabilité $$p$$ sur l'univers $$Ω$$.
 
-> **Expérience aléatoire :** expérience dont on ne connait le résultat qu'après l'avoir exécutée, mais dont on connait toutes les issues.
+> **Expérience aléatoire :** expérience dont on ne connait le résultat qu'après l'avoir exécutée, mais dont on connaît toutes les issues.  
 > **Événement :** sous-ensemble de l'univers d'une expérience aléatoire.
 
 

@@ -1,10 +1,10 @@
-# Apprenez SQL
+# SQL / PLSQL / JDBC
 SQL est un **langage de définition, de contrôle et de manipulation de données.** Toute entreprise assez développée se sert de bases de données pour stocker ses informations. Le SQL est l'outil par excellence pour traiter la problématique du big data.
 
 <details>
 <summary> Plan ✨</summary>
 
-- [Apprenez SQL](#apprenez-sql)
+- [SQL / PLSQL / JDBC](#sql--plsql--jdbc)
 	- [Vocabulaire](#vocabulaire)
 	- [Création de tables](#création-de-tables)
 		- [Types](#types)

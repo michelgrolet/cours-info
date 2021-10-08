@@ -73,7 +73,7 @@ Lors d'une connection par mot de passe, ce dernier peut être intercepté. Il es
 | `ps x`                                    | liste les processus d'une machine                                 |
 | `/etc/init.d/ssh start`                   | démarre ssh                                                       |
 | `ssh &IP`                                 | lance ssh vers &IP                                                |
-| `scp user@machine:fichier u@m:f`          | copie un fichier entre deux machines                              |
+| `scp user@&ip:fichier u@&ip:f`            | copie un fichier entre deux machines                              |
 
 
 ## Fichier de configuration réseau
@@ -89,7 +89,7 @@ allow-hotplug eth0     #lancer au démarrage
 # Éléments réseau
 #### Hub
 Reproduit un paquet reçu sur tous les autres ports. Équivaut à un switch non programmable.
-
+,l
 #### Switch
 Reproduit un paquet reçu vers sa destination.
 > **FSTP :** trouve les cycles entre des switchs pour arrêter les bouclages. 

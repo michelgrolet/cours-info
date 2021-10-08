@@ -2,6 +2,9 @@
 ## [📐 Probabilités](./cours/a2proba.md)
 Cours de S3 sur le modèle probabiliste, allant jusqu'aux lois de probabilités dicrètes et continues.
 
+## [🖥 PHP](./cours/a2php.md)
+Ensemble des cours de deuxième année sur la prog web backend (PHP).
+
 ## [☕ Conception objet Java](./cours/a1coo.md)
 Cours de S2 sur la conception objet spécifique à Java.
 

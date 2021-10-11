@@ -265,7 +265,7 @@ Indépendance | $$P(A∩B)=P(A)P(B)$$
 
 Probabilités composées | $$P(A∩B)=P(A)P_{A}(B)$$  
 
-Variable Aléatoire | $$x: Ω ⇒ ℝ$$ | $$ωᵢ ⇒ x(ωᵢ)=xᵢ$$  
+Variable Aléatoire discrète | $$x: \begin{cases}Ω → ℝ \\ωᵢ ↦ x(ωᵢ)=xᵢ\end{cases}$$   
 
 Espérance | $$Σ(xᵢ) P(X=xᵢ)$$  
 

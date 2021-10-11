@@ -15,7 +15,7 @@ Balises php :
 ```php
 <?php 
 	echo 'hello'; // affiche hello
-?>
+?> // balise de fin optionnelle si que du php dans le fichier
 print 'hello'; // affiche print 'hello'; (hors des balises)
 ```
 
@@ -25,6 +25,8 @@ Php est faiblement typé. On récupère le type avec `gettype($var)`. On récup�
 - Affichage avec `echo` ou `print`. on peut utiliser des simple ou double quotes
   - `echo()` peut prendre plusieurs paramètres séparés par des virgules. Plus rapide que print.
   - `print()` retourne 1.
+  - `printf($objet)` affiche le `toString()` de `$objet`.
+  - `print_r($array)` affiche le contenu d'un `array()`.
 - Variables : commencent par `$`
 - Les variables sont interprétées dans les doubles quotes
 

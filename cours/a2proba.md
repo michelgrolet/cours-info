@@ -253,7 +253,7 @@ Comme la FDP est paire (symétrique) : $$P(T≤-u) = P(T≥u) = 1-P(T≤u)$$
 
 Incompatibilité | $$A∩B=∅$$  
 
-Probabilité | $$📌P: \begin{cases}Ω → [0,1] \\A ↦ P(A)\end{cases}$$
+Probabilité | $$P: \begin{cases}Ω → [0,1] \\A ↦ P(A)\end{cases}$$
 
 Probabilités totales | $$P(A)=P(A∩B₁)+P(A∩B₂)+P(A∩B₃)$$  
 

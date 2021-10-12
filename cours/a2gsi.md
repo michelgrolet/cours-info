@@ -1,3 +1,5 @@
+{% include mathjax.html %}
+
 # Gestion des Systèmes d'information
 
 ## Structure du cours
@@ -48,7 +50,7 @@ Un ERP permet d'homogénéiser le Système d'information d'une entreprise, pour 
 - achats
 - ventes
 - comptabilité
-- gestion
+- gestion (RH)
 - production
 - stocks
 
@@ -81,7 +83,7 @@ On distingue les charges variables des charges fixes.
 
 > **Résultat =** $$C.A.-Σ charges$$.
 
-Comtpe de résultat différentiel :
+Compte de résultat différentiel :
 
 |                           | Montant | Taux |
 | ------------------------- | ------- | ---- |

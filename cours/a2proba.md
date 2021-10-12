@@ -21,6 +21,12 @@
       - [Fonction densité de probabilité](#fonction-densité-de-probabilité)
       - [Espérance, Variance](#espérance-variance)
       - [Différentes lois de probabilité continues](#différentes-lois-de-probabilité-continues)
+- [Théorèmes limites et Approximations](#théorèmes-limites-et-approximations)
+  - [Lois d'inégalités](#lois-dinégalités)
+  - [Théorème central limite](#théorème-central-limite)
+  - [Approximation de Lois](#approximation-de-lois)
+    - [B par P](#b-par-p)
+    - [B par N](#b-par-n)
 - [Formules](#formules)
 
 
@@ -115,7 +121,7 @@ ___
 
 ___
 ## Variables aléatoires discrètes
-Pour toute VA $$X$$ :
+Pour toute VAD $$X$$ :
 $$📌x: 
 \begin{cases}
 Ω → ℝ \\
@@ -248,6 +254,57 @@ Comme la FDP est paire (symétrique) : $$P(T≤-u) = P(T≥u) = 1-P(T≤u)$$
 
 
 
+
+# Théorèmes limites et Approximations
+
+## Lois d'inégalités
+Soit $$X, a ⊂ ℝ^{+}$$
+- On ne connait pas la loi de X
+- On connaît E(X)
+
+> 📌 Inégalité de Markov :      
+> $$P(X≥a) = \frac{E(X)}{a}$$
+
+> 📌 Inégalité de Bienaymé - Tchebychev :  
+> $$P(|X-E(X)|≥a) ≤ \frac{V(X)}{a²}$$
+
+## Théorème central limite
+Soit n VA ~ L de même espérance.
+> Soit $$Y = X_1+...+X_n$$
+> Y ~ approx. $$N(m, σ)$$ avec
+> - $$E(Y) = n×m$$
+> - $$σ(Y) = σ×\sqrt{n}$$
+
+> Soit $$\bar{Y}=\frac{X_1+...+X_n}{n}$$
+> Y ~ approx. $$N(m, σ)$$ avec
+> - $$E(\bar{X}) = m$$
+> - $$σ(\bar{X}) = \frac{σ}{\sqrt{n}}$$
+
+✍️ Il n'y a pas d'approximation quand $$X_i \sim N(M, σ)$$ d'après la stabilité de $$N$$.
+
+## Approximation de Lois
+### B par P
+La table de $$B$$ n'existe pas pour $$n≥50$$, mais on peu approcher $$B(n, p)$$ par $$P(λ)$$ ssi :
+- E et V de $$B(n, p)$$ et $$P(λ)$$ doivent être égales.
+- $$λ=n×p$$
+- $$λ≤16$$
+
+📌 $$\underset{B(n,p)}{P(X=k)} = \underset{P(n×p)}{P(X=k)}$$  
+📌 $$\underset{B(n,p)}{P(a≤X≤b)} = \underset{P(n×p)}{P(a≤X≤b)}$$
+
+✍️ L'approximation est bonne dès que :
+- P \< 0,1 
+- N ≥ 30
+- n×p \< 15
+
+### B par N
+On peut décomposer $$X \sim B(n, p)$$ en $$X_i$$ qui suivent la même loi avec :
+- $$E(X_i)=p$$
+- $$V(X_i)=p(1-p)$$
+
+D'après le théorème central limite, $$X \sim N(n×p, σ)$$
+
+📌 $$P(λ) ≈ N(λ, \sqrt{λ})$$
 
 # Formules
 

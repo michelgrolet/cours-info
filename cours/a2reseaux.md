@@ -6,23 +6,27 @@
 <summary> Plan ✨</summary>
 
 - [Réseaux](#réseaux)
-  - [Introduction](#introduction)
+  - [Concepts réseau](#concepts-réseau)
     - [Trame](#trame)
     - [LAN](#lan)
     - [VLAN](#vlan)
     - [&IP](#ip)
     - [SSH](#ssh)
       - [Connection SSH avec certificat :](#connection-ssh-avec-certificat-)
-- [Réseaux et Bash](#réseaux-et-bash)
+      - [Tunnel SSH](#tunnel-ssh)
+    - [DHCP](#dhcp)
+    - [Serveur HTTP](#serveur-http)
+- [Commandes réseau bash](#commandes-réseau-bash)
   - [Fichier de configuration réseau](#fichier-de-configuration-réseau)
 - [Éléments réseau](#éléments-réseau)
       - [Hub](#hub)
       - [Switch](#switch)
       - [Routeur](#routeur)
+- [Scripts bash](#scripts-bash)
 </details>
 
 ___
-## Introduction
+## Concepts réseau
 
 ### Trame
 data  | ... | ... | Transport                           | IP                  | interface
@@ -39,7 +43,7 @@ Sur le terminal VDE d'un switch :
 - `port/setvlan 4 1` : attribue le port 4 au VLAN 1
 - `vlan/print` : affiche les affectations des ports.
 
-> **Trunk :** port transportant des trames entre différents switchs entre des VLANs parfois différents.
+> **Trunk :** port transportant des trames entre différents switchs et différents VLANs.
 
 ### &IP
 4 octets (32 bits)
@@ -51,6 +55,13 @@ Sur le terminal VDE d'un switch :
 ### SSH
 Lors d'une connection par mot de passe, ce dernier peut être intercepté. Il est plus sécurisé de se connecter avec un certificat.
 
+| commande                       | explication                             |
+| ------------------------------ | --------------------------------------- |
+| `/etc/init.d/ssh start`        | démarre ssh                             |
+| `ssh -X &IP`                   | lance ssh vers &IP (X : mode graphique) |
+| `scp user@&ip:fichier u@&ip:f` | copie un fichier entre deux machines    |
+| `exit` ou `CTRL+D`             | quitte la session ssh                   |
+
 #### Connection SSH avec certificat :
 1. `ssh-keygen` 
    - génère un couple de clés privée/publique stockées dans `~/.ssh/id_rsa` et `~/.ssh/id_rsa.pub`.
@@ -58,22 +69,38 @@ Lors d'une connection par mot de passe, ce dernier peut être intercepté. Il es
 2. Copier `id_rsa.pub` sur le serveur SSH dans `~/.ssh/authorized_keys`.
 3. Se connecter au serveur avec la passphrase.
 
+#### Tunnel SSH
+`ssh -L 7777:&IP[destination] &IP[intermédiaire]` Crée un tunnel pour le port `7777` de `&IP[destination]` passant par `&IP[intermédiaire]`.
 
-# Réseaux et Bash
+### DHCP
+Logiciel sur un réseau qui distribue des &IP du réseau aux nouveaux arrivants.
+- &IP réseau/masque
+- &IPs disponibles
+- = &IP + #eth
 
-| commande                                  | explication                                                       |
-| ----------------------------------------- | ----------------------------------------------------------------- |
-| `ifconfig`                                | informations réseau de la machine                                 |
-| `ifconfig eth0 &ip`                       | assigne l'ip à l'interface eth0                                   |
-| `ifconfig eth0 inet6 add ipv6`            | assigne l'ipv6 à l'interface eth0                                 |
-| `ping &ip`                                | requête à &ip. &ip doit répondre.                                 |
-| `route`                                   | affiche les routes d'une machine ou d'un routeur                  |
-| `route add -net &IPdest/24 gw &IProuteur` | ajoute une route ves &IPdest dont le prochain saut est &IProuteur |
-| `route del -net &IPdest/24`               | supprime la route                                                 |
-| `ps x`                                    | liste les processus d'une machine                                 |
-| `/etc/init.d/ssh start`                   | démarre ssh                                                       |
-| `ssh &IP`                                 | lance ssh vers &IP                                                |
-| `scp user@&ip:fichier u@&ip:f`            | copie un fichier entre deux machines                              |
+### Serveur HTTP
+| commande                       | explication                            |
+| ------------------------------ | -------------------------------------- |
+| `/etc/init.d/apache2 start`    | démarre le serveur apache              |
+| `lynx localhost`               | lance localhost sur le navigateur lynx |
+| `scp user@&ip:fichier u@&ip:f` | copie un fichier entre deux machines   |
+| `exit` ou `CTRL+D`             | quitte la session ssh                  |
+
+
+# Commandes réseau bash
+
+| commande                                        | explication                                                       |
+| ----------------------------------------------- | ----------------------------------------------------------------- |
+| `ifconfig`                                      | informations réseau de la machine                                 |
+| `ifconfig eth0 &ip`                             | assigne l'ip à l'interface eth0                                   |
+| `ifconfig eth0 inet6 add ipv6`                  | assigne l'ipv6 à l'interface eth0                                 |
+| `ping &ip`                                      | requête à &ip. &ip doit répondre.                                 |
+| `route`                                         | affiche les routes d'une machine ou d'un routeur                  |
+| `route add -net &IPReseaudest/24 gw &IProuteur` | ajoute une route ves &IPdest dont le prochain saut est &IProuteur |
+| `route del -net &IPdest/24`                     | supprime la route                                                 |
+| `ps x`                                          | liste les processus d'une machine                                 |
+| `xterm &`                                       | ouvre un autre terminal                                           |
+
 
 
 ## Fichier de configuration réseau
@@ -96,3 +123,10 @@ Reproduit un paquet reçu vers sa destination.
 
 #### Routeur
 Relie deux réseaux IP ou transfère des paquets à leur réseau de destination.
+
+# Scripts bash
+```bash
+# Affiche le nombre de processus en cours d'exécution.
+#!/bin/bash
+echo $(ps -aux | wc -l) 
+```

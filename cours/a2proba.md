@@ -148,7 +148,7 @@ ___
 #### Espérance
 L'espérance représente ce que vaut X en moyenne, après beaucoup de répétitions.
 
-Somme des xᵢ pondérés par leur probabilité. 
+Somme des xᵢ pondérés par leur probabilité.  
 📌 $$E(X) = ∑ xᵢ×P(X=xᵢ)$$  
 
 $$E(X+Y)=E(X)+E(Y)$$  
@@ -156,11 +156,11 @@ $$E(kX)=kE(X)$$
 $$E(X+a)=E(X)+a$$
 
 #### Variance 
-> C'est la somme des carrés des écarts à l'espérance :   
-> $$= ∑ (xᵢ-E(X))² P(X=xᵢ)$$  
-> $$= ∑ (x² P(X=xᵢ))$$  
-> $$= E(X²)-E(X)²$$  
-> 📌$$V(X) = E[(X-E(X))²]$$
+C'est la somme des carrés des écarts à l'espérance :   
+$$= ∑ (xᵢ-E(X))² P(X=xᵢ)$$  
+$$= ∑ (x² P(X=xᵢ))$$  
+$$= E(X²)-E(X)²$$  
+📌$$V(X) = E[(X-E(X))²]$$
 
 > **Écart-type :** 📌$$σ=\sqrt{V(X)}$$
 

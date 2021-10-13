@@ -27,6 +27,8 @@ Collections, patrons de conception.
 	- [Patron adapter (structure)](#patron-adapter-structure)
 	- [Patron itérateur (comportement)](#patron-itérateur-comportement)
 	- [Patron décorateur](#patron-décorateur)
+	- [Patron fabrique (conception)](#patron-fabrique-conception)
+	- [Patron fabrique abstraite](#patron-fabrique-abstraite)
 </details>
 
 ___
@@ -293,3 +295,11 @@ Le constructeur du décorateur prends une instance du décoré en paramètre. Le
 ```java
 Décorateur d = new Décorateur(new Décoré());
 ```
+
+## Patron fabrique (conception)
+On utilise la méthode fabriquer() d'une classe Fabrique qui retourne un nouveau produit. On peut avoir plusieurs classe Fabrique qui implémentent une interface générale de fabrique.
+
+On peut aussi utiliser des fabriques paramétrées
+
+## Patron fabrique abstraite
+Pour une seule fabrique, on va pourvoir créer plusieurs types d'objets. Une Fabrique abstraite est implémentée par plusieurs fabriques concrètes. 

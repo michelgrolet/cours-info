@@ -68,7 +68,9 @@ A ↦ P(A)
 > Une probabilité vérifie :  
 > $$P(A)⊂[0,1]$$  
 > $$P(Ω)=1$$  
-> 📌$$P(A)∪P(B) = P(A)+P(B)$$ *(si compatibles :)* $$-P(A)∩P(B)$$
+> 📌$$P(A)∪P(B) = P(A)+P(B)-P(A)∩P(B)$$
+
+> **Événements incompatibles :** $$P(A)∩P(B) = ∅$$
 
 ✍🏻 Propriétés :
 - Additivité : $$P(A∪\bar{A}) = P(A)+P(\bar{A})$$

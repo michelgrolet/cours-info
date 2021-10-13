@@ -215,3 +215,62 @@ Marché du cloud : 5 milliards en 2015.
 ## Cloud et Écologie
 Le coût en énergie représente entre 20 et 30% du budget total d'un serveur.  
 Certaines entreprises construisent leurs serveurs dans le grand Nord. Le serveur de Facebook (alimentée en énergie par des barrages), c'est 10% plus efficace et 40% plus économe.
+
+Datacenters =
+- 6% de la consomation électrique aux US.
+- 2% des émissions de gaz à effet de serre.
+
+Indicateur de la consommation énergétique d'un datacenter : **POWER USAGE EFFECTIVENESS**.
+$$PUE = \frac{conso Datacenter}{conso Serveurs}$$
+
+## Trois modèles du cloud computing
+Cloud public :
+- à disposition du grand public.
+- Géré par un prestataire.
+- Ressources partagées.
+
+Cloud privé :
+- infrastructure exploitée par l'entreprise.
+- Hébergée par l'entreprise ou par un tiers.
+
+Hybrid Cloud :
+- infrastructure Composée de plusieurs clouds (publics ou privés) indépendants mais liés par les technologies utilisées.
+- Permet la portabilité des données et des applications entre les clouds. 
+
+## Saas (for end users)
+Mise à disposition de logiciels avec accès web, stockés sur le serveur de l'opérateur du Saas.
+
+## Paas (for developpers)
+Mise à disposition de plateformes de développement de logiciel avec accès web, stockées sur le serveur de l'opérateur du Paas.  
+Regroupe la partie développeur et système du Cloud, de façon simplifiée, afin que les développeurs du client n'aient pas besoin par exemple de gérer les utilisateurs.
+
+## Iass (for network architects)
+Infrastructures materielles louées à la demande. Stockage, VMs, OS, ...
+
+## Pourquoi aller vers le cloud computing
+- Mieux prévoir les coûts
+- Gagner en flexibilité et en réactivité
+- Évoluer avec moins de contraintes
+
+## Étapes de l'externalisation
+Externaliser :
+1. sauvegarde de data
+2. plan de reprise
+3. passer au Iass
+
+## Clause de SLA (Service Level Agreement)
+Cet engagement définit les garanties que les entreprises peuvent exiger de leurs fournisseurs. **Il permet de transformer une obligation de moyens en obligation de résultat.
+SLA :
+- Définition du périmètre de la prestation :
+  - Disponibilité
+  - Sécurité
+  - ...
+- Objectifs attendus avec des indicateurs mesurables :
+  - Temps de panne maximal
+  - Niveau de sécurité
+  - Vitesse de transfert
+  - ...
+- Sanctions en cas de manquement :
+  - rabais
+  - amende
+  - avoirs

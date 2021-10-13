@@ -146,6 +146,8 @@ ___
 ✍🏻 Les événements X=xᵢ forment un [Système complet d'événements](#système-complet-dévénements). C'est pourquoi $$\sum_{i}P(X=xᵢ)=1$$.
 
 #### Espérance
+L'espérance représente ce que vaut X en moyenne, après beaucoup de répétitions.
+
 Somme des xᵢ pondérés par leur probabilité. 
 📌 $$E(X) = ∑ xᵢ×P(X=xᵢ)$$  
 
@@ -154,7 +156,7 @@ $$E(kX)=kE(X)$$
 $$E(X+a)=E(X)+a$$
 
 #### Variance 
-> Somme des carrés des écarts à la moyenne :   
+> C'est la somme des carrés des écarts à l'espérance :   
 > $$= ∑ (xᵢ-E(X))² P(X=xᵢ)$$  
 > $$= ∑ (x² P(X=xᵢ))$$  
 > $$= E(X²)-E(X)²$$  

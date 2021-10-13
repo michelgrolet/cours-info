@@ -147,7 +147,7 @@ ___
 
 #### Espérance
 Somme des xᵢ pondérés par leur probabilité. 
-📌 $$E(X) = Σ(xᵢ) P(X=xᵢ)$$  
+📌 $$E(X) = ∑ xᵢ×P(X=xᵢ)$$  
 
 $$E(X+Y)=E(X)+E(Y)$$  
 $$E(kX)=kE(X)$$  
@@ -155,8 +155,8 @@ $$E(X+a)=E(X)+a$$
 
 #### Variance 
 > Somme des carrés des écarts à la moyenne :   
-> $$= \sum(xᵢ-E(X))² P(X=xᵢ)$$  
-> $$= \sum(x² P(X=xᵢ))$$  
+> $$= ∑ (xᵢ-E(X))² P(X=xᵢ)$$  
+> $$= ∑ (x² P(X=xᵢ))$$  
 > $$= E(X²)-E(X)²$$  
 > 📌$$V(X) = E[(X-E(X))²]$$
 

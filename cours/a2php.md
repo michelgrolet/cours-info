@@ -81,3 +81,55 @@ Les paramètres de type simple et les arrays sont passés par valeur. On peut fa
 - `require_once()` : une seule fois par fichier.
 
 ✍️ Les parenthèses sont optionelles pour require, require_once, echo et print.
+
+## Affectation de code
+```php
+$a = $b
+```
+Duplique les types simples et les tableaux. Copie la valeur mais la référence est différente.  
+Pour des objets, cette opération copie aussi la référence.
+
+```php
+$a = &$b
+```
+ici, `$a` et `$b` référencent la même adresse mémoire.
+
+## Variables dynamiques
+La valeur d'une variable peut être utilisée comme nom de variable.
+```php
+$v2='test';
+$var='v2';
+echo ${$var} //affiche test
+```
+
+Cela marche aussi pour les noms d'attributs, de méthodes et de fonctions.
+
+La dynamicité permet de créer des getter et setter génériques. On utilise alors `property_exists($objet, $propriete)` qui retourne vrai si `$propriete` (nom de methode ou d'attribut) existe.
+```php
+public function __get(string $attr):mixed {
+	if (property_exists($this, $attr)) return $this->$attr;
+	if ($attr == /*valeur*/) return /*attribut ou appel a methode*/ 
+	throw new Exception("$attr : invalid expression");
+}
+```
+Cette méthode permet l'accès automatique aux attributs d'un objet : `$attr = $obj->$attr` fonctionne même si l'attribut est privé.
+
+## Interfaces
+Elles fonctionnent comme en Java.
+
+## Héritage
+Pareil que Java. Seule différence pour utiliser les méthodes de la classe parente : 
+```java
+parent::__construct();
+```
+
+## 
+On peut créer des classes d'exceptions
+```php
+class Exc extends Exception {}
+try {
+	throw new Exc("");
+} catch (Exc $e) {
+	echo $e->getMessage();
+}
+```

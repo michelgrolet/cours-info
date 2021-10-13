@@ -11,11 +11,13 @@
   - [Probabilité](#probabilité)
   - [Indépendance](#indépendance)
   - [Probabilité Conditionelle](#probabilité-conditionelle)
+  - [Variables aléatoires](#variables-aléatoires)
+    - [Fonction de répartition](#fonction-de-répartition)
   - [Variables aléatoires discrètes](#variables-aléatoires-discrètes)
+  - [Variables aléatoires continues](#variables-aléatoires-continues)
   - [Lois de probabilité Discrètes](#lois-de-probabilité-discrètes)
       - [Espérance](#espérance)
       - [Variance](#variance)
-      - [Fonction de répartition](#fonction-de-répartition)
       - [Différentes lois de probabilité discrètes](#différentes-lois-de-probabilité-discrètes)
   - [Lois de probabilité continues](#lois-de-probabilité-continues)
       - [Fonction densité de probabilité](#fonction-densité-de-probabilité)
@@ -121,16 +123,46 @@ ___
 
 
 
+## Variables aléatoires
+
+### Fonction de répartition
+$$📌x: 
+\begin{cases}
+ℝ → [0;1] \\
+t ↦ F(t)=P(X≤t)
+\end{cases}$$
+
+📌$$F(t)=P(X≤t)$$
+
+> **Propriétés :**
+> - F est toujours croissante
+> - $$\lim_{t→0}F(t)=0$$
+> - $$\lim_{t→∞}F(t)=1$$
+
+> $$P(a≤X≤b)=P(X≤b)-P(X≤a)=F(b)-F(a)$$
+> P(X>a)=1-P(X≤a)=1-F(a)
+
+
+
 
 ___
 ## Variables aléatoires discrètes
+Une VAD est une fonction qui associe à chaque résultat d'une expérience aléatoire un entier naturel.
 Pour toute VAD $$X$$ :
 $$📌x: 
 \begin{cases}
 Ω → ℕ \\
 ωᵢ ↦ x(ωᵢ)=xᵢ
 \end{cases}$$ 
-
+___
+## Variables aléatoires continues
+Une VAC est une fonction qui associe à chaque résultat d'une expérience aléatoire un nombre réel.
+Pour toute VAC $$X$$ :
+$$📌x: 
+\begin{cases}
+Ω → \mathbb{R} \\
+ωᵢ ↦ x(ωᵢ)=xᵢ
+\end{cases}$$ 
 
 
 
@@ -157,34 +189,16 @@ $$E(X+a)=E(X)+a$$
 
 #### Variance 
 C'est la somme des carrés des écarts à l'espérance :   
-$$= ∑ (xᵢ-E(X))² P(X=xᵢ)$$  
-$$= ∑ (x² P(X=xᵢ))$$  
-$$= E(X²)-E(X)²$$  
-📌$$V(X) = E[(X-E(X))²]$$
+📌$$V(X) = ∑ (xᵢ-E(X))² P(X=xᵢ)$$  
+$$V(X) = ∑ (x² P(X=xᵢ))$$  
+$$V(X) = E(X²)-E(X)²$$  
+$$V(X) = E[(X-E(X))²]$$
 
 > **Écart-type :** 📌$$σ=\sqrt{V(X)}$$
 
 $$V(X+Y)=V(X)+V(Y)$$  
 $$V(kX)=k²V(X)$$  
 $$V(X+a)=V(X)$$
-
-#### Fonction de répartition
-
-$$📌x: 
-\begin{cases}
-ℝ → ℝ \\
-t ↦ F(t)=P(X≤t)
-\end{cases}$$
-
-> ✍🏻 Sa représentation est un escalier toujours montant car on inclut toujours les probabilités inférieures.
-> $$F⊂ℝ$$
-> $$F↗$$
-> $$0≤F(t)≤1$$
-> $$\lim_{t→0}F(t)=0$$
-> $$\lim_{t→∞}F(t)=1$$
-
-> $$P(a≤X≤b)=P(X≤b)-P(X≤a)=F(b)-F(a)$$
-> P(X>a)=1-P(X≤a)=1-F(a)
 
 #### Différentes lois de probabilité discrètes
 
@@ -194,13 +208,13 @@ B(p\)     |Bernoulli|$$p$$ |$$p(1-p)$$ |$$kn$$
 B(n;p)   |Binomiale|$$np$$|$$np(1-p)$$|$$\binom{n}{k} pᵏ(1-p)ⁿ⁻ᵏ$$
 P(λ)     |Poisson  |$$λ$$ |$$λ$$      |$$\frac{e^{-λ}λ^{k}}{k!}$$
 
-- **Loi de Bernoulli :** pour X ne prenant que 2 valeurs.  
+- **Loi de Bernoulli :** pour X ne prenant que 2 valeurs. On réalise des expériences de Bernoulli. 
   
 |X=xᵢ|0|1|
 |--|--|--|
 |P(X=xᵢ)|1-p|p|
 
-- **Loi binomiale :** Un ensemble de probabilités suit la loi binomiale **ssi** il forme un **schéma de Bernoulli** (EBRII).  
+- **Loi binomiale :** Un ensemble de probabilités suit la loi binomiale **ssi** il forme un **schéma de Bernoulli** (EBRII, Expériences de Bernoulli Répétées, Identiques, Indépendantes).  
 
 ✍🏻 Une loi binomiale s'applique par exemple à un tirage avec remise. 
 

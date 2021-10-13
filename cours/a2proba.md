@@ -97,6 +97,7 @@ A ↦ P(A)
 
 ___
 ## Indépendance
+Deux événements sont indépendants si la réalisation de l'un n'influence pas la réalisation de l'autre. 
 > #### Théorème de l'Indépendance
 > 📌A et B indépendants ssi $$P(A∩B)=P(A)P(B)$$
 > 
@@ -126,7 +127,7 @@ ___
 Pour toute VAD $$X$$ :
 $$📌x: 
 \begin{cases}
-Ω → ℝ \\
+Ω → ℕ \\
 ωᵢ ↦ x(ωᵢ)=xᵢ
 \end{cases}$$ 
 

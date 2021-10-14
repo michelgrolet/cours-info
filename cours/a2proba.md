@@ -136,8 +136,8 @@ t ↦ F(t)=P(X≤t)
 
 > **Propriétés :**
 > - F est toujours croissante
-> - $$\lim_{t→0}F(t)=0$$
-> - $$\lim_{t→∞}F(t)=1$$
+> - $$\lim_{t→0}F(t)=0$$.
+> - $$\lim_{t→∞}F(t)=1$$.
 
 > $$P(a≤X≤b)=P(X≤b)-P(X≤a)=F(b)-F(a)$$
 > P(X>a)=1-P(X≤a)=1-F(a)
@@ -188,7 +188,7 @@ $$E(kX)=kE(X)$$
 $$E(X+a)=E(X)+a$$
 
 #### Variance 
-C'est la somme des carrés des écarts à l'espérance :   
+C'est la moyenne des carrés des écarts à l'espérance :   
 📌$$V(X) = ∑ (xᵢ-E(X))² P(X=xᵢ)$$  
 $$V(X) = ∑ (x² P(X=xᵢ))$$  
 $$V(X) = E(X²)-E(X)²$$  

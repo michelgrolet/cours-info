@@ -392,7 +392,7 @@ $${f_1, f_2, ...}$$ est la distribution d'échantillonnage de proportion.
 $${\bar{X_1}, \bar{X_2}, ...}$$ est la distribution d'échantillonnage des moyennes.
 
 > $$\bar{X}$$ est une VA associant $$\bar{X_i}$$ à chaque échantillon $$i$$. $$\bar{X} = \frac{\sum_1^n x_i}{n}$$
-> - Loi de $$\bar{X}$$ : d'après le **Théorème central limite**, $$\bar{X} ∼ N(m, σ/\sqrt{n}$$
+> - Loi de $$\bar{X}$$ : d'après le **Théorème central limite**, $$\bar{X} ∼ N(m, σ/\sqrt{n})$$
 
 > $$X_i$$ est une VA qui représente la valeur du $$i^ème$$ tirage.
 > - Espérance : $$E(X_i) = ΣE(X)/n = m$$

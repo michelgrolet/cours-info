@@ -376,7 +376,7 @@ On suppose que :
 
 ## Distribution d'échantillonnage de proportion
 
-$$f_1$$ est la proportion d'individus possédant le caractère $$A$$ dans l'échantillon $$i$$.
+$$f_i$$ est la proportion d'individus possédant le caractère $$A$$ dans l'échantillon $$i$$.
 
 $${f_1, f_2, ...}$$ est la distribution d'échantillonnage de proportion.
 
@@ -385,7 +385,7 @@ $${f_1, f_2, ...}$$ est la distribution d'échantillonnage de proportion.
 
 > F : VA associant $$f_i$$ à chaque $$i$$.
 > - lien avec Y : $$F=\frac{Y}{n}$$
-> - Loi de F : on approche $$Y ∼ B(n,p)$$ par $$F ∼ N(p, \sqrt{p(1-p)/n}$$
+> - Loi de F : on approche $$Y ∼ B(n,p)$$ par $$F ∼ N(p, \sqrt{p(1-p)/n})$$
 > - Espérance de F : $$E(F) = E(Y/n) = E(Y)/n = p$$
 > - Variance de F : $$V(F) = V(Y/n) = V(Y)/n² = \frac{p(1-p)}{n}$$
 
@@ -418,3 +418,5 @@ On connaît $$\bar{x}$$ d'un échantillon.
 > $$I_{0,95} = [\bar{x}-\frac{1,96σ}{\sqrt{n}}, \bar{x}+\frac{1,96σ}{\sqrt{n}}]$$
 
 ✍️ Si on ne connaît pas σ on peut utiliser $$\hat{σ} = s×\sqrt{\frac{n}{n-1}}>s$$
+
+Après un sondage, il y a 95% de chances que le résultat soit dans $$I_{0,95}$$. 

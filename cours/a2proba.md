@@ -353,6 +353,9 @@ Variance | $$E[(X-E(X))²]$$
 
 
 
+
+
+
 # Échantillonnage, Estimation, Intervalle de confiance
 
 Soit une **population** sur laquelle on a une Variable Aléatoire :
@@ -360,8 +363,8 @@ Soit une **population** sur laquelle on a une Variable Aléatoire :
 - d'écart-type $$σ$$
 - de probabilité $$p$$
 
-On suppose :
-- La population infinie
+On suppose que :
+- La population est infinie
 - Les tirages sont avec remise
 
 | Paramètre  | Population | Échantillon |
@@ -369,7 +372,7 @@ On suppose :
 | moyenne    | $$m$$      | $$\bar{x}$$ |
 | écart-type | $$σ$$      | $$s$$       |
 | proportion | $$p$$      | $$f$$       |
-| taille     | $$N→∞$$    | $$n≥30$$    |
+| taille     | $$N→+∞$$    | $$n≥30$$    |
 
 ## Distribution d'échantillonnage de proportion
 
@@ -410,7 +413,7 @@ Estimer la population (m, σ, p) à partir d'un échantillon (\bar{x}, s, f).
 
 On connaît $$\bar{x}$$ d'un échantillon.
 
-> **Intervalle de confiance :** $$[\bar{x}-a, \bar{x}+a]$$ avec $$a ⊂ \R^+$$.
+> **Intervalle de confiance :** $$[\bar{x}-a, \bar{x}+a]$$ avec $$a ⊂ \mathbb{R}^+$$.
 > Intervalle contenant $$m$$ avec un degré de confiance de 95%.
 > $$I_{0,95} = [\bar{x}-\frac{1,96σ}{\sqrt{n}}, \bar{x}+\frac{1,96σ}{\sqrt{n}}]$$
 

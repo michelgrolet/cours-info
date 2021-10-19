@@ -133,3 +133,25 @@ try {
 	echo $e->getMessage();
 }
 ```
+
+## Namespaces
+Pour éviter les conflits entre classes de même nom, on utilise les namespaces (chemin d'un package).
+```php
+$prof = new \personne\Enseignant("Guenego");
+```
+
+On doit donner le nom complet d'une classe quand elle n'est pas dans le package courant.
+
+### Alias de noms de classe : use
+```php
+use \personne\Enseignant as Ens;
+use \personne\Enseignant; // as Enseignant est implicite
+use \personne as p; // alias de namespace
+```
+
+✍️ Ne pas confondre les namespaces définis avec `\\` des répertoires de fichiers définis avec `/`.
+
+## Structures de fichiers
+Une bonne pratique :
+- src : classes non accessibles depuis une url
+- public : fichiers accessibles, html et php

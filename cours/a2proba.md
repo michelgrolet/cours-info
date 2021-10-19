@@ -30,6 +30,10 @@
     - [B par P](#b-par-p)
     - [B par N](#b-par-n)
 - [Formules](#formules)
+- [Échantillonnage, Estimation, Intervalle de confiance](#échantillonnage-estimation-intervalle-de-confiance)
+  - [Distribution d'échantillonnage de proportion](#distribution-déchantillonnage-de-proportion)
+  - [Estimation ponctuelle](#estimation-ponctuelle)
+  - [Estimation par intervalle de confiance](#estimation-par-intervalle-de-confiance)
 
 
 ___
@@ -346,3 +350,68 @@ Variable Aléatoire discrète | $$x: \begin{cases}Ω → ℝ \\ωᵢ ↦ x(ωᵢ
 Espérance | $$Σ(xᵢ) P(X=xᵢ)$$  
 
 Variance | $$E[(X-E(X))²]$$  
+
+
+
+# Échantillonnage, Estimation, Intervalle de confiance
+
+Soit une **population** sur laquelle on a une Variable Aléatoire :
+- de moyenne $$m$$
+- d'écart-type $$σ$$
+- de probabilité $$p$$
+
+On suppose :
+- La population infinie
+- Les tirages sont avec remise
+
+| Paramètre  | Population | Échantillon |
+| ---------- | ---------- | ----------- |
+| moyenne    | $$m$$      | $$\bar{x}$$ |
+| écart-type | $$σ$$      | $$s$$       |
+| proportion | $$p$$      | $$f$$       |
+| taille     | $$N→∞$$    | $$n≥30$$    |
+
+## Distribution d'échantillonnage de proportion
+
+$$f_1$$ est la proportion d'individus possédant le caractère $$A$$ dans l'échantillon $$i$$.
+
+$${f_1, f_2, ...}$$ est la distribution d'échantillonnage de proportion.
+
+> Y : VA qui associe le nombre d'individus possédant le caractère A à un échantillon donné.
+> - loi de Y : $$Y ∼ B(n,p)$$
+
+> F : VA associant $$f_i$$ à chaque $$i$$.
+> - lien avec Y : $$F=\frac{Y}{n}$$
+> - Loi de F : on approche $$Y ∼ B(n,p)$$ par $$F ∼ N(p, \sqrt{p(1-p)/n}$$
+> - Espérance de F : $$E(F) = E(Y/n) = E(Y)/n = p$$
+> - Variance de F : $$V(F) = V(Y/n) = V(Y)/n² = \frac{p(1-p)}{n}$$
+
+$${\bar{X_1}, \bar{X_2}, ...}$$ est la distribution d'échantillonnage des moyennes.
+
+> $$\bar{X}$$ est une VA associant $$\bar{X_i}$$ à chaque échantillon $$i$$. $$\bar{X} = \frac{\sum_1^n x_i}{n}$$
+> - Loi de $$\bar{X}$$ : d'après le **Théorème central limite**, $$\bar{X} ∼ N(m, σ/\sqrt{n}$$
+
+> $$X_i$$ est une VA qui représente la valeur du $$i^ème$$ tirage.
+> - Espérance : $$E(X_i) = ΣE(X)/n = m$$
+> - Variance : $$V(X_i) = Σx_i/n² = σ²$$
+
+## Estimation ponctuelle
+
+Estimer la population (m, σ, p) à partir d'un échantillon (\bar{x}, s, f).
+
+> Estimation ponctuelle de la moyenne : $$\hat{m} = \bar{x}$$
+
+> Estimation ponctuelle de l'écart-type : $$\hat{σ} = s×\sqrt{\frac{n}{n-1}}>s$$
+> avec $$\frac{n}{n-1}$$ coefficient de biais.
+
+> Estimation ponctuelle de la proportion : $$\hat{p} = f$$
+
+## Estimation par intervalle de confiance
+
+On connaît $$\bar{x}$$ d'un échantillon.
+
+> **Intervalle de confiance :** $$[\bar{x}-a, \bar{x}+a]$$ avec $$a ⊂ \R^+$$.
+> Intervalle contenant $$m$$ avec un degré de confiance de 95%.
+> $$I_{0,95} = [\bar{x}-\frac{1,96σ}{\sqrt{n}}, \bar{x}+\frac{1,96σ}{\sqrt{n}}]$$
+
+✍️ Si on ne connaît pas σ on peut utiliser $$\hat{σ} = s×\sqrt{\frac{n}{n-1}}>s$$

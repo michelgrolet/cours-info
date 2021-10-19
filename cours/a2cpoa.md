@@ -29,6 +29,8 @@ Collections, patrons de conception.
 	- [Patron décorateur](#patron-décorateur)
 	- [Patron fabrique (conception)](#patron-fabrique-conception)
 	- [Patron fabrique abstraite](#patron-fabrique-abstraite)
+	- [Patron singleton](#patron-singleton)
+	- [Threads](#threads)
 </details>
 
 ___
@@ -302,4 +304,30 @@ On utilise la méthode fabriquer() d'une classe Fabrique qui retourne un nouveau
 On peut aussi utiliser des fabriques paramétrées
 
 ## Patron fabrique abstraite
-Pour une seule fabrique, on va pourvoir créer plusieurs types d'objets. Une Fabrique abstraite est implémentée par plusieurs fabriques concrètes. 
+Pour une seule fabrique, on va pourvoir créer plusieurs types d'objets. Une Fabrique abstraite est implémentée par plusieurs fabriques concrètes.
+
+## Patron singleton
+
+Garantis qu'une classe n'a qu'une seule instance accessible.
+Une classe instance possède un attribut instance et une méthode statique getInstance.
+```java
+public class Singleton {
+	private static Singleton instance;
+	private Singleton(){}
+	public static Singleton getInstance() {
+		if(instance==null) instance = new Singleton();
+		return instance;
+	}
+}
+```
+
+Pour garantir l'unicité de l'instance parmi les threads, on initialise l'instance dès le début : `private static Singleton instance = new Singleton`.
+
+Mais la meilleure méthode est d'ajouter le paramètre `synchronized` à `getInstance()` qui garde l'accès à la méthode synchronisé entre les threads.
+
+## Threads
+Sur des processeurs multi coeurs, les threads s'effectuent en même temps si il y a assez de coeurs disponibles.
+Sur des processeurs à un coeur, le simultané est simulé par le processeur qui change de thread 
+- `run()` démarre le thread
+- `start()` exécute `run()`
+- `sleep(ms)` permet de mettre en pause l'exécution du thread. 

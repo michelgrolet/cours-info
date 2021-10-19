@@ -381,7 +381,7 @@ $$f_i$$ est la proportion d'individus possédant le caractère $$A$$ dans l'éch
 $${f_1, f_2, ...}$$ est la distribution d'échantillonnage de proportion.
 
 > Y : VA qui associe le nombre d'individus possédant le caractère A à un échantillon donné.
-> - loi de Y : $$Y ∼ B(n,p)$$
+> - Loi de Y : $$Y ∼ B(n,p)$$
 
 > F : VA associant $$f_i$$ à chaque $$i$$.
 > - lien avec Y : $$F=\frac{Y}{n}$$
@@ -419,4 +419,4 @@ On connaît $$\bar{x}$$ d'un échantillon.
 
 ✍️ Si on ne connaît pas σ on peut utiliser $$\hat{σ} = s×\sqrt{\frac{n}{n-1}}>s$$
 
-Après un sondage, il y a 95% de chances que le résultat soit dans $$I_{0,95}$$. 
+Exemple : lors d'un sondage, il y a 95% de chances que le résultat soit dans $$I_{0,95}$$. 

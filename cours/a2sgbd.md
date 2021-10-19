@@ -50,6 +50,7 @@
 
 ---
 ## 1. Notations
+
 | Définition             | Notation         |
 | ---------------------- | ---------------- |
 | Colonne                | t[attrr]         |

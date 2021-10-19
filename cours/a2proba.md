@@ -394,17 +394,17 @@ $${\bar{X_1}, \bar{X_2}, ...}$$ est la distribution d'échantillonnage des moyen
 > $$\bar{X}$$ est une VA associant $$\bar{X_i}$$ à chaque échantillon $$i$$. $$\bar{X} = \frac{\sum_1^n x_i}{n}$$
 > - Loi de $$\bar{X}$$ : d'après le **Théorème central limite**, $$\bar{X} ∼ N(m, σ/\sqrt{n})$$
 
-> $$X_i$$ est une VA qui représente la valeur du $$i^ème$$ tirage.
+> $$X_i$$ est une VA qui représente la valeur du $$i^{ème}$$ tirage.
 > - Espérance : $$E(X_i) = ΣE(X)/n = m$$
 > - Variance : $$V(X_i) = Σx_i/n² = σ²$$
 
 ## Estimation ponctuelle
 
-Estimer la population (m, σ, p) à partir d'un échantillon (\bar{x}, s, f).
+Estimer la population (m, σ, p) à partir d'un échantillon ($$\bar{x}, s, f$$).
 
 > Estimation ponctuelle de la moyenne : $$\hat{m} = \bar{x}$$
 
-> Estimation ponctuelle de l'écart-type : $$\hat{σ} = s×\sqrt{\frac{n}{n-1}}>s$$
+> Estimation ponctuelle de l'écart-type : $$\hat{σ} = s×\sqrt{\frac{n}{n-1}}>s$$  
 > avec $$\frac{n}{n-1}$$ coefficient de biais.
 
 > Estimation ponctuelle de la proportion : $$\hat{p} = f$$
@@ -413,8 +413,8 @@ Estimer la population (m, σ, p) à partir d'un échantillon (\bar{x}, s, f).
 
 On connaît $$\bar{x}$$ d'un échantillon.
 
-> **Intervalle de confiance :** $$[\bar{x}-a, \bar{x}+a]$$ avec $$a ⊂ \mathbb{R}^+$$.
-> Intervalle contenant $$m$$ avec un degré de confiance de 95%.
+> **Intervalle de confiance :** $$[\bar{x}-a, \bar{x}+a]$$ avec $$a ⊂ \mathbb{R}^+$$.  
+> Intervalle contenant $$m$$ avec un degré de confiance de 95%.  
 > $$I_{0,95} = [\bar{x}-\frac{1,96σ}{\sqrt{n}}, \bar{x}+\frac{1,96σ}{\sqrt{n}}]$$
 
 ✍️ Si on ne connaît pas σ on peut utiliser $$\hat{σ} = s×\sqrt{\frac{n}{n-1}}>s$$

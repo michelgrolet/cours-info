@@ -28,8 +28,8 @@ Collections, patrons de conception.
 	- [Patron itérateur (comportement)](#patron-itérateur-comportement)
 	- [Patron décorateur (structure)](#patron-décorateur-structure)
 	- [Patron fabrique (construction)](#patron-fabrique-construction)
-	- [Patron fabrique abstraite](#patron-fabrique-abstraite)
-	- [Patron singleton](#patron-singleton)
+	- [Patron fabrique abstraite (construction)](#patron-fabrique-abstraite-construction)
+	- [Patron singleton (construction)](#patron-singleton-construction)
 	- [Threads](#threads)
 </details>
 
@@ -262,6 +262,8 @@ Types de patrons de conception :
   - [Iterator](#patron-itérateur-comportement)
 - patrons de **construction** (créer/configurer des objets)
   - [Fabrique](#patron-fabrique-construction)
+  - [Fabrique Abstraite](#patron-fabrique-abstraite-construction)
+  - [Singleton](#patron-singleton-construction)
 
 
 ## Patron stratégie (comportement)
@@ -309,10 +311,12 @@ On utilise la méthode fabriquer() d'une classe Fabrique qui retourne un nouveau
 
 On peut aussi utiliser des fabriques paramétrées
 
-## Patron fabrique abstraite
+## Patron fabrique abstraite (construction)
 Pour une seule fabrique, on va pourvoir créer plusieurs types d'objets. Une Fabrique abstraite est implémentée par plusieurs fabriques concrètes.
+Chaque fabrique de ce patron a une méthode de création pour chaque type d'objet créé.
+> ✍️ Si on veut créer des objets de type 1, on utilise `FabriqueAbstraite f = new FabriqueType1()` puis `f.creerObjetTypeA()`, `f.creerObjetTypeB()`...
 
-## Patron singleton
+## Patron singleton (construction)
 
 Garantis qu'une classe n'a qu'une seule instance accessible.
 Une classe instance possède un attribut instance et une méthode statique getInstance.

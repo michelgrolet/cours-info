@@ -261,11 +261,10 @@ Types de patrons de conception :
 
 ## Patron stratégie (comportement)
 ![](..//assets/diagrammes/Patron_Strategie.png)
-- Classe Context : gère une référence à un objet qui implémente Stratégie
-- Interface Stratégie : implémentée par plusieurs classe concrètes.
+Le patron de conception **Stratégie** permet à une classe `Context` de switcher d'algorithme entre `Strat1` et `Strat2` en encapsulant ces deux classes dans une classe/interface `Stratégie`.
 
 ## Patron adapter (structure)
-![](../assets/diagrammes/Patron_Adaptateur.png)
+![](../assets/diagrammes/Patron_Adapteur.png)
 - Une classe sert d'**adaptateur** entre le client et les classes à adapter.
 - L'adaptateur peut se lier aux classes à adapter par 2 moyens :
   - Extends les classes à adapter

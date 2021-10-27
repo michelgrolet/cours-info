@@ -1,0 +1,12 @@
+@startuml Patron_Strategie
+skinparam backgroundcolor transparent
+skinparam Monochrome reverse
+interface Strategie
+
+class Strategie1 implements Strategie
+class Strategie2 implements Strategie
+class Context
+
+Context "1" --> "1 Strat" Strategie
+
+@enduml

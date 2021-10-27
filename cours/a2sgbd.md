@@ -95,7 +95,7 @@ On doit grouper les colonnes redondantes dans la même relation.
 > **F+** *(Sur l'ensemble F)* : ensemble des DFE pouvant être trouvées avec les [Axiomes d'Armstrong](#axiomes-darmstrong).
 
 ### Couverture Minimale
-> **Couverture Minimale :** Ensemble **G** de DF canoniques non-redondantes élémentaires.
+> **Couverture Minimale :** Ensemble **G** des DF canoniques non-redondantes élémentaires.
 
 - On minimise le nombre de DF.
 - Il ne faut pas perdre d'informations.
@@ -109,7 +109,7 @@ On doit grouper les colonnes redondantes dans la même relation.
 Si on a la DF **X→Clé**, x est une clé.
 
 > **Clé Primaire :** Une des clés de R.  
-> **Clé Étrangère :** Clé primaire de R2 appartenant à R.
+> **Clé Étrangère :** Clé primaire de R2 appartenant à R.  
 > **Clé Minimale :** Clé comportant le minimum d'attributs.
 
 ### X dépend de Y...
@@ -294,7 +294,7 @@ ___
     - Blocs (portion d'une piste)
       - Secteurs (portion d'un bloc)
 
-> **Piste :** ensemble des **blocs** lus pendant une rotation.
+> **Piste :** ensemble des **blocs** lus pendant une rotation.  
 > **Cylindre :** pistes de chaque disque, situées sous la tête de lecture.
 
 ✍️ Une BDD est stockée sur plusieurs fichiers situés eux-même sur plusieurs blocs. Les SGBD permettent autant que possible de

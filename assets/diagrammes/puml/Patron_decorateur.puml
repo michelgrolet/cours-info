@@ -1,0 +1,35 @@
+@startuml Patron_Decorateur
+skinparam backgroundcolor transparent
+skinparam Monochrome reverse
+abstract class Boisson {
+	- description
+	+ getDescription()
+	+ cout()
+}
+
+class Expresso extends Boisson {
+	+ cout()
+}
+class Déca extends Boisson {
+	+ cout()
+}
+
+abstract class DecorateurIngredient extends Boisson {
+	+ getDescription()
+}
+
+class BoissonLait extends DecorateurIngredient {
+	+ getDescription()
+	+ cout()
+}
+class BoissonChocolat extends DecorateurIngredient {
+	+ getDescription()
+	+ cout()
+}
+class BoissonCaramel extends DecorateurIngredient {
+	+ getDescription()
+	+ cout()
+}
+DecorateurIngredient ---> "composant" Boisson
+
+@enduml

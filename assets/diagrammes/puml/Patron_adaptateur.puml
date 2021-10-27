@@ -1,0 +1,20 @@
+@startuml Patron_Adapteur
+skinparam backgroundcolor transparent
+skinparam Monochrome reverse
+
+class Client
+interface cible {
+	+ requete()
+}
+
+class Adaptateur implements Client {
+	+ requete()
+}
+
+class Adapté {
+	+ Methode()
+}
+
+Adaptateur --> "adapté" Adapté
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml Patron_Fabrique
+skinparam backgroundcolor transparent
+skinparam Monochrome reverse
+abstract class Fabrique {
+	-{abstract}fabriquer() : produit
+}
+
+abstract class Produit
+Fabrique -[dashed]-> Produit : crée
+
+class FabriqueConcrete extends Fabrique {
+	-fabriquer()
+}
+note top: return new ProduitConcret();
+class ProduitConcret extends Produit
+FabriqueConcrete -[dashed]-> ProduitConcret : crée
+
+@enduml

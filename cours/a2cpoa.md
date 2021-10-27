@@ -26,8 +26,8 @@ Collections, patrons de conception.
 	- [Patron stratégie (comportement)](#patron-stratégie-comportement)
 	- [Patron adapter (structure)](#patron-adapter-structure)
 	- [Patron itérateur (comportement)](#patron-itérateur-comportement)
-	- [Patron décorateur](#patron-décorateur)
-	- [Patron fabrique (conception)](#patron-fabrique-conception)
+	- [Patron décorateur (structure)](#patron-décorateur-structure)
+	- [Patron fabrique (construction)](#patron-fabrique-construction)
 	- [Patron fabrique abstraite](#patron-fabrique-abstraite)
 	- [Patron singleton](#patron-singleton)
 	- [Threads](#threads)
@@ -254,9 +254,14 @@ Algorithmes génériques opérant sur certaines collections (souvent des listes)
 Bonnes pratiques de la COO.
 Solutions de haut niveau : s'adaptent à tous les languages.
 Types de patrons de conception :
-- patrons de **construction** (créer/configurer des objets)
 - patrons de **structure** (créer des structures)
+  - [Adaptateur](#patron-adapter-structure)
+  - [Decorateur](#patron-décorateur-structure)
 - patrons de **comportement** (gérer les interactions entre objets)
+  - [Stratégie](#patron-stratégie-comportement)
+  - [Iterator](#patron-itérateur-comportement)
+- patrons de **construction** (créer/configurer des objets)
+  - [Fabrique](#patron-fabrique-construction)
 
 
 ## Patron stratégie (comportement)
@@ -283,7 +288,7 @@ requête en utilisant une instance d’Adapté `(adapté.methode())`.
 - `elementCourant()` : dans Java, cette méthode est dans `suivant()`.
 
 
-## Patron décorateur
+## Patron décorateur (structure)
 ![](../assets/diagrammes/Patron_Decorateur.png)
 
 
@@ -297,7 +302,7 @@ Le constructeur du décorateur prends une instance du décoré en paramètre. Le
 Décorateur d = new Décorateur(new Décoré());
 ```
 
-## Patron fabrique (conception)
+## Patron fabrique (construction)
 ![](../assets/diagrammes/Patron_Fabrique.png)
 
 On utilise la méthode fabriquer() d'une classe Fabrique qui retourne un nouveau produit. On peut avoir plusieurs classe Fabrique qui implémentent une interface générale de fabrique.

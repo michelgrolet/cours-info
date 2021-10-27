@@ -260,12 +260,12 @@ Types de patrons de conception :
 
 
 ## Patron stratégie (comportement)
-![](..//assets/Patron_strategie.png)
+![](..//assets/diagrammes/Patron_strategie.png)
 - Classe Context : gère une référence à un objet qui implémente Stratégie
 - Interface Stratégie : implémentée par plusieurs classe concrètes.
 
 ## Patron adapter (structure)
-![](..//assets/Patron_adaptateur.png)
+![](..//assets/diagrammes/Patron_adaptateur.png)
 - Une classe sert d'**adaptateur** entre le client et les classes à adapter.
 - L'adaptateur peut se lier aux classes à adapter par 2 moyens :
   - Extends les classes à adapter
@@ -286,7 +286,7 @@ requête en utilisant une instance d’Adapte `(adapte.method())`.
 
 
 ## Patron décorateur
-![](../assets/Patron_decorateur.png)
+![](../assets/diagrammes/Patron_decorateur.png)
 
 
 > **Agrégations UML :** Quand une classe 1 est composée d'objets d'une classe 2. Losange vide.
@@ -300,7 +300,7 @@ Décorateur d = new Décorateur(new Décoré());
 ```
 
 ## Patron fabrique (conception)
-![](../assets/Patron_fabrique.png)
+![](../assets/diagrammes/Patron_fabrique.png)
 
 On utilise la méthode fabriquer() d'une classe Fabrique qui retourne un nouveau produit. On peut avoir plusieurs classe Fabrique qui implémentent une interface générale de fabrique.
 

@@ -1,0 +1,21 @@
+@startuml Patron_Observateur
+skinparam backgroundcolor transparent
+skinparam Monochrome reverse
+
+class SujetConcret {
+	+ addObs()
+	+ removeObs()
+	+ notifyObs()
+}
+
+class ObservateurConcret implements Obserateur {
+	+ actualiser()
+}
+
+interface Obserateur {
+	+ actualiser()
+}
+SujetConcret --> Obserateur : observateurs
+ObservateurConcret --> SujetConcret : sujet
+
+@enduml

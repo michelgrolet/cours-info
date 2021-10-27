@@ -31,6 +31,7 @@ Collections, patrons de conception.
 	- [Patron fabrique abstraite (construction)](#patron-fabrique-abstraite-construction)
 	- [Patron singleton (construction)](#patron-singleton-construction)
 	- [Threads](#threads)
+	- [Patron observateur (comportement)](#patron-observateur-comportement)
 </details>
 
 ___
@@ -259,7 +260,8 @@ Types de patrons de conception :
   - [Decorateur](#patron-décorateur-structure)
 - patrons de **comportement** (gérer les interactions entre objets)
   - [Stratégie](#patron-stratégie-comportement)
-  - [Iterator](#patron-itérateur-comportement)
+  - [Iterateur](#patron-itérateur-comportement)
+  - [Observateur](#patron-observer-comportement)
 - patrons de **construction** (créer/configurer des objets)
   - [Fabrique](#patron-fabrique-construction)
   - [Fabrique Abstraite](#patron-fabrique-abstraite-construction)
@@ -318,22 +320,18 @@ Chaque fabrique de ce patron a une méthode de création pour chaque type d'obje
 
 ## Patron singleton (construction)
 
-Garantis qu'une classe n'a qu'une seule instance accessible.
-Une classe instance possède un attribut instance et une méthode statique getInstance.
+Singleton permet d'avoir une unique instance d'une classe, accessible depuis la méthode `synchronised getInstance()`.  
 ```java
 public class Singleton {
 	private static Singleton instance;
-	private Singleton(){}
-	public static Singleton getInstance() {
+	private Singleton(){/*initialisation*/}
+	public static synchronized Singleton getInstance() {
 		if(instance==null) instance = new Singleton();
 		return instance;
 	}
 }
 ```
-
-Pour garantir l'unicité de l'instance parmi les threads, on initialise l'instance dès le début : `private static Singleton instance = new Singleton`.
-
-Mais la meilleure méthode est d'ajouter le paramètre `synchronized` à `getInstance()` qui garde l'accès à la méthode synchronisé entre les threads.
+**Synchronized** permet à un thread de "prendre les clés" de la méthode pour que les autres threads ne puissent pas y accéder pendant que le premier thread s'en sert.
 
 ## Threads
 Sur des processeurs multi coeurs, les threads s'effectuent en même temps si il y a assez de coeurs disponibles.
@@ -341,3 +339,14 @@ Sur des processeurs à un coeur, le simultané est simulé par le processeur qui
 - `run()` démarre le thread
 - `start()` exécute `run()`
 - `sleep(ms)` permet de mettre en pause l'exécution du thread. 
+
+## Patron observateur (comportement)
+
+![](../assets/diagrammes/Patron_Observateur.png)
+
+Les classes `Observer` sont notifiées (et se mettent à jour) quand `Sujet` change.
+
+`Sujet` et `Observer` sont faiblement couplés, parce que le sujet ne sait qu'une chose : chaque `ObserverConcret` implémente `Observer`. Cela permet
+- d'avoir un système souple
+- d'ajouter des observateurs à tout moment
+- de modifier indépendamment `Sujet` des `ObserverConcret`. 

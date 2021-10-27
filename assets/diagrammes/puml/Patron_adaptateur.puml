@@ -3,11 +3,11 @@ skinparam backgroundcolor transparent
 skinparam Monochrome reverse
 
 class Client
-interface cible {
+interface Cible {
 	+ requete()
 }
-
-class Adaptateur implements Client {
+Client -[dotted]-> Cible
+class Adaptateur implements Cible {
 	+ requete()
 }
 

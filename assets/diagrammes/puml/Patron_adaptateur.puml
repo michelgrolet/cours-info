@@ -15,6 +15,6 @@ class Adapté {
 	+ Methode()
 }
 
-Adaptateur --> "adapté" Adapté
+Adaptateur --> "adapte" Adapté
 
 @enduml

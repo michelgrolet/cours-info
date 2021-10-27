@@ -265,14 +265,13 @@ Le patron de conception **Stratégie** permet à une classe `Context` de switche
 
 ## Patron adapter (structure)
 ![](../assets/diagrammes/Patron_Adapteur.png)
-- Une classe sert d'**adaptateur** entre le client et les classes à adapter.
-- L'adaptateur peut se lier aux classes à adapter par 2 moyens :
-  - Extends les classes à adapter
-  - Prendre les classes à adapter en paramètre
+- Une classe `Client` gère différents types de `cibles`. On veut adapter une nouvelle cible `Adapté` qui ne correspond pas au modèle actuel. 
+- `Adaptateur` peut se lier à `Adapté` par 2 moyens :
+  - `extends Adapté`
+  - `Adaptateur(Adapté a)`
 
-> Le client envoie `requete()` et l’adapté doit exécuter `methode()`
-pour satisfaire la demande. L’adaptateur répond à cette
-requête en utilisant une instance d’Adapte `(adapte.method())`.
+> Le client envoie `requete()` et l’adapté doit exécuter `methode()` pour satisfaire la demande. L’adaptateur répond à cette
+requête en utilisant une instance d’Adapté `(adapté.methode())`.
 
 ## Patron itérateur (comportement)
 - L'itérateur fournit un objet qui permet de parcourir toute Collection indépendamment de sa structure.

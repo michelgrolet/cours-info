@@ -1,10 +1,11 @@
 @startuml Patron_Decorateur
 skinparam backgroundcolor transparent
 skinparam Monochrome reverse
-abstract class Boisson {
+
+class Boisson {
 	- description
 	+ getDescription()
-	+ cout()
+	+ {abstract} cout()
 }
 
 class Expresso extends Boisson {

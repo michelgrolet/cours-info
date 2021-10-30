@@ -27,7 +27,7 @@
       - [Tolérance aux pannes](#tolérance-aux-pannes)
   - [Gestion de la concurence](#gestion-de-la-concurence)
       - [Nécessité d'une gestion de la cohérence](#nécessité-dune-gestion-de-la-cohérence)
-      - [Niveaux d'isolation du verouillage](#niveaux-disolation-du-verouillage)
+      - [Niveaux d'isolation](#niveaux-disolation)
   - [Modes de verouillage](#modes-de-verouillage)
       - [RS](#rs)
       - [RX](#rx)
@@ -175,19 +175,18 @@ Tout schéma passant une FN doit passer la FN précédente.
 > > - **Durabilité :** Lorsqu'une transaction durable est terminée, ses effets sur le système sont permanents.  
 
 #### Etats d'une transaction
-> Commit -> l'effet de la transaction est entériné.
-> Rollback -> annule la dernière transaction.
+> Commit → l'effet de la transaction est entériné.  
+> Rollback → annule la dernière transaction.
 
 #### Transactions Oracle
 Commence avec la première instruction SQL.  
 Termine :
 - Lors du commit ou rollback
 - Déconnection (commit auto)
-- Erreur -> arrêt du processus (rollback auto)
+- Erreur → arrêt du processus (rollback auto)
 
 #### Tolérance aux pannes
-Les algo de récup permettent de respecter les propriétés ACID.
-Ils permettent de revenir à un état cohérent.
+Les algorithmes de récupération permettent de respecter les propriétés ACID et de revenir à un état cohérent.
 
 Un Journal contient toutes les actions exécutées.
 - Démarrage
@@ -214,7 +213,7 @@ Concurrence entre deux transactions qui accèdent en même temps aux mêmes donn
 
 #### Nécessité d'une gestion de la cohérence
 Un **système de concurrence** doit éviter les introductions d'incohérences, telles que :
-- **Mise à jour perdue :** lorsque deux transactions ou plus sélectionnent la même ligne.
+- **Mise à jour perdue :** lorsque plusieurs transactions sélectionnent la même ligne.
 - **Dépendance non validée :**  lorsqu'une deuxième transaction sélectionne une ligne qui est actuellement mise à jour par une autre transaction.
 - **Lecture non reproductible :** lorsqu'une deuxième transaction accède à la même ligne plusieurs fois et lit différentes données à chaque fois.
 - **Lecture fantôme :** lorsque deux requêtes identiques sont exécutées et que la collection de lignes retournée par la deuxième requête est différente.
@@ -227,7 +226,7 @@ Un **système de concurrence** doit éviter les introductions d'incohérences, t
 **Verouillage binaire :** variable binaire associée à une donnée, qui décrit si elle est disponible.  
 Le verouillage binaire est trop exclusif.
 
-#### Niveaux d'isolation du verouillage
+#### Niveaux d'isolation
 ```SQL
 SET TRANSACTION ISOLATION LEVEL X
 ```
@@ -237,6 +236,13 @@ Les autres transactions ne peuvent pas insérer de nouvelles lignes avec des val
 - `X=REPEATABLE READ` Spécifie que les instructions ne peuvent pas lire des données qui ont été modifiées mais pas encore validées par d'autres transactions, et qu'aucune autre transaction ne peut modifier les données lues par la transaction active tant que celle-ci n'est pas terminée.  
 - `X=READ COMMITED` Spécifie que les instructions ne peuvent pas lire les données modifiées mais non validées par d'autres transactions.  
 - `X=READ UNCOMMITED` *(par défaut)* Spécifie que les instructions peuvent lire des lignes qui ont été modifiées par d'autres transactions, mais pas encore validées.
+
+|                   | Dépendance non validée | Lecture non reproductible | Lecture fantôme |
+| ----------------- | ---------------------- | ------------------------- | --------------- |
+| `READ UNCOMMITED`   | ❌                     | ❌                       | ❌             |
+| `READ COMMITED`     |                        | ❌                       | ❌              |
+| `REPEATABLE READ` |                        |                           | ❌             |
+| `SERIALIZED`      |                        |                           |                 |
 
 
 Niveaux de granularité : différentes tailles de verouillage

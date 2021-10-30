@@ -141,22 +141,18 @@ Tout schéma passant une FN doit passer la FN précédente.
 
 <details>
 <summary>Par synthèse</summary>
-
 > **L'algorithme synthétique** permet d'obtenir une 3FN.
 
 1. On part de l'ensemble des attributs et des DF.
-1. On construit la [couverture minimale](#couverture-minimale)
-1. On regroupe dans une même relation les attributs ayant la même partie gauche dans le graphe des DF.
-1. Si aucune des relations construites ne permet d'avoir la clé de la relation initiale, on ajoute une relation composée des attributs de cette clé.
-
+2. On construit la [couverture minimale](#couverture-minimale)
+3. On regroupe dans une même relation les attributs ayant la même partie gauche dans le graphe des DF.
+4. Si aucune des relations construites ne permet d'avoir la clé de la relation initiale, on ajoute une relation composée des attributs de cette clé.
 </details>
 
 <details>
 <summary>Par décomposition</summary>
-
 1. On part du schéma complet (appellé ***relation universelle***).
 2. on décompose le schéma pour éviter les DF de la forme **non-clé → non-clé**.
-
 </details>
 
 ### BCFN

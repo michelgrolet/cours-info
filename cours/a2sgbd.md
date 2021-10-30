@@ -138,6 +138,7 @@ Tout schéma passant une FN doit passer la FN précédente.
 - Les attributs dépendent [directement](#x-dépend-de-y) des clés *(non-clé→non-clé ne doit pas exister).*
 
 #### Méthodes pour obtenir une 3FN
+
 <details>
 <summary>Par synthèse</summary>
 

@@ -19,7 +19,8 @@
     - [Serveur HTTP](#serveur-http)
     - [DNS](#dns)
       - [Création du DNS avec bind](#création-du-dns-avec-bind)
-- [Résolveur : Indique le DNS aux machines](#résolveur--indique-le-dns-aux-machines)
+      - [Résolveur : Indique le DNS aux machines](#résolveur--indique-le-dns-aux-machines)
+      - [Lier les sites avec l'url du DNS](#lier-les-sites-avec-lurl-du-dns)
 - [Commandes réseau bash](#commandes-réseau-bash)
   - [Fichier de configuration réseau](#fichier-de-configuration-réseau)
 - [Éléments réseau](#éléments-réseau)
@@ -153,21 +154,21 @@ $TTL    604800
                          604800 )       ; Negative Cache TTL
 ;
         IN      NS      ns.iut.   #remplacer l'url
-ns      IN      A       192.168.0.1 # A : alias 
+ns      IN      A       192.168.0.1 # A : alias (apellé nom canonique)
 # ajouter ici des lignes comme celle juste au dessus
 # pour créer des enregistrements DNS (des sous-domaines)
 www     IN      A       192.168.0.3 #serveur apache2
 webetu  IN      CNAME   www #host virtuel d'apache
 ```
 
-✍️ webetu et www tournent sur le même serveur web apache. Webetu est un host virtuel.
+✍️ webetu et www tournent sur le même serveur web apache à la même IP. Webetu est un host virtuel.
 
 Lancer DNS avec  `/etc/init.d/bind9 start`.
 
 ❗ Dès qu'on modifie ce fichier, il faut redémarrer le DNS.
 
 
-# Résolveur : Indique le DNS aux machines
+#### Résolveur : Indique le DNS aux machines
 
 Modifier le fichier  `/etc/resolv.conf` :
 
@@ -180,6 +181,30 @@ nameserver 192.168.0. # ne laisser que cette ligne
 
 Tester avec la commande `ping ns.iut` ou alors  `ping ns`. 
 
+#### Lier les sites avec l'url du DNS 
+
+Modifier le fichier  `/etc/apache2/sites-available/default`.
+
+```bash
+# début du fichier
+        ServerName www.iut
+        ServerAlias www
+``` 
+Le site associé à ce fichier de configuration sera affiché quand on entre `www` ou `www.iut`.
+
+
+
+Dans `/etc/apache2/apache2.conf` on ajoute  `NameVirtualHost *:80`. 
+  
+Copier la config  `/etc/apache2/sites-available/default` dans  `/etc/apache2/sites-available/webetu` et mettre  `webetu.iut` pour le ServerName,  `webetu` pour le ServerAlias, et  `/var/webetu` pour Directory.
+
+Les fichiers du site sont à mettre dans `/var/webetu`.
+
+Activer le site avec  `a2ensite webetu`. 
+
+Relancer le serveur.
+
+**On a bien deux sites web sur le même serveur apache.**
 
 
 

@@ -155,3 +155,23 @@ use \personne as p; // alias de namespace
 Une bonne pratique :
 - src : classes non accessibles depuis une url
 - public : fichiers accessibles, html et php
+
+
+# Chargement automatique des classes
+
+si une classe n'est pas connue à son appel, l'interpréteur exécute des fonctions **autoloader** pour la charger. Ces fonctions peut être définie par le développeur.
+
+## Programmation d'un autoloader
+
+❗ Un autoloader ne doit pas bloquer l'exécution.
+
+Ajout d'un autoloader avec :
+```php
+spl_autoload_register(function($nom_classe) {
+/*
+- calcule le chemin vers la classe
+- ajoute ".php"
+- remplace \ par le DIRECTORY_SEPARATOR de l'OS
+*/
+}); 
+```

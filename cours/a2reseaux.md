@@ -17,6 +17,9 @@
     - [DHCP](#dhcp)
     - [Routage](#routage)
     - [Serveur HTTP](#serveur-http)
+    - [DNS](#dns)
+      - [Création du DNS avec bind](#création-du-dns-avec-bind)
+- [Résolveur : Indique le DNS aux machines](#résolveur--indique-le-dns-aux-machines)
 - [Commandes réseau bash](#commandes-réseau-bash)
   - [Fichier de configuration réseau](#fichier-de-configuration-réseau)
 - [Éléments réseau](#éléments-réseau)
@@ -117,6 +120,67 @@ Les tables de routage doivent être configurées dans toutes les machines d'un r
 | `lynx localhost`               | lance localhost sur le navigateur lynx |
 | `scp user@&ip:fichier u@&ip:f` | copie un fichier entre deux machines   |
 | `exit` ou `CTRL+D`             | quitte la session ssh                  |
+
+### DNS
+
+#### Création du DNS avec bind
+
+DNS : programme  `bind`
+Fichiers de configuration dans `/etc/bind`.
+-  `named.conf` Contient les définitions des zones, et les correspondances IP/nom de sous-domaine.
+-  `named.conf.global` Il ne contient rien. Il faut y mettre NOTRE définition de zone :
+
+```bash
+zone "iut" {
+  type master;
+  file "/etc/bind/db.iut"; # fichier à créer à partir de /etc/bind/db.local
+}
+```
+
+**db.local :**  
+Remplacer toutes les IP et les noms de domaines.
+
+```bash
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     ns.iut. root.localhost. ( # remplacer les url par défaut
+                              1         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+        IN      NS      ns.iut.   #remplacer l'url
+ns      IN      A       192.168.0.1 # A : alias 
+# ajouter ici des lignes comme celle juste au dessus
+# pour créer des enregistrements DNS (des sous-domaines)
+www     IN      A       192.168.0.3 #serveur apache2
+webetu  IN      CNAME   www #host virtuel d'apache
+```
+
+✍️ webetu et www tournent sur le même serveur web apache. Webetu est un host virtuel.
+
+Lancer DNS avec  `/etc/init.d/bind9 start`.
+
+❗ Dès qu'on modifie ce fichier, il faut redémarrer le DNS.
+
+
+# Résolveur : Indique le DNS aux machines
+
+Modifier le fichier  `/etc/resolv.conf` :
+
+```bash
+domain iut # spécifier le nom de domaine
+nameserver 192.168.0. # ne laisser que cette ligne
+```
+
+✍️ Avec  `domain iut`, le client connait le nom de domaine, comme ça il n'a besoin de mettre que le sous-domaine (le domaine devient implicite).
+
+Tester avec la commande `ping ns.iut` ou alors  `ping ns`. 
+
+
 
 
 # Commandes réseau bash

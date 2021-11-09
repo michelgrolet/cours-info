@@ -295,13 +295,13 @@ Soit $$X, a ⊂ ℝ^{+}$$
 Soit n VA ~ L de même espérance.
 > Soit $$Y = X_1+...+X_n$$
 > Y ~ approx. $$N(m, σ)$$ avec
-> - $$E(Y) = n×m$$
-> - $$σ(Y) = σ×\sqrt{n}$$
+> - $$E(Y) = n×m$$,
+> - $$σ(Y) = σ×\sqrt{n}$$.
 
 > Soit $$\bar{Y}=\frac{X_1+...+X_n}{n}$$
 > Y ~ approx. $$N(m, σ)$$ avec
-> - $$E(\bar{X}) = m$$
-> - $$σ(\bar{X}) = \frac{σ}{\sqrt{n}}$$
+> - $$E(\bar{X}) = m$$,
+> - $$σ(\bar{X}) = \frac{σ}{\sqrt{n}}$$.
 
 ✍️ Il n'y a pas d'approximation quand $$X_i \sim N(M, σ)$$ d'après la stabilité de $$N$$.
 
@@ -309,8 +309,8 @@ Soit n VA ~ L de même espérance.
 ### B par P
 La table de $$B$$ n'existe pas pour $$n≥50$$, mais on peu approcher $$B(n, p)$$ par $$P(λ)$$ ssi :
 - E et V de $$B(n, p)$$ et $$P(λ)$$ doivent être égales.
-- $$λ=n×p$$
-- $$λ≤16$$
+- $$λ=n×p$$,
+- $$λ≤16$$.
 
 📌 $$\underset{B(n,p)}{P(X=k)} = \underset{P(n×p)}{P(X=k)}$$  
 📌 $$\underset{B(n,p)}{P(a≤X≤b)} = \underset{P(n×p)}{P(a≤X≤b)}$$
@@ -322,8 +322,8 @@ La table de $$B$$ n'existe pas pour $$n≥50$$, mais on peu approcher $$B(n, p)$
 
 ### B par N
 On peut décomposer $$X \sim B(n, p)$$ en $$X_i$$ qui suivent la même loi avec :
-- $$E(X_i)=p$$
-- $$V(X_i)=p(1-p)$$
+- $$E(X_i)=p$$,
+- $$V(X_i)=p(1-p)$$.
 
 D'après le théorème central limite, $$X \sim N(n×p, σ)$$
 

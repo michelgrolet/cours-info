@@ -20,8 +20,11 @@ Ensemble des cours de deuxième année sur les bases de données : théorie des 
 ## [🖥 Gestion des Systèmes d'information](./cours/a2gsi.md)
 Ensemble des cours de deuxième année sur les SI : les ERP.
 
+## [🖧 Réseaux](./cours/a2reseaux.md)
+Cours de deuxième année.
 
-
+## [Rust](./cours/rust.md)
+Cours de deuxième année sur le langage Rust.
 
 ## En construction :
 #### [Structures de données](./cours/a1str.md)
@@ -32,9 +35,6 @@ Copie d'un html.
 
 #### [JS](./cours/javascript.md)
 Copie d'un html.
-
-#### [🖧 Réseaux](./cours/a2reseaux.md)
-Vide
 
 #### [💽 Algorithmique](./cours/a2algo.md)
 Vide

@@ -286,7 +286,7 @@ Soit $$X, a ⊂ ℝ^{+}$$
 - On connaît E(X)
 
 > 📌 Inégalité de Markov :      
-> $$P(X≥a) = \frac{E(X)}{a}$$
+> $$P(X≥a) ≤ \frac{E(X)}{a}$$
 
 > 📌 Inégalité de Bienaymé - Tchebychev :  
 > $$P(|X-E(X)|≥a) ≤ \frac{V(X)}{a²}$$

@@ -30,7 +30,6 @@ Sources de la protection des données personnelles :
 - Textes fondateurs
     - **Loi 6 janvier 1978** en France **→** CNIL (1 des 1ères en Europe)
         (CNIL : Commission Nationale Informatique et Libertés)
-
     - A inspiré la **directive 95/46/CE du 24/10/1995** portant sur le traitement des données à caractère personnel
     - Transposition directive de **la loi 2004-801 du 06/08/2004** relative à la protection des personnes physiques à l'égard des traitements à caractère personnel
     - Adhésion de la France à la **Convention du 28/01/1981** du Conseil de l’Europe pour la protection des personnes à l’égard des traitements automatisés à caractère personnel
@@ -48,7 +47,7 @@ Sources Nationales :
         - Concernant l’individu, le citoyen, le justiciable, l’acteur économique et social **→** tout citoyen
     - <span style="text-decoration:underline;">Portée large :</span>
         - Domaine évolutif et en pleine mutation **→** loi large
-        - S’applique aux traitements automatisés ou aux fichiers manuels, secteur public ou privé
+        - S’applique aux traitements automatisés ou aux fichiers manuels, secteur ~~public ou~~ privé (le public est souvent exclus de la LIL)
         - Multiples obligations déclaratives
     - <span style="text-decoration:underline;">Droits accordés :</span>
         - Personne concernée par les traitements à des droits : curiosité, accès et communication des données, contestation et rectification de la qualité et du sens des informations

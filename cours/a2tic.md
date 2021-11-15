@@ -14,6 +14,7 @@ Collections, patrons de conception.
     - [Droits et obligations des personnes](#droits-et-obligations-des-personnes)
       - [Droit au consentement préalable](#droit-au-consentement-préalable)
       - [Droit à l'information préalable](#droit-à-linformation-préalable)
+- [TDs](#tds)
 - [TD TIC](#td-tic)
 </details>
 
@@ -307,11 +308,9 @@ sauf exceptions : obligation légale, sauvegarde de la vie, mission de service p
 
 
 
+____
+# TDs
 
-
-
-<details>
-<summary>TD ❗</summary>
 # TD TIC
 
 1. Le principe de finalité
@@ -386,4 +385,3 @@ Fichier d’adresses , application informatiques , base contacts , autocommutate
 Qui est le responsable des traitements ?
 
 Le responsable du traitement de données à caractères personnel est la personne , l’autorité publique, le service ou l’organisme qui détermine ses finalités ( à a quoi il va servir ) et ses moyens (selon quelles modalités).
-</summary>

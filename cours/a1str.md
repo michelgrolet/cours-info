@@ -1,5 +1,7 @@
 # Cours Structure de données
 
+[Retour à l'accueil](./../README.md)
+
 Une structure de données est une donnée abstraite dont le comportement est modélisé par des opérations abstraites. Elle peut être décrite par un TAD (Type Abstrait de données).
 
 ## Les structures linéaires

@@ -6,13 +6,9 @@ Les bases de la conception objet en Java.
 
 ## Menu
 
-<details>
-<summary> Plan ✨</summary>
-
 - [COO](#coo)
 	- [Menu](#menu)
 - [Tests Unitaires avec JUnit](#tests-unitaires-avec-junit)
-</details>
 
 # Tests Unitaires avec JUnit
 

@@ -1,8 +1,9 @@
 # SQL / PLSQL / JDBC
+
+[Retour à l'accueil](./../README.md)
+
 SQL est un **langage de définition, de contrôle et de manipulation de données.** Toute entreprise assez développée se sert de bases de données pour stocker ses informations. Le SQL est l'outil par excellence pour traiter la problématique du big data.
 
-<details>
-<summary> Plan ✨</summary>
 
 - [SQL / PLSQL / JDBC](#sql--plsql--jdbc)
 	- [Vocabulaire](#vocabulaire)
@@ -75,7 +76,6 @@ SQL est un **langage de définition, de contrôle et de manipulation de données
 			- [Si le résultat ne contient qu'une ligne](#si-le-résultat-ne-contient-quune-ligne)
 			- [Si le résultat contient plusieurs lignes](#si-le-résultat-contient-plusieurs-lignes)
 		- [Accès aux métadonnées d'un resultSet](#accès-aux-métadonnées-dun-resultset)
-</details>
 
 ## Vocabulaire
 

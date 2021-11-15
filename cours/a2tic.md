@@ -9,13 +9,12 @@ Collections, patrons de conception.
 
 - [Droits des TICs](#droits-des-tics)
 - [Partie 1 : Protection des données personnelles](#partie-1--protection-des-données-personnelles)
-- [TD TIC](#td-tic)
     - [Régime de protection des données personnelles](#régime-de-protection-des-données-personnelles)
     - [Champ d’application de la protection](#champ-dapplication-de-la-protection)
     - [Droits et obligations des personnes](#droits-et-obligations-des-personnes)
       - [Droit au consentement préalable](#droit-au-consentement-préalable)
       - [Droit à l'information préalable](#droit-à-linformation-préalable)
-      - [Droit et obligations des personnes](#droit-et-obligations-des-personnes)
+- [TD TIC](#td-tic)
 </details>
 
 ___
@@ -162,81 +161,7 @@ Sources européennes
             - Application du RGPD au traitement de données personnelles effectué par un responsable du traitement ou un sous-traitant sur le territoire de l'Union, que le traitement ait lieu ou non en UE
         - critère du** public ciblé** par le traitement:
             - Application du RGPD chaque fois d'un résident européen est directement vis par un traitement de données personnelles.
-# TD TIC
 
-1-Le principe de finalité
-
-Les données à caractère personnel ne peuvent être recueillis et traitées que pour un usage déterminé et légitime , correspond…
-
-2-...
-
-...
-
-3-Le principe de pertinence des données
-
-Les données personnelles doivent être adéquates, pertinentes et non excessives au regard des objectifs poursuivis
-
-4-Le principe de durée limitée de conservation des données
-
-le droit à l’oubli.
-
-Les informations ne peuvent être conservées de façon indéfinie dans les fichiers informatiques. Une durée de conservation doit être établie en fonction de la finalité de chaque fichier.
-
-Au-delà , les données peuvent être archivées sur un support distinct.
-
-La durée de conservation déclarée dans le registre du CIL …
-
-5-Le principe de sécurité et de confidentialité
-
-Le responsable du traitement est astreint à une obligation de sécurité . Il doit faire prendre les mesures nécessaire pour garantir la confidentialité des données et éviter leur divulgation:
-
--Les données contenues dans les fichiers ne peuvent être consultées que par les services habilités a y accéder en raison de leurs fonctions.
-
--Le responsable du traitement doit prendre toutes mesures pour empêcher que les données appel à un prestataire externe , des garanties contractuelles doivent être envisagées .
-
--Les mesures de sécurité, tant physique que logique, doivent être prises . (par ex : Protection
-
-anti-incendie, copies de sauvegarde, installation de logiciel antivirus, changement fréquent des mots de passe alphanumériques d’un minimum de 8 caractères.)
-
--Les mesures de sécurité doivent être adaptées à la nature des données et aux risques présentés par le traitement.
-
-6-Le principe de transparence
-
-La loi garantit aux personnes l’information nécessaire relative aux traitements auxquels sont soumises des données les concernant et les assure de la possibilité d’un contrôle personnel. Le responsable du traitement de données personnelles doit avertir ces personnes dès la collecte des données et en cas de transmission de ces données à des tiers.
-
-7-Le principe du respect du droit des personnes
-
-7-1 Informer les intéressés
-
-Lors de l’informatisation de tel ou tel service, ou lorsque des données sont recueillies par exemple par voie de questionnaires, les usagers concernés et les personnel de l’organisme doivent être informés de la finalité du traitement, du caractère obligatoire ou facultatif du recueil, des destinataires des données et des modalités d’exercice des droits qui leur sont ouverts au titre de la loi “Informatique et Libertés” : droit d’accès et de rectification mais aussi, droit de s’opposer, sous certaines conditions, à l’utilisation de leurs données.
-
-Cette information doit être diffusée par exemple au moyen d’affiches apposées dans les services recevant du public , de mentions portées sur les formulaires de collecte papier et électroniques, ainsi que sur les courriers et courriels adressés aux personnes dont les données sont collectées des...
-
-7-2 …..
-
-Toute personne peut demander communication de toutes les informations la concernant contenues dans un fichier détenu par l’établissement et a le droit de faire rectifier ou supprimer les informations …
-
-7-3- Le droit d’opposition
-
-Toute personne a le droit de s'opposer pour des motifs, à ce que des données la concernant soient enregistrées dans un fichier informatique sauf si celui-ci présente un caractère obligatoire.
-
-Fichier : Au sens de la loi Informatique et libertés tout ensemble structuré et stable de données à caractère personnel accessible selon des critères déterminés.
-
-Un fichier peut donc être “papier” ou “électronique”
-
-Traitement automatisé : C’est un traitement automatisé ou fichier manuel de données à caractère personnel dont le responsable est établi sur le territoire français oui qui recourt à des moyens de traitement situé sur ces territoires qui sont régis par la loi Informatique et Libertés
-
-Exemples de traitements :
-
-Fichier d’adresses , application informatiques , base contacts , autocommutateur, espaces numériques de travail, système d’enregistrement des conservations téléphoniques sur support numérique.
-
-Également toute procedure de …
-
-…
-
-Qui est le responsable des traitements ?
-
-Le responsable du traitement de données à caractères personnel est la personne , l’autorité publique, le service ou l’organisme qui détermine ses finalités ( à a quoi il va servir ) et ses moyens (selon quelles modalités).
 
 ### Régime de protection des données personnelles
 
@@ -373,3 +298,92 @@ sauf exceptions : obligation légale, sauvegarde de la vie, mission de service p
 - gérer les risques
 - organiser les processus internes
 - documenter la conformité
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+<summary>TD ❗</summary>
+# TD TIC
+
+1. Le principe de finalité
+
+Les données à caractère personnel ne peuvent être recueillis et traitées que pour un usage déterminé et légitime , correspond…
+
+2. ...
+
+
+3. Le principe de pertinence des données
+
+Les données personnelles doivent être adéquates, pertinentes et non excessives au regard des objectifs poursuivis
+
+4-Le principe de durée limitée de conservation des données
+
+le droit à l’oubli.
+
+Les informations ne peuvent être conservées de façon indéfinie dans les fichiers informatiques. Une durée de conservation doit être établie en fonction de la finalité de chaque fichier.
+
+Au-delà , les données peuvent être archivées sur un support distinct.
+
+La durée de conservation déclarée dans le registre du CIL …
+
+5-Le principe de sécurité et de confidentialité
+
+Le responsable du traitement est astreint à une obligation de sécurité . Il doit faire prendre les mesures nécessaire pour garantir la confidentialité des données et éviter leur divulgation:
+
+-Les données contenues dans les fichiers ne peuvent être consultées que par les services habilités a y accéder en raison de leurs fonctions.
+
+-Le responsable du traitement doit prendre toutes mesures pour empêcher que les données appel à un prestataire externe , des garanties contractuelles doivent être envisagées .
+
+-Les mesures de sécurité, tant physique que logique, doivent être prises . (par ex : Protection
+
+anti-incendie, copies de sauvegarde, installation de logiciel antivirus, changement fréquent des mots de passe alphanumériques d’un minimum de 8 caractères.)
+
+-Les mesures de sécurité doivent être adaptées à la nature des données et aux risques présentés par le traitement.
+
+6-Le principe de transparence
+
+La loi garantit aux personnes l’information nécessaire relative aux traitements auxquels sont soumises des données les concernant et les assure de la possibilité d’un contrôle personnel. Le responsable du traitement de données personnelles doit avertir ces personnes dès la collecte des données et en cas de transmission de ces données à des tiers.
+
+7-Le principe du respect du droit des personnes
+
+7-1 Informer les intéressés
+
+Lors de l’informatisation de tel ou tel service, ou lorsque des données sont recueillies par exemple par voie de questionnaires, les usagers concernés et les personnel de l’organisme doivent être informés de la finalité du traitement, du caractère obligatoire ou facultatif du recueil, des destinataires des données et des modalités d’exercice des droits qui leur sont ouverts au titre de la loi “Informatique et Libertés” : droit d’accès et de rectification mais aussi, droit de s’opposer, sous certaines conditions, à l’utilisation de leurs données.
+
+Cette information doit être diffusée par exemple au moyen d’affiches apposées dans les services recevant du public , de mentions portées sur les formulaires de collecte papier et électroniques, ainsi que sur les courriers et courriels adressés aux personnes dont les données sont collectées des...
+
+7-2 …..
+
+Toute personne peut demander communication de toutes les informations la concernant contenues dans un fichier détenu par l’établissement et a le droit de faire rectifier ou supprimer les informations …
+
+7-3- Le droit d’opposition
+
+Toute personne a le droit de s'opposer pour des motifs, à ce que des données la concernant soient enregistrées dans un fichier informatique sauf si celui-ci présente un caractère obligatoire.
+
+Fichier : Au sens de la loi Informatique et libertés tout ensemble structuré et stable de données à caractère personnel accessible selon des critères déterminés.
+
+Un fichier peut donc être “papier” ou “électronique”
+
+Traitement automatisé : C’est un traitement automatisé ou fichier manuel de données à caractère personnel dont le responsable est établi sur le territoire français oui qui recourt à des moyens de traitement situé sur ces territoires qui sont régis par la loi Informatique et Libertés
+
+Exemples de traitements :
+
+Fichier d’adresses , application informatiques , base contacts , autocommutateur, espaces numériques de travail, système d’enregistrement des conservations téléphoniques sur support numérique.
+
+Également toute procedure de …
+
+…
+
+Qui est le responsable des traitements ?
+
+Le responsable du traitement de données à caractères personnel est la personne , l’autorité publique, le service ou l’organisme qui détermine ses finalités ( à a quoi il va servir ) et ses moyens (selon quelles modalités).
+</summary>

@@ -4,6 +4,8 @@
 
 - [Droits des TICs](#droits-des-tics)
 - [Partie 1 : Protection des données personnelles](#partie-1--protection-des-données-personnelles)
+  - [Sources de la protection des données personnelles](#sources-de-la-protection-des-données-personnelles)
+    - [Sources nationales, communautaires et européennes](#sources-nationales-communautaires-et-européennes)
     - [Régime de protection des données personnelles](#régime-de-protection-des-données-personnelles)
     - [Champ d’application de la protection](#champ-dapplication-de-la-protection)
     - [Droits et obligations des personnes](#droits-et-obligations-des-personnes)
@@ -20,23 +22,16 @@ Objectifs du module
 
 # Partie 1 : Protection des données personnelles
 
-Dispositif général de protection des données personnelles
+## Sources de la protection des données personnelles
 
-- Sources de la protection des données
-- Régime de protection des données personnelles
+**Loi 6 janvier 1978** en France : CNIL (1 des 1ères en Europe) CNIL : Commission Nationale Informatique et Libertés
+- A inspiré la **directive 95/46/CE du 24/10/1995** portant sur le traitement des données à caractère personnel
+- Transposition :p directive de **la loi 2004-801 du 06/08/2004** relative à la protection des personnes physiques à l'égard des traitements à caractère personnel
+- Adhésion de la France à la **Convention du 28/01/1981** du Conseil de l’Europe pour la protection des personnes à l’égard des traitements automatisés à caractère personnel
+- Le **RGPD** (Règlement Général sur la Protection des Données) **applicable dans toute l’Union Européenne** depuis **le 25 mai 2018** → Renforcement de la protection des données personnelles et modification du régime actuel applicable en France
+- Modification de la loi dite “ Informatique et libertés ” le 20 juin 2018 pour devenir conforme au RGPD
 
-Sources de la protection des données personnelles :
-
-- Textes fondateurs
-    - **Loi 6 janvier 1978** en France **→** CNIL (1 des 1ères en Europe)
-        (CNIL : Commission Nationale Informatique et Libertés)
-    - A inspiré la **directive 95/46/CE du 24/10/1995** portant sur le traitement des données à caractère personnel
-    - Transposition directive de **la loi 2004-801 du 06/08/2004** relative à la protection des personnes physiques à l'égard des traitements à caractère personnel
-    - Adhésion de la France à la **Convention du 28/01/1981** du Conseil de l’Europe pour la protection des personnes à l’égard des traitements automatisés à caractère personnel
-    - Le **RGPD** (Règlement Général sur la Protection des Données) **applicable dans toute l’Union Européenne** depuis **le 25 mai 2018** → Renforcement de la protection des données personnelles et modification du régime actuel applicable en France
-    - Modification de la loi dite “ Informatique et libertés ” le 20 juin 2018 pour devenir conforme au RGPD
-
-**→** Sources nationales, communautaires et européennes
+### Sources nationales, communautaires et européennes
 
 Sources Nationales :
 

@@ -23,6 +23,9 @@ Ensemble des cours de deuxième année sur les SI : les ERP.
 ## [🖧 Réseaux](./cours/a2reseaux.md)
 Cours de deuxième année.
 
+## [👨🏻‍🎓 Droits des TIC](./cours/a2tic.md)
+Cours de droits des TIC de deuxième année.
+
 ## [Rust](./cours/rust.md)
 Cours de deuxième année sur le langage Rust.
 

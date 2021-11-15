@@ -2,11 +2,6 @@
 
 [Retour à l'accueil](./../README.md)
 
-Collections, patrons de conception.
-
-<details>
-<summary> Plan ✨</summary>
-
 - [Droits des TICs](#droits-des-tics)
 - [Partie 1 : Protection des données personnelles](#partie-1--protection-des-données-personnelles)
     - [Régime de protection des données personnelles](#régime-de-protection-des-données-personnelles)
@@ -14,7 +9,7 @@ Collections, patrons de conception.
     - [Droits et obligations des personnes](#droits-et-obligations-des-personnes)
       - [Droit au consentement préalable](#droit-au-consentement-préalable)
       - [Droit à l'information préalable](#droit-à-linformation-préalable)
-</details>
+
 
 ___
 

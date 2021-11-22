@@ -3,30 +3,48 @@
 [Retour à l'accueil](./../README.md)
 
 - [Droits des TICs](#droits-des-tics)
-- [Partie 1 : Protection des données personnelles](#partie-1--protection-des-données-personnelles)
-  - [Sources de la protection des données personnelles](#sources-de-la-protection-des-données-personnelles)
-    - [Sources nationales, communautaires et européennes](#sources-nationales-communautaires-et-européennes)
-    - [Régime de protection des données personnelles](#régime-de-protection-des-données-personnelles)
+  - [Définitions](#d%C3%A9finitions)
+- [Partie 1 : Protection des données personnelles](#partie-1--protection-des-donn%C3%A9es-personnelles)
+  - [Sources de la protection des données personnelles](#sources-de-la-protection-des-donn%C3%A9es-personnelles)
+    - [Sources nationales, communautaires et européennes](#sources-nationales-communautaires-et-europ%C3%A9ennes)
+    - [Régime de protection des données personnelles](#r%C3%A9gime-de-protection-des-donn%C3%A9es-personnelles)
     - [Champ d’application de la protection](#champ-dapplication-de-la-protection)
     - [Droits et obligations des personnes](#droits-et-obligations-des-personnes)
-      - [Droit au consentement préalable](#droit-au-consentement-préalable)
-      - [Droit à l'information préalable](#droit-à-linformation-préalable)
-
+      - [Droit au consentement préalable](#droit-au-consentement-pr%C3%A9alable)
+      - [Droit à l'information préalable](#droit-%C3%A0-linformation-pr%C3%A9alable)
+    - [**recommandations de la CNIL**](#recommandations-de-la-cnil)
+    - [**Contrôles et sanctions dans le cadre du RGPD**](#contr%C3%B4les-et-sanctions-dans-le-cadre-du-rgpd)
+    - [Sanctions administratives](#sanctions-administratives)
+    - [Amendes](#amendes)
+    - [Pouvoirs de la CNIL](#pouvoirs-de-la-cnil)
+    - [Pouvoirs de décision de la CNIL](#pouvoirs-de-d%C3%A9cision-de-la-cnil)
+    - [Pouvoir d’autorisation de certains traitements](#pouvoir-dautorisation-de-certains-traitements)
+    - [Pouvoir de proposition](#pouvoir-de-proposition)
+    - [Pouvoir d’investigation et de contrôle](#pouvoir-dinvestigation-et-de-contr%C3%B4le)
+    - [Pouvoir de sanction](#pouvoir-de-sanction)
+    - [Missions et devoir d’information](#missions-et-devoir-dinformation)
+    - [Missions de réflexion et d’assistance](#missions-de-r%C3%A9flexion-et-dassistance)
 
 ___
 
-Objectifs du module
-  - Appréhender les enjeux juridiques liés au développement des technologies de l’information et de la communication (TIC)
-  - Acquérir des connaissances de base en droit des TIC
-  - Compléter la connaissance du contrat de travail et des autres contrats dans le domaine de l’informatique
+## Définitions
+
+**TIC :** Technologies de l’Information et de la Communication
+
+**Donnée personnelle :**  toute information se rapportant à une personne physique identifiée ou identifiable.
+
+------
+
+
 
 # Partie 1 : Protection des données personnelles
 
 ## Sources de la protection des données personnelles
 
-**Loi 6 janvier 1978** en France : CNIL (1 des 1ères en Europe) CNIL : Commission Nationale Informatique et Libertés
+**Loi 6 janvier 1978** en France : fonde la CNIL (l’une des premières en Europe) CNIL : Commission Nationale Informatique et Libertés
+
 - A inspiré la **directive 95/46/CE du 24/10/1995** portant sur le traitement des données à caractère personnel
-- Transposition :p directive de **la loi 2004-801 du 06/08/2004** relative à la protection des personnes physiques à l'égard des traitements à caractère personnel
+- Transposition : loi 2004-801 du 06/08/2004** relative à la protection des personnes physiques à l'égard des traitements à caractère personnel
 - Adhésion de la France à la **Convention du 28/01/1981** du Conseil de l’Europe pour la protection des personnes à l’égard des traitements automatisés à caractère personnel
 - Le **RGPD** (Règlement Général sur la Protection des Données) **applicable dans toute l’Union Européenne** depuis **le 25 mai 2018** → Renforcement de la protection des données personnelles et modification du régime actuel applicable en France
 - Modification de la loi dite “ Informatique et libertés ” le 20 juin 2018 pour devenir conforme au RGPD
@@ -279,10 +297,109 @@ sauf exceptions : obligation légale, sauvegarde de la vie, mission de service p
     - Avant le 25/5/2018 : formalités auprès de la CNIL, déclarations et autorisations.
     - Après le 25/5/2018 : maintien des autres démarches. Les responsables doivent prouver en cas de contrôle de la CNIL que les traitements sont conformes à la RGPD.
 
-**recommandations de la CNIL**
+### **recommandations de la CNIL**
+
 - désignation d'un pilote
 - cartographie des traitements (pour les contrôles)
 - prioriser les actions à mener
 - gérer les risques
 - organiser les processus internes
 - documenter la conformité
+
+**Nouveautés du RGPD**
+- Responsabilité du sous-traitant qui doit garantir la sécurité des données personnelles.
+- Autres obligations : par exemple, il doit informer immédiatement le responsable des traitements en cas de suspicion de violation du RGPD.
+
+### **Contrôles et sanctions dans le cadre du RGPD**
+
+- augmentation des contrôles et des sanctions
+
+- possibilité pour la CNIL de faire des contrôles sur place ou à distance
+
+### Sanctions administratives
+
+-   Retrait de la certification
+-   Rectification, limitation ou effacement des données
+-   Satisfaction des demandes de droits des personnes
+-   Suspension des flux de données vers un destinataire hors EU
+-   Limitation du traitement, temporairement ou définitivement
+-   Avertissement
+
+### Amendes
+
+-   Amende entre 10 et 20 millions d’euros en fonction du type d’infraction
+-   2 à 4 % du CA global
+
+### Pouvoirs de la CNIL
+
+-   Les pouvoirs qu’elle exerce peuvent être rassemblés en plusieurs catégories :
+    -   pouvoir de décisions et de propositions,
+    -   pouvoirs de donner des avis et des recommandations,
+    -   pouvoirs de contrôle,une mission d’information
+    -   et une mission de réflexion.
+    -   La CNIL est dotée de pouvoirs d’action et de contrôle à priori et a posteriori très larges, en ce qui concerne l’activité informatique tant du secteur privé que du secteur public
+
+### Pouvoirs de décision de la CNIL
+
+-   Pouvoir réglementaire
+    
+    -   Pour l'édification de règlements types en matière de sécurité des systèmes d'information
+    
+    -   Pour l'établissement de son règlement intérieur
+    
+    -   Pour l'adoption de normes simplifiées ou de dispenses de déclaration
+    
+    -   ### Pouvoir d’autorisation de certains traitements
+    
+        -   Ex : pour les traitements biométriques nécessaires au contrôle de l’identité des personnes (art 25)
+        -   Participer à la définition des infractions pénales
+        -   Prendre des décisions individuelles à l'égard des personnes ([art11](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2#Article11)), faire procéder à toutes vérifications utiles à sa mission ([art11](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2#Article11), 20, f), prononcer des sanctions et ordonner des mesures d’urgence (art11, 20, g), ou encore accorder des délais de réponse au responsable d’un fichier contre lequel est invoqué le droit d’accès des articles 41 et 42 de la loi ([art11](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2#Article11), 20, h)
+    
+    -   ### Pouvoir de proposition
+    
+        -   Permet de proposer au gouvernement les mesures législatives ou réglementaires d'adaptation de la protection des libertés à l'évolution des procédés et techniques informatiques.
+    
+    -   ### Pouvoir d’investigation et de contrôle
+    
+        -   Important, accru par la loi du 6 août 2004 (art44 s.)
+        -   La directive de 1995 (art28-3, al 2) prévoit que l’autorité nationale de contrôle dispose de pouvoirs effectifs d’intervention, tels que la possibilité *« d’ordonner le verrouillage, l’effacement ou la destruction de données ou interdire temporairement ou définitivement un traitement, ou celui d’adresser un avertissement ou une admonestation au responsable du traitement. »*
+        -   Au titre de ses prérogatives de contrôle, la loi en particulier permet à la Commission de **charger un ou plusieurs de ses membres** de procéder ou de faire **procéder à des vérifications portant sur tous traitements** et **obtenir des copies de tous documents** ou supports d’information utiles à ses missions ([art11](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2#Article11)).
+        -   Il faut noter que les membres et les agents de la commission sont dans ce cadre astreints au secret professionnel pour les faits, actes ou renseignements dont ils ont pu avoir connaissance en raison de leurs fonctions, dans les conditions prévues à l’article 413-10 du code pénal et sous réserve de ce qui est nécessaire à l’établissement du rapport annuel) l’article 226-13 du même code.
+        -   la loi impose aux responsables des traitements de prendre les mesures nécessaires pour faciliter à la CNIL son contrôle.
+            -   art21: *« Les ministres, autorités publiques, dirigeants d'entreprises publiques ou privées, responsables de groupements divers et plus généralement les détenteurs ou utilisateurs de traitements ou de fichiers de données à caractère personnel ne peuvent s’opposer à l’action de la commission ou de ses membres et doivent au contraire prendre toutes mesures utiles afin de faciliter sa tâche ». Ceux-ci « sont tenus de fournir les renseignements demandés par celle-ci pour l'exercice de ses missions »* 
+        -   Cette obligation est sanctionnée pénalement par le délit d'entrave à l'action de la CNIL (1 an d'emprisonnement et 15.000 euros d'amende) dans les termes de l'article 51 de la loi 
+        -   La procédure de contrôle est détaillée dans les articles 44 et suivants de la loi
+    
+    -   ### Pouvoir de sanction
+    
+        -   La modification de la loi en 2004, a considérablement augmenté les prérogatives de la CNIL en matière de sanctions, et en particulier pécuniaires. La loi établit aujourd’hui une gradation des mesures permettant à la CNIL de sanctionner en fonction des manquements constatés :
+            -   avertissement
+            -   mise en demeure
+            -   sanction pécuniaire
+            -   injonction de cesser le traitement ou le retrait d’autorisation
+            -   interruption du traitement
+            -   verrouillage de certaines données
+            -   information du Premier ministre
+            -   saisie du juge des référés
+            -   publicité des sanctions
+        -   Procédure définie aux articles 45 et suivants.
+    
+    -   ### Missions et devoir d’information
+    
+        -   La CNIL a hérité de la loi d’un grand nombre de missions d’informations. La première c'est d'informer “toutes les personnes concernées et tous les responsables de traitements de leurs droits et obligations “ (art.11, 10).
+            -   Elle est exercée en partie au travers de son site Internet qui lui permet d’informer le grand public sur ses droits à l’égard du traitement des données personnelles, autant que les responsables de traitement.
+            -   La CNIL participe également régulièrement à des colloques et émissions et intervient dans de nombreuses manifestations afin de sensibiliser le public sur la protection des données.
+        -   La CNIL a également une mission d’information sur l'évolution des technologies.
+            -   La loi dispose en effet que la CNIL se tient *« informée de l’évolution des technologies de l’information et rend publique le cas échéant son appréciation des conséquences qui en résultent pour l’exercice des droits et libertés mentionnés à l’article 1er »* (art11, 40).
+        -   La CNIL a également plus spécifiquement pour rôles de tenir à disposition du public la liste des traitement ayant fait l’objet de formalités préalable
+    
+    -   ### Missions de réflexion et d’assistance
+    
+        -   Elle « se tient informée de l’évolution des technologies de l’information et rend publique le cas échéant son appréciation des conséquences qui en résultent pour l’exercice des droits et libertés mentionnées à l’article 1er. » (art11, 4)
+        -   Elle est consultée sur tout projet de loi ou de décret relatif à la protection des personnes à l’égard des traitements automatisés
+        -   Elle propose au Gouvernement les mesures législatives ou réglementaires d’adaptation de la protection des libertés à l’évolution des procédés et techniques informatiques ; à la demande d'autres autorités administratives indépendantes, elle peut apporter son concours en matière de protection des données ; elle peut être associé, à la demande du Premier Ministre, à la préparation et à la définition de a position française dans les négociations internationales dans le domaine de la protection des données à caractère personnel.
+        -   Elle peut participer, à la demande du Premier ministre, à la représentation française dans les organisations internationales et communautaires compétentes en ce domaine (art11, 4°)
+        -   **Assistance des professionnels** dans différents domaines :
+            -   elle donne son avis sur la conformité de projets de règles professionnelles et des produits et procédures tendant à la protection des personnes à l’égard du traitement des données, ou leur anonymisation
+            -   elle porte une appréciation sur les garanties offertes par des règles professionnelles qu’elle a précédemment reconnues conformes aux dispositions de la présente loi, au regard du respect des droits fondamentaux des personnes
+            -   elle délivre un label à des produits ou à des procédures tendant à la protection des personnes à l'égard du traitement des données à caractère personnel, auprès qu’elle les a reconnus conformes aux dispositions de la présente loi

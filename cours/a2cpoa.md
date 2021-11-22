@@ -52,7 +52,7 @@ ___
 ___
 # Collections de java.util
 
-![Image : interfaces/classes implémentant Collection.](../assets/cpoa_collection.png)
+![Image : interfaces/classes implémentant Collection.](../assets/diagrammes/cpoa_collection.png)
 
 > ❗ Les collections ne manipulent que des objets héritant de `Object`. Elles ne prennent pas les types de base java.  
 > - Il faut utiliser les objets `Wrapper` (Integer, Boolean, Double, ...).  

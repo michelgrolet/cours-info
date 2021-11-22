@@ -201,7 +201,7 @@ while(i.hasPrevious()) {
 On peut aussi utiliser la boucle **foreach** avec un tableau ou une instance d'Iterable (les collections par exemple).
 
 ## Map<K,V> 
-![Image : classes implémentant Map.](../assets/cpoa_map.png)  
+![Image : classes implémentant Map.](../assets/diagrammes/cpoa_map.png)  
 Permet d'associer des valeurs à des clés comme dans un dictionnaire.
 
 ```java

@@ -16,7 +16,6 @@ Balises php :
 <?php 
 	echo 'hello'; // affiche hello
 ?> // balise de fin optionnelle si que du php dans le fichier
-print 'hello'; // affiche print 'hello'; (hors des balises)
 ```
 
 Php est faiblement typé. On récupère le type avec `gettype($var)`. On récupère des informations sur une variable avec `var_dump($var)`.
@@ -33,13 +32,26 @@ Php est faiblement typé. On récupère le type avec `gettype($var)`. On récup�
 ## Tableaux
 ```php
 $array = array($val1, "val2", 3);
+$assocArray = array("key1" => $val1);
+$assocArray["key2"] = $val2;
 ```
-On boucle sur un tableau avec `foreach()`: 
+
+On boucle sur un tableau avec `foreach()`:
+
 ```php
-foreach($array as $var) {
-	echo $var
+foreach($array as $val) { // ou as $key => val 
+	echo $val
 }
 ```
+
+### Fonctions sur les tableaux
+-  `count($array)` retourne le nombre d'éléments dans le tableau.
+- `array_key_exists($key, $array)` retourne true si la clé existe dans le tableau.
+
+### Tableaux superglobaux
+- `$_GET` : tableau associatif des paramètres dans l'url.
+- `$_POST` : tableau associatif des paramètres dans le formulaire.
+-  `$_SERVER` : tableau associatif des informations sur le serveur.
 
 ## Classes
 ```php
@@ -80,7 +92,7 @@ Les paramètres de type simple et les arrays sont passés par valeur. On peut fa
 - `require()` inclus le fichier php.
 - `require_once()` : une seule fois par fichier.
 
-✍️ Les parenthèses sont optionelles pour require, require_once, echo et print.
+✍️ Les parenthèses sont optionnelles pour require, require_once, echo et print.
 
 ## Affectation de code
 ```php
@@ -118,13 +130,13 @@ Cette méthode permet l'accès automatique aux attributs d'un objet : `$attr = $
 Elles fonctionnent comme en Java.
 
 ## Héritage
-Pareil que Java. Seule différence pour utiliser les méthodes de la classe parente : 
+Pareil que Java. Seule différence, pour utiliser les méthodes de la classe parente : 
 ```java
 parent::__construct();
 ```
 
-## 
-On peut créer des classes d'exceptions
+## Exceptions
+On peut créer des classes d'exceptions :
 ```php
 class Exc extends Exception {}
 try {
@@ -135,12 +147,16 @@ try {
 ```
 
 ## Namespaces
-Pour éviter les conflits entre classes de même nom, on utilise les namespaces (chemin d'un package).
+Pour se repérer dans les classes d'un projet, on utilise les namespaces.
 ```php
+// on définit le namespace dans lequel on se trouve :
+namespace \personne\Enseignant;
+class Enseignant {}
+// dans un fichier php, on pourra utiliser :
 $prof = new \personne\Enseignant("Guenego");
 ```
 
-On doit donner le nom complet d'une classe quand elle n'est pas dans le package courant.
+✍️ Les classes créées en dehors d'un namespace sont accessibles depuis le namespace `\`. 
 
 ### Alias de noms de classe : use
 ```php
@@ -149,17 +165,17 @@ use \personne\Enseignant; // as Enseignant est implicite
 use \personne as p; // alias de namespace
 ```
 
-✍️ Ne pas confondre les namespaces définis avec `\\` des répertoires de fichiers définis avec `/`.
+✍️ Ne pas confondre les namespaces définis avec `\` des répertoires de fichiers définis avec `/`.
 
 ## Structures de fichiers
 Une bonne pratique :
-- src : classes non accessibles depuis une url
+- src : classes non accessibles depuis une url (classes php, ...)
 - public : fichiers accessibles, html et php
 
 
 # Chargement automatique des classes
 
-si une classe n'est pas connue à son appel, l'interpréteur exécute des fonctions **autoloader** pour la charger. Ces fonctions peut être définie par le développeur.
+Si une classe n'est pas connue à son appel, l'interpréteur exécute des fonctions **autoloader** pour la charger. Ces fonctions peut être définie par le développeur.
 
 ## Programmation d'un autoloader
 
@@ -175,3 +191,125 @@ spl_autoload_register(function($nom_classe) {
 */
 }); 
 ```
+
+## Composer
+
+On utilise [composer (gestionnaire de dépendances PHP)](https://getcomposer.org/) pour générer un autoloader automatiquement.
+
+Composer se sert du fichier `composer.json` pour définir les dépendances.
+
+pour l'autoload, on ajoute dans le fichier `composer.json` :
+```json
+"autoload": {
+	"psr-4": {
+		"namespace\\": "src/chemin/vers/namespace"
+	}
+}
+```
+L'autoloader est généré dans le répertoire `vendor`. On y accède avec :
+```php
+require_once "vendor/autoload.php";
+```
+
+## Cookies
+
+On crée un cookie avec la fonction suivante :
+```php
+setcookie("nom", $valeur, time()+$duree, "/", "", false, true);
+```
+On peut passer des objets en valeur de cookie en utilisant les fonctions serialize et unserialize.
+
+## Sessions
+
+```php
+session_start();
+//utilisation du tableau superglobal $_SESSION
+$_SESSION['nom'] = 'toto';
+session_destroy();
+```
+
+## PDO
+
+```php
+$dsn = 'mysql:host=localhost;dbname=bdd';
+$pdo = new PDO($dsn, 'uname', 'pwd', [
+	PDO::ATTR_PERSISTENT => true,
+	PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+	PDO::ATTR_EMULATE_PREPARES => false,
+	PDO::ATTR_STRINGIFY_FETCHES => false,
+]);
+
+// statement
+$s = $pdo->prepare('SELECT ... WHERE x=? and y=?');
+$s->execute([$x, $y]);
+while ($row = $s->fetch(PDO::FETCH_ASSOC)) {
+	// traitement de la ligne
+}
+```
+
+### ConnectionFactory
+```php
+// contient une méthode :
+public static function setConfig(String $fichier) : void {
+	self::$config = parse_ini_file($fichier);
+}
+```
+On exécute ensuite `ConnectionFactory::setConfig('db.config.ini')` pour charger la configuration.
+
+## ORM (Object-Relational Mapping) Eloquent de Laravel
+
+### Configuration
+
+D'abord installer [laravel (framework PHP)](https://laravel.com/)
+```bash
+composer require illuminate/database
+```
+
+```php
+use \Illuminate\Database\Capsule\Manager as DB;
+$db = new DB();
+$db->addConnection(parse_ini_file('db.config.ini'));
+```
+
+### Select
+
+```php
+class Ville extends \Illuminate\Database\Eloquent\Model {
+	protected $table = 'table';
+	protected $primaryKey = 'id';
+	public $timestamps = false;
+
+	public function pays() {
+		return $this->belongsTo('Pays', 'id_pays');
+	}
+}
+
+$villes = Ville::select('*')
+	->where('id', $id);
+	->skip($offset)
+	->take($limit)
+	->get(); // ou first()
+echo $villes->toJson();
+
+// Association avec clé étrangère :
+$pays = Ville::select('*')
+	->get();
+$pays->belongsTo('Pays', 'id_pays');
+
+```
+
+### Insert, update, delete
+
+```php
+$v = new Ville();
+$v->nom = 'Paris';
+$v->save();
+
+$v->nom = 'Lyon';
+$v->save();
+
+$v->delete();
+```
+
+### Associations
+

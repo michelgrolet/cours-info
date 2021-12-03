@@ -39,143 +39,102 @@ ___
 
 # Partie 1 : Protection des données personnelles
 
-## Sources de la protection des données personnelles
+## Sources de la protection des données personnelles 👨🏻‍⚖️
 
-**Loi 6 janvier 1978** en France : fonde la CNIL (l’une des premières en Europe) CNIL : Commission Nationale Informatique et Libertés
+**Loi 6 janvier 1978** en France : fonde la CNIL : Commission Nationale Informatique et Libertés.
 
-- A inspiré la **directive 95/46/CE du 24/10/1995** portant sur le traitement des données à caractère personnel
-- Transposition : loi 2004-801 du 06/08/2004** relative à la protection des personnes physiques à l'égard des traitements à caractère personnel
-- Adhésion de la France à la **Convention du 28/01/1981** du Conseil de l’Europe pour la protection des personnes à l’égard des traitements automatisés à caractère personnel
-- Le **RGPD** (Règlement Général sur la Protection des Données) **applicable dans toute l’Union Européenne** depuis **le 25 mai 2018** → Renforcement de la protection des données personnelles et modification du régime actuel applicable en France
-- Modification de la loi dite “ Informatique et libertés ” le 20 juin 2018 pour devenir conforme au RGPD
+- A inspiré la **directive 95/46/CE du 24/10/1995** portant sur le traitement des données à caractère personnel.
 
-### Sources nationales, communautaires et européennes
+**Loi 2004-801 du 06/08/2004** relative à la protection des personnes physiques à l'égard des traitements à caractère personnel.
 
-Sources Nationales :
+Adhésion de la France à la **Convention du 28/01/1981** du Conseil de l’Europe pour la protection des personnes à l’égard des traitements automatisés à caractère personnel.
 
-- Loi n°78-17 du 6 janvier 1978 dite “loi Informatique et Libertés”
-    - <span style="text-decoration:underline;">Objectif :</span> informatique au service des citoyens, ne doit pas porter atteinte ni à la vie privée, ni aux libertés individuelles ou publiques
-    - <span style="text-decoration:underline;">Protection des droits et libertés fondamentaux :</span>
-        - Droits et libertés ont une valeur constitutionnelle
-        - Concernant l’individu, le citoyen, le justiciable, l’acteur économique et social **→** tout citoyen
-    - <span style="text-decoration:underline;">Portée large :</span>
-        - Domaine évolutif et en pleine mutation **→** loi large
-        - S’applique aux traitements automatisés ou aux fichiers manuels, secteur ~~public ou~~ privé (le public est souvent exclus de la LIL)
-        - Multiples obligations déclaratives
-    - <span style="text-decoration:underline;">Droits accordés :</span>
-        - Personne concernée par les traitements à des droits : curiosité, accès et communication des données, contestation et rectification de la qualité et du sens des informations
-    - <span style="text-decoration:underline;">CNIL (Commission Nationale Informatique et Libertés) :</span>
+Le **RGPD** (Règlement Général sur la Protection des Données) **applicable dans toute l’Union Européenne** depuis **le 25 mai 2018** → Renforcement de la protection des données personnelles et modification du régime actuel applicable en France.
+
+Modification de la **loi Informatique et libertés** le 20 juin 2018 pour la rendre conforme au RGPD.
+
+### Sources Nationales 🇫🇷
+
+- **Loi Informatique et Libertés** (1979)
+    - Objectif : informatique au service des citoyens, ne doit pas porter atteinte ni à la vie privée, ni aux libertés individuelles ou publiques.
+    - Droits et libertés ont une valeur constitutionnelle.
+    - Portée large, concerne surtout les entreprises.
+    - Droits accordés :
+        - Personne concernée par les traitements à des droits : curiosité, accès et communication des données, contestation et rectification de la qualité et du sens des informations.
+    - CNIL :
         - Structure (autorité administrative indépendante) créée par le législateur pour veiller au respect de la loi
-        - Pouvoirs et sanctions renforcés (voir loi 2004-801 et le RGPD)
-    - <span style="text-decoration:underline;">Sanctions pénales :</span>
-        - Infractions pénales codifiés dans le Code pénal pour sanctionner le manquement aux principales règles de la loi
-- Loi 2004/801 de transport de la directive européenne de 1995
-    - <span style="text-decoration:underline;">Réforme dans la continuité :</span> 
+        - Pouvoirs et sanctions renforcés (loi 2004-801 et RGPD)
+    - Sanctions pénales :
+        - Infractions pénales codifiés dans le Code pénal pour sanctionner le manquement aux principales règles de la loi.
+- **Loi 2004/801**, transport de la directive européenne de 1995, MAJ de la loi de 78.
+    - Réforme dans la continuité : 
         - Meilleure prise en compte des évolutions de l’informatique
         - Mise en conformité avec le droit communautaire
         - Loi de 1978 reste le texte de référence, mais avec des évolutions (conditions de recueil, de conservation et de traitement des données personnelles).
-    - <span style="text-decoration:underline;">Contrôle de constitutionnalité :</span>
+    - Contrôle de constitutionnalité :
         - Modifications constitutionnelles non contraires au respect de la vie privée
-        - Mutualisation possible de la lutte contre le piratage (contre Peer-to-peer), qui a donné suite à la loi n°2009-580 DC du 10/06/2009 favorisant la diffusion et la protection de la création sur internet (dite loi HADOPI)
+        - Mutualisation possible de la lutte contre le piratage (contre le P2P), qui a donné suite à la loi HADOPI du (2009) favorisant la diffusion et la protection de la création sur internet.
 
-Sources communautaires :
+### Sources communautaires 
 
-- Protection des données personnelles : directive 95/46/CE du 24/10/1995
-- Protection des données à caractère personnel et protection de la vie privée dans le cadre d’un réseau de télécommunication : directive 2002/58/CE du 12/07/2002
-- Conservation des données générés et traitées dan le cadre d’un service accessible au public : directive 2006/24/CE du 15/03/2006
-- **Règlement n°2016/679 dit RGPD du 14/04/2016 applicable à compter du 25/05/2018**
-
-Directive 95/46/CE du 24/10/1995
-
-- Objectif : 
+- **95/46/CE** Protection des données personnelles.
+    - Objectif : 
     - Texte de référence, au niveau européen, en matière de protection de données à caractère personnel
-    - Définitions :
-        - “données à caractère personnel”, “traitement de données à caractère personnel”, “fichier de données à caractère personnel”, “de responsable du traitement”, “consentement de la personne concernée”
-- Champ d’application :
-    - Art 3.1 : “traitement de données personnelles, automatisé en tout ou partie, ainsi qu’au traitement non automatisé à caractère personnel contenues ou appelées à figurer dans un fichier
-    - Exclusion : traitements de souveraineté (défense, sûreté de l’état, droit pénal…)
-    - 
-
-- <span style="text-decoration:underline; ">Principes directeurs :</span>
-    - Qualité des données (art.6) : **collectées de manière loyale et pour des finalités précises**
-    - **Consentement préalable** et indubitable de la personne au traitement des données la concernant (art.7)
-    - **Information de la personne concernée**, lors de la collecte de données directement auprès de la personne concernée (art.10) ou indirectement (art.11)
-    - **Droit d’accès et de contestation** des données pour les personnes dont les données sont collectées(art.12)
-    - Limitations et restrictions d’un état membre (art.13)
-- Directive 95/46/CE du 24/10/1995
-- principes directeurs :
-    - Droit d’opposition des personnes concernées (art.14)
-    - Droit de ne pas être soumis à une décision produisant des effets juridiques à son égard ou l’affectant de manière significative (art.15)
-    - Obligation de confidentialité et de sécurité (art.16 et 17)
-    - Obligation de notification à l’autorité de contrôle, préalablement à la mise en oeuvre d’un traitement entièrement ou partiellement
-    - **<span style="text-decoration:underline;">{manque la suite}</span>**
-- Directive 2000/58/CE de 2002
-    - <span style="text-decoration:underline;">Objet :</span>
-        - **Traitement des données à caractère personnel** et la protection de la vie privée dans **le secteur du commerce électronique** (directive vie privée et communications électroniques).
-        - S’applique aux traitements de données à caractère personnel dans **le cadre de fournitures de services de télécommunications accessibles au public** (réseaux numériques à intégration de services/RNIS, réseaux numériques mobiles)
-    - <span style="text-decoration:underline;">Caractéristiques :</span>
+    - Champ d’application :
+        - Art 3.1 : “traitement de données personnelles, automatisé en tout ou partie, ainsi qu’au traitement non automatisé à caractère personnel contenues ou appelées à figurer dans un fichier
+        - Exclusion : traitements de souveraineté (défense, sûreté de l’état, droit pénal…)
+    - Principes directeurs :
+        - Qualité des données (art.6) : **collectées de manière loyale et pour des finalités précises**
+        - **Consentement préalable** et indubitable de la personne au traitement des données la concernant (art.7)
+        - **Information de la personne concernée**, lors de la collecte de données directement auprès de la personne concernée (art.10) ou indirectement (art.11)
+        - **Droit d’accès et de contestation** des données pour les personnes dont les données sont collectées(art.12)
+        - Limitations et restrictions d’un état membre (art.13)
+- **2002/58/CE** Protection des données à caractère personnel et protection de la vie privée dans le cadre d’un réseau de télécommunication.
+    - **Traitement des données à caractère personnel** et la protection de la vie privée dans **le secteur du commerce électronique** (directive vie privée et communications électroniques).
+    - S’applique aux traitements de données à caractère personnel dans **le cadre de fournitures de services de télécommunications accessibles au public** (réseaux numériques à intégration de services/RNIS, réseaux numériques mobiles)
+    - Caractéristiques :
         - **Obligation de confidentialité et de sécurité**
         - **Règles de spamming** : interdiction du courrier électronique commercial non sollicité ("spam") dans l’ensemble de l’UE.
         - **Règles sur les cookies** : conditions spécifiques à respecter pour installer des témoins de connexion (“cookies”)
         - **Protection des données personnelles utilisées par les instances européennes**
-- Directive 2006/25/CE du 15/03/2006
-    - <span style="text-decoration:underline;">Objet :</span>
-        - Définit les règles applicables au traitement, par les fournisseurs de réseaux et de services de données relatives au trafic et de données de localisation générées par l’utilisation de services de communications électroniques
-    - <span style="text-decoration:underline;">Objectif :</span>
-        - Harmoniser les dispositions des États membre relatives aux obligations des fournisseurs de services de communications électroniques accessibles au public ou de réseaux publics de télécommunication en matière de conservation de certaines données qui sont générées ou traitées par ces fournisseurs
-- Convention de 108/81 du Conseil de l’Europe (1981)
-    - [http://conventins.oe.int/treaty/fr/treaties/html/108.htm](http://conventins.oe.int/treaty/fr/treaties/html/108.htm)
-    - Convention pour la protection des données à caractère personnel entrée en vigueur au 01/10/1985
-    - 1er instrument international contraignant dont l’objet est de protéger les personnes contre l’usage abusif du traitement automatisé des données à caractère personnel
-    - -> volonté : **étendre la protection des droits et libertés fondamentales de chacun contre l’intensification de la circulation à travers les frontières de données à caractère personnel faisant l’objet de traitements informatisés**
+- **2006/24/CE** Conservation des données générés et traitées dan le cadre d’un service accessible au public.
+    - Définit les règles applicables au traitement, par les fournisseurs de réseaux et de services de données relatives au trafic et de données de localisation générées par l’utilisation de services de communications électroniques
+    - Objectif : Harmoniser les dispositions des États membre relatives aux obligations des fournisseurs de services de communications électroniques accessibles au public ou de réseaux publics de télécommunication en matière de conservation de certaines données qui sont générées ou traitées par ces fournisseurs
+- **RGPD** (2016) applicable à compter de 2018.
 
-Sources européennes
 
-- Convention 108/.81 du 28/01/1981 du Conseil de l’Europe
-    - <span style="text-decoration:underline;">Objet :</span>
-        - Art.1 : “Le but de la présente Convention est de garantir, sur le territoire de chaque Partie, à toute personne physique,
-             quelle que soit sa nationalité ou sa résidence, le respect de ses droits et de ses libertés fondamentales, et notamment de son droit à la vie privée, à l’égard du traitement automatisé des données à caractère personnel la concernant (“protection des données”).”
-
-- <span style="text-decoration:underline; ">Définitions :</span> art.2
-    - "données à caractère personnel “, “fichier automatisé”, “traitement automatisé” et “ maître du fichier”
-- <span style="text-decoration:underline; ">Champ d'application :</span>
-    - Tout fichier informatisé des secteurs public ou privé
-    - Facultatif (dans un état) : fichiers traités manuellement
-- <span style="text-decoration:underline; ">Principes :</span>
-    - **Garanties minimales devant être prévues par les état** (art. 5)
-    - Personne utilisant les fichiers doivent en** contrôler l’exactitude**
-    - **Finalité et utilisation du fichier doit être spécifiées**, justifiées et faire l’objet de publicité ou être portée à la connaissance de la personne concernée
-    - **Sécurité de protection des données** (art. 7)
-    - **Protection des données sensibles** (art. 6)
-- **Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 dit RGPD**
-    - <span style="text-decoration:underline;">Objet :</span>
-        - **Renforcer le droit des personnes :** création d’un droit à la portabilité des données personnelle et de dispositions propres aux personnes mineures
-        - **Responsabiliser les acteurs traitent des données** (responsable de traitement et sous-traitants)
-        - Crédibiliser la régulation : Renforcement de la coopération entre les autorités de protection des données (ex: possibilité d’adopter des décisions communes lorsque les traitements de données seront transnationaux et des sanctions renforcées)
-    - <span style="text-decoration:underline;">Source européennes</span>
-        - **Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 dit RGPD **
-        - **Directive** **→ nécessité de transposition **dans les lois nationales (délai plus long et différence entre les pays)
-        - **Règlement** => application immédiate dans tous les États membres
-    - <span style="text-decoration:underline;">Principes :</span>
-        - **Intégration des concepts** de la protection des données personnelles dès la conception des produits et services;
-        - **Prise en compte le principe d’accountability** : obligation pour les entreprises de mettre en oeuvre des mécanismes et des procédures internes permettant de démontrer le respect du RGPD
-        - **Notification à la CNIL de toute violation** des données à caractère personnel
-        - **Introduction de la fonction de Data Protection Officer (DPO)** au sein de l’entreprise
-    - **<span style="text-decoration:underline;">Champ d’application :</span>**
+### Sources européennes 🇪🇺
+        
+- **Convention 108 du Conseil de l’Europe** (1981)
+    - 1<sup>er</sup> instrument international contraignant, dont l’objet est de protéger les personnes contre l’usage abusif du <ins>traitement automatisé des données à caractère personnel</ins>, particulièrement à l'internationale.
+    - Champ d'application :
+        - Tout fichier informatisé des secteurs public ou privé
+        - Facultatif (dans un état) : fichiers traités manuellement
+    - Principes :
+        - La personne utilisant les fichiers doivent en contrôler l’exactitude.
+        - La finalité et l'utilisation du fichier doivent être spécifiées, justifiées et être portées à la connaissance de la personne concernée
+- **RGPD** (règlement, 2016)
+    - Renforcer le droit des personnes : création d’un droit à la portabilité des données, et de dispositions propres aux personnes mineures.
+    - Responsabiliser les acteurs traitent des données (responsable de traitement et sous-traitants).
+    - Crédibiliser la régulation : Renforcement de la coopération entre les autorités de protection des données (possibilité d’adopter des décisions communes lorsque les traitements de données seront transnationaux et des sanctions renforcées).
+    - Principes :
+        - Intégration des concepts de la protection des données personnelles dès la conception des produits et services;
+        - Prise en compte le principe d’accountability : obligation pour les entreprises de mettre en oeuvre des mécanismes et des procédures internes permettant de démontrer le respect du RGPD.
+        - Notification à la CNIL de toute violation des données à caractère personnel.
+        - Introduction de la fonction de Data Protection Officer (DPO) au sein de l’entreprise.
+    - Champ d’application :
         - Traitement de données à caractère personnel, automatisé en tout ou en partie, ainsi qu’au traitement non autorisé de données à caractère personnel contenues ou appelées à figurer dans un fichier.
-        - critère du **lieu d'établissement** :
+        - critère du lieu d'établissement :
             - Application du RGPD au traitement de données personnelles effectué par un responsable du traitement ou un sous-traitant sur le territoire de l'Union, que le traitement ait lieu ou non en UE
-        - critère du** public ciblé** par le traitement:
+        - critère du public ciblé par le traitement:
             - Application du RGPD chaque fois d'un résident européen est directement vis par un traitement de données personnelles.
 
 
 ### Régime de protection des données personnelles
 
-Organisation dans le cham d’application précisé par les lois de 1978 et 2004
+Organisation dans le champ d’application précisé par les lois de 1978 et 2004
 
 Octroi de droits au profit des personnes dont les données sont traitées, par les obligations à la charge du responsable des traitements.
-
-Rôle central de la CNIL
 
 ### Champ d’application de la protection
 
@@ -183,11 +142,11 @@ Loi s’applique aux traitements automatisés ou non de données à caractère p
 
 Notion de caractère personnel (permet d’identifier de manière directe ou non une personne) centrale et large dans la loi de 2004.
 
-sont exclus les traitements pour l’exercice d’activités exclusivement personnelles et domestiques
+Sont exclus les traitements pour les d’activités personnelles et domestiques.
 
-les copies temporaires faites dans le cadre d’activités techniques de transmission et d’accès aux réseaux numériques.
+Les copies temporaires faites dans le cadre d’activités techniques de transmission et d’accès aux réseaux numériques.
 
-loi nationale applicable : traitements de données dont le responsable est établi sur le territoire français ou a des moyens de traitement situés en France
+Loi nationale applicable : traitements de données dont le responsable est établi sur le territoire français ou a des moyens de traitement situés en France.
 
 Loi nationale et internet :
 

@@ -194,8 +194,6 @@ $$E(X+a)=E(X)+a$$
 #### Variance 
 C'est la moyenne des carrés des écarts à l'espérance :   
 📌$$V(X) = ∑ [(xᵢ-E(X))² P(X=xᵢ)]$$  
-$$V(X) = ∑ (x² P(X=xᵢ))-E(X)²$$  
-$$V(X) = E(X²)-E(X)²$$  
 $$V(X) = E(X-E(X))²$$
 
 > **Écart-type :** 📌$$σ=\sqrt{V(X)}$$
